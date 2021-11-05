@@ -1,5 +1,5 @@
 import psycopg2
-import database_entities
+import entities
 
 cursor = None
 
@@ -14,23 +14,57 @@ def connect():
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
 
-def query(queryStr, asObjects):
+def query(queryStr):
     cursor.execute(queryStr)
     result = cursor.fetchall()
-    if asObjects:
-        return rowsToObjects(result, 'recording_entity')
-    else:
-        return result
+    return result
 
 def rowsToObjects(result, tablename):
     objects = []
     if tablename == 'recording_entity':
         for row in result:
-            objects.append(database_entities.Recording_Entity(
-                row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8],
-            ))
-    return objects
+            objects.append(entities.Recording_Entity(row))
+    elif tablename == 'sample_entity':
+        for row in result:
+            objects.append((entities.Sample_Entity(row)))
+    elif tablename == 'task_entity':
+        for row in result:
+            objects.append((entities.Task_Entity(row)))
+    if len(objects) == 1: return objects[0]
+    else: return objects
 
+def getRecordById(recordId, asObject=False):
+    result = query("SELECT * FROM recording_entity WHERE recording_id = '" + recordId + "'")
+    if asObject:
+        return rowsToObjects(result, 'recording_entity')
+    else:
+        return result
 
 def getRecordsByTaskId(taskId, asObjects=False):
-    return query("SELECT * FROM recording_entity WHERE task_id = '" + taskId + "'", asObjects)
+    result = query("SELECT * FROM recording_entity WHERE task_id = '" + taskId + "'")
+    if asObjects:
+        return rowsToObjects(result, 'recording_entity')
+    else:
+        return result
+
+def getRecordSamples(recordId, asObjects=False):
+    result = query("SELECT * FROM sample_entity WHERE recording_id = '" + recordId + "'")
+    if asObjects:
+        return rowsToObjects(result, 'sample_entity')
+    else:
+        return result
+
+def getTaskById(taskId, asObject=False):
+    result = query("SELECT * FROM task_entity WHERE id = '" + taskId + "'")
+    if asObject:
+        return rowsToObjects(result, 'task_entity')
+    else:
+        return result
+
+def getTaskByRecordId(recordId, asObject):
+    taskId = getRecordById(recordId, True).task_id
+    result = query("SELECT * FROM task_entity WHERE id = '" + str(taskId) + "'")
+    if asObject:
+        return rowsToObjects(result, 'task_entity')
+    else:
+        return result
