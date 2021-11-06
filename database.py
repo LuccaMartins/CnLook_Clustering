@@ -33,35 +33,35 @@ def rowsToObjects(result, tablename):
     if len(objects) == 1: return objects[0]
     else: return objects
 
-def getRecordById(recordId, asObject=False):
-    result = query("SELECT * FROM recording_entity WHERE recording_id = '" + recordId + "'")
+def getRecordById(recordId, asObject=True):
+    result = query("SELECT * FROM recording_entity WHERE recording_id = '" + str(recordId) + "'")
     if asObject:
         return rowsToObjects(result, 'recording_entity')
     else:
         return result
 
-def getRecordsByTaskId(taskId, asObjects=False):
+def getRecordsByTaskId(taskId, asObjects=True):
     result = query("SELECT * FROM recording_entity WHERE task_id = '" + taskId + "'")
     if asObjects:
         return rowsToObjects(result, 'recording_entity')
     else:
         return result
 
-def getRecordSamples(recordId, asObjects=False):
-    result = query("SELECT * FROM sample_entity WHERE recording_id = '" + recordId + "'")
+def getRecordSamples(recordId, asObjects=True):
+    result = query("SELECT * FROM sample_entity WHERE recording_id = '" + str(recordId) + "'")
     if asObjects:
         return rowsToObjects(result, 'sample_entity')
     else:
         return result
 
-def getTaskById(taskId, asObject=False):
-    result = query("SELECT * FROM task_entity WHERE id = '" + taskId + "'")
+def getTaskById(taskId, asObject=True):
+    result = query("SELECT * FROM task_entity WHERE id = '" + str(taskId) + "'")
     if asObject:
         return rowsToObjects(result, 'task_entity')
     else:
         return result
 
-def getTaskByRecordId(recordId, asObject):
+def getTaskByRecordId(recordId, asObject=True):
     taskId = getRecordById(recordId, True).task_id
     result = query("SELECT * FROM task_entity WHERE id = '" + str(taskId) + "'")
     if asObject:

@@ -1,21 +1,36 @@
 import database
 import json
-import plotting
+import plotter
 
 database.connect()
 
-recordId = '764'
-# records = database.getRecordsByTaskId('2510', True)
+#records = database.getRecordsByTaskId('2510', True)
 #
-recordSamples = database.getRecordSamples(recordId, True)
+#recordSamples = database.getRecordSamples(recordId, True)
 #
 # for sample in recordSamples:
 #     sample.print()
 
 # task = database.getTaskById('2515', True)
-task = database.getTaskByRecordId(recordId, True)
+#task = database.getTaskByRecordId(recordId, True)
 # task.print()
+#
+# record = database.getRecordById('701', True)
+#
+# [leftDist, rightDist] = record.distanceToFigure_Horizontal()
+# plotting.distanceToFigure_Horizontal(record.timestamps, leftDist, rightDist)
 
-taskJson = json.loads(task.animation_blueprint)
+#plotting.distanceToFigure_Horizontal(taskJson["NormalizedPositionDurations"], recordSamples)
 
-plotting.distanceToFigure_Horizontal(taskJson["NormalizedPositionDurations"], recordSamples)
+recordId = '792'
+objRecord = database.getRecordById(recordId)
+
+objRecord.print()
+
+# not working properly
+# plotter.distanceToFigure_HV(objRecord)
+
+plotter.positions_HV(objRecord)
+
+
+
