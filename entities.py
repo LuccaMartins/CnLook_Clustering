@@ -45,7 +45,7 @@ class Recording_Entity:
     #
     #     return [leftEyeDistances, rightEyeDistances]
 
-    def getPositions_HV(self):
+    def getEyesPositions_HV(self):
         leftPos = []
         rightPos = []
         for sample in self.samples:

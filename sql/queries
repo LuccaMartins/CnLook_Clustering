@@ -1,0 +1,34 @@
+-- SELECT COUNT (*) recording_entity 
+-- WHERE screening_id 
+-- IN SELECT  
+	
+-- select * from recording_entity where name like 'Reading: The Legend of the Mafumeira 2'
+
+-- lista de id's de screenings com a mesma resolução
+-- select screening_id from screening_entity 
+-- 	where recorded_screen_width = 1600 
+-- 	and recorded_screen_height = 900
+	
+-- lista de id's de recordings com a mesma resolução
+-- select recording_id from recording_entity 
+-- 	where screening_id in 
+-- 	(select screening_id from screening_entity 
+-- 	where recorded_screen_width = 1600 
+-- 	and recorded_screen_height = 900);
+
+-- select * from recording_entity where name = 'Horizontal, 10 fixations'
+
+-- select subject_id from subject_entity where group_id != 1
+
+select count(*) from recording_entity 
+	where screening_id in 
+	(select screening_id from screening_entity 
+		where recorded_screen_width = 1600 
+		and recorded_screen_height = 900
+		and subject_id in (
+			select subject_id from subject_entity 
+				where group_id != 1
+		))
+	and name = 'Reading: The Legend of the Mafumeira 2'
+	
+	

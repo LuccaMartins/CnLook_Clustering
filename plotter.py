@@ -14,9 +14,10 @@ def distanceToFigure_HV(objRecord):
 
 
 def positions_HV(objRecord):
-    [leftEyePos, rightEyePos] = objRecord.getPositions_HV()
+    [leftEyePos, rightEyePos] = objRecord.getEyesPositions_HV()
     figPos = objRecord.task.getFigurePositions_HV(objRecord.timestamps)
 
+    plt.figure()
     plt.title('Horizontal Position')
     plt.xlabel('Timestamp (ms)')
     plt.ylabel('<-Left    -    Right->')
