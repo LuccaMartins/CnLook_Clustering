@@ -67,12 +67,12 @@ def plotDendrogram(Z, result, title, saveDescription=None):
                     leaf_rotation=45, link_color_func=lambda x: linkCols[x])
     plt.title(title, fontsize=12)
 
+    plt.show()
 
     if saveDescription != None:
         plt.savefig(saveDescription)
         plt.close(fig)
-        return  #se for para salvar, não plota
-    plt.show()
+        return
 
 
 

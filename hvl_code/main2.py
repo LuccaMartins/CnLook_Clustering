@@ -1,5 +1,6 @@
 from analysis import *
 import numpy as np
+import array
 import matplotlib.pyplot as plt
 import collections, numpy
 import psycopg2
@@ -14,6 +15,10 @@ import matplotlib.pyplot as plt
 import re
 from pandas import DataFrame
 from matplotlib.pyplot import figure
+
+# from dtw import *
+from dtaidistance import dtw
+from dtaidistance import dtw_visualisation as dtwvis
 from FOSC.util.fosc import FOSC
 from scipy.cluster.hierarchy import linkage, dendrogram
 
@@ -21,7 +26,6 @@ from scipy.cluster.hierarchy import linkage, dendrogram
 palleteColors = ["#80ff72", "#8af3ff", "#7ee8fa", "#89043d", "#023c40", "#c3979f", "#797270", "#c57b57", "#07004d",
                  "#0e7c7b", "#c33149", "#f49e4c", "#2e4057", "#f2d7ee", "#bfb48f", "#a5668b", "#002500", "#720e07",
                  "#f46036", "#78290f"]
-
 
 def plotPartition(x, y, result, title, saveDescription=None):
     uniqueValues = np.unique(result)
@@ -77,26 +81,52 @@ def plotDendrogram(Z, result, title, saveDescription=None):
                     leaf_rotation=45, link_color_func=lambda x: linkCols[x])
     plt.title(title, fontsize=12)
 
-
     if saveDescription != None:
         plt.savefig(saveDescription)
         plt.close(fig)
-        return  #se for para salvar, não plota
+        return
+
     plt.show()
 
 
 
-conn = connect_db("127.0.0.1","candlook_hvl")
+
+
+
+
+
+
+
+    #  MAIN CODE   =========================================================================================================
+
+def examples_dtw_warping(X):
+    for i in range(0, 10):
+        path = dtw.warping_path(X[i], X[i+10])
+        dtwvis.plot_warping(X[i], X[i+10], path, filename="warp" + str(i) + ".png")
+
+
+
+
+print("Connecting to CnLook Database...")
+conn = connect_db("127.0.0.1", "candlook_hvl")
+
 dsGroupName = "Arusha"
 dsTaskName = "Horizontal, 10 fixations"
 
+print('Reading records from database: ' + dsGroupName + " - " + dsTaskName)
 allRecords = read_task_data(conn, dsGroupName, dsTaskName)
 grouped = allRecords.groupby('recording_id')
-listed = list(grouped)
+X = list(map(lambda x: np.array(x[1]['left_x'].values, dtype=np.double), list(grouped)))
 
-X = []
-for record in listed:
-   X.append(list(record[1]['left_x'].values))
+
+print("Saving warping examples...")
+examples_dtw_warping(X)
+
+
+# X = X[0:30]
+print("Producing distance matrix with dtw...")
+mat = dtw.distance_matrix_fast(X)
+
 
 
 listOfMClSize = [4, 5, 8, 16, 20, 30]
@@ -107,29 +137,22 @@ for m in listOfMClSize:
     print("--------------------------------------- MCLSIZE = %d ---------------------------------------" % m)
 
     for lm in methodsLinkage:
-        titlePlot = "C&Look - " + dsGroupName + "(" + dsTaskName + "),\n mClSize=" + str(m) + "\n" + lm
-        savePath = "../FOSC/Results/" + dsGroupName + "(" + dsTaskName + "),\n mClSize=" + str(m) + "\n" + lm + ".png"
-        saveDendrogram = "../FOSC/Results/Dendrogram" + dsGroupName + "(" + dsTaskName + "),\n mClSize=" + str(m) + "\n" + lm + ".png"
+        titlePlot = "C&Look - " + dsGroupName + "(" + dsTaskName + "),\n mClSize: " + str(m) + "\nLinkage Method: " + lm + "Qtd Objects: " + str(len(X))
+        savePath = "../FOSC/Results/" + dsGroupName + "(" + dsTaskName + "),\n mClSize: " + str(m) + "\n" + lm + ".png"
+        saveDendrogram = "../FOSC/Results" #Dendrogram " + dsGroupName + "(" + dsTaskName + "),\n mClSize=" + str(m) + "\n" + lm + ".png"
 
 
-        #normalizando só para rodar...
-        min = 99999;
-        X_norm = []
-        for rec in X:
-            if len(rec) < min: min = len(rec)
-        for rec in X:
-            X_norm.append(rec[0:min])
-
-        print("Using linkage method %s" % lm)
-        Z = linkage(X_norm, method=lm, metric="euclidean")
+        print("Calling linkage with the distance_matrix...")
+        Z = linkage(mat, method=lm)
 
         foscFramework = FOSC(Z, mClSize=m)
         infiniteStability = foscFramework.propagateTree()
         partition = foscFramework.findProminentClusters(1, infiniteStability)
 
         # Plot results
-        plotPartition(X_norm[:,0], X_norm[:,1], partition, titlePlot, savePath)
-        plotDendrogram(Z, partition, titlePlot, saveDendrogram)
+        #plotPartition(X_norm[:,0], X_norm[:,1], partition, titlePlot, savePath)
+        # plotDendrogram(Z, partition, titlePlot, saveDendrogram)
+        plotDendrogram(Z, partition, titlePlot)
 
 
 
