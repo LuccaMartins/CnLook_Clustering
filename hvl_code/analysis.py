@@ -88,6 +88,14 @@ def get_sample_recording(conn, recording_id):
     cur.close()
     return res
 
+def get_specific_recording_by_id(conn, recording_id):
+    """Read data of a specific recording"""
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM recording_entity WHERE recording_id=%(id)s", {'id': recording_id})
+    res = cur.fetchall()  # flatten result
+    #res = [r[0] for r in cur.fetchall()]  # flatten result
+    cur.close()
+    return res
 
 def get_specific_recording(conn, screening_id):
     """Read data of a specific recording"""

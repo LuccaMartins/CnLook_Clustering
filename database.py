@@ -1,14 +1,14 @@
 import psycopg2
 import entities
 
-conn = None
+cursor = None
 
 def connect():
     """ query data from the vendors table """
     # conn = None
     try:
-        conn = psycopg2.connect(user='postgres', password='2021', host='localhost', database='candlook_hvl')
-        return conn
+        cursor = psycopg2.connect(user='postgres', password='2021', host='localhost', database='candlook_hvl')
+        return cursor
         # if cursor is None:
         #     cursor = conn.cursor()
     except (Exception, psycopg2.DatabaseError) as error:

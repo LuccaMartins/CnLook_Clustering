@@ -1,0 +1,282 @@
+-- SELECT * FROM subject_entity
+-- WHERE name NOT LIKE '%mads%'
+-- AND name NOT LIKE '%Mads%'
+-- AND name NOT LIKE '%qasim%'
+-- AND name NOT LIKE '%Qasim%'
+-- AND name NOT LIKE '%eyex%'
+-- AND name NOT LIKE '%tx300%'
+-- AND name NOT LIKE '%demo%'
+-- AND name NOT LIKE '%damo%'
+-- AND name NOT LIKE '%Demo%'
+-- AND name NOT LIKE 'calibTest'
+-- AND name NOT LIKE '??'
+-- AND name NOT LIKE '%merged%'
+-- AND name NOT LIKE 'unknown'
+-- AND name NOT LIKE '%(glasses)%';
+
+-- SELECT * from recording_entity where screening_id 
+
+
+SELECT * FROM recording_entity 
+WHERE screening_id IN(
+	SELECT screening_id FROM screening_entity 
+	WHERE subject_id IN(
+		SELECT subject_id FROM subject_entity WHERE group_id = 2));
+		
+-- SELECT * FROM subject_entity 
+-- WHERE subject_id IN(
+-- 	SELECT subject_id FROM screening_entity
+-- 	WHERE screening_id IN(
+-- 	SELECT screening_id from)
+-- );
+
+SELECT subject_id, screening_id FROM screening_entity order by subject_id;
+
+SELECT * FROM recording_entity 
+WHERE screening_id IN(
+	SELECT screening_id FROM screening_entity
+	WHERE subject_id = 81)
+ORDER BY name;
+
+
+SELECT COUNT(*) FROM recording_entity 
+WHERE screening_id IN(
+	SELECT screening_id FROM screening_entity
+	WHERE subject_id IN(
+		SELECT subject_id FROM subject_entity
+		WHERE group_id = 4
+		AND name NOT LIKE '%mads%'
+		AND name NOT LIKE '%Mads%'
+		AND name NOT LIKE '%qasim%'
+		AND name NOT LIKE '%Qasim%'
+		AND name NOT LIKE '%eyex%'
+  		AND name NOT LIKE '%tx300%'
+		AND name NOT LIKE '%demo%'
+		AND name NOT LIKE '%damo%'
+		AND name NOT LIKE '%Demo%'
+		AND name NOT LIKE 'calibTest'
+		AND name NOT LIKE '??'
+		AND name NOT LIKE '%merged%'
+		AND name NOT LIKE '%unknown%'
+		AND name NOT LIKE '%(glasses)%'));
+
+
+SELECT * FROM subject_entity 
+WHERE group_id = 12;
+-- and name not like '%(glasses)%'
+-- and name not like '%al%'
+
+-- AND name NOT LIKE '%mads%'
+-- AND name NOT LIKE '%Mads%'
+-- AND name NOT LIKE '%qasim%'
+-- AND name NOT LIKE '%Qasim%'
+-- AND name NOT LIKE '%eyex%'
+-- AND name NOT LIKE '%tx300%'
+-- AND name NOT LIKE '%demo%'
+-- AND name NOT LIKE '%damo%'
+-- AND name NOT LIKE '%Demo%'
+-- AND name NOT LIKE 'calibTest'
+-- AND name NOT LIKE '??'
+-- AND name NOT LIKE '%merged%'
+-- AND name NOT LIKE '%unknown%'
+-- AND name NOT LIKE '%(glasses)%';
+
+-- SELECT count(*) FROM recording_entity 
+-- WHERE screening_id IN(
+-- 	SELECT screening_id FROM screening_entity
+-- 	WHERE subject_id IN(
+-- 		SELECT subject_id FROM subject_entity
+-- 		WHERE group_id = 11
+-- 		))
+
+
+SELECT * FROM subject_entity 
+WHERE subject_id IN(
+	SELECT subject_id FROM screening_entity
+	where screening_id in(
+		select screening_id from recording_entity 
+		where name = 'Horizontal'))
+AND name not like '%??%'
+AND name not like '%unknown%'
+AND name not like '%eyex%'
+AND name not like '%tx300%';
+
+
+
+SELECT COUNT(*) FROM recording_entity 
+WHERE screening_id IN(
+	SELECT screening_id FROM screening_entity
+	WHERE subject_id IN(
+		SELECT subject_id FROM subject_entity
+		WHERE group_id = 11
+		AND name NOT LIKE '%mads%'
+		AND name NOT LIKE '%Mads%'
+		AND name NOT LIKE '%qasim%'
+		AND name NOT LIKE '%Qasim%'
+ 		AND name NOT LIKE '%eyex%'
+ 		AND name NOT LIKE '%tx300%'
+		AND name NOT LIKE '%demo%'
+		AND name NOT LIKE '%damo%'
+		AND name NOT LIKE '%Demo%'
+		AND name NOT LIKE 'calibTest'
+		AND name NOT LIKE '??'
+		AND name NOT LIKE '%merged%'
+		AND name NOT LIKE '%unknown%'
+		AND name NOT LIKE '%(glasses)%'
+	))
+and name = 'Vertical, 10 fixations';
+
+select * from subject_entity 
+where group_id = 6
+and subject_id in(
+	select subject_id from screening_entity
+	where screening_id in (
+		select screening_id from recording_entity
+		where name = 'DiagonalLeftAndBack'))
+AND name NOT LIKE '%mads%'
+AND name NOT LIKE '%Mads%'
+AND name NOT LIKE '%qasim%'
+AND name NOT LIKE '%Qasim%'
+--AND name NOT LIKE '%eyex%'
+--AND name NOT LIKE '%tx300%'
+AND name NOT LIKE '%demo%'
+AND name NOT LIKE '%damo%'
+AND name NOT LIKE '%Demo%'
+AND name NOT LIKE 'calibTest'
+AND name NOT LIKE '??'
+AND name NOT LIKE '%merged%'
+AND name NOT LIKE '%unknown%'
+AND name NOT LIKE '%(glasses)%';
+
+select * from recording_entity where screening_id in (
+	select screening_id from screening_entity where subject_id = 265);
+	
+select group_id, count(*) as n_children from subject_entity 
+	where subject_id in(
+		select subject_id from screening_entity
+		where screening_id in (
+			select screening_id from recording_entity
+			where name = 'Horizontal, 10 fixations'
+		))
+	AND name NOT LIKE '%mads%'
+	AND name NOT LIKE '%Mads%'
+	AND name NOT LIKE '%qasim%'
+	AND name NOT LIKE '%Qasim%'
+	--AND name NOT LIKE '%eyex%'
+	--AND name NOT LIKE '%tx300%'
+	AND name NOT LIKE '%demo%'
+	AND name NOT LIKE '%damo%'
+	AND name NOT LIKE '%Demo%'
+	AND name NOT LIKE 'calibTest'
+	AND name NOT LIKE '??'
+	AND name NOT LIKE '%merged%'
+	AND name NOT LIKE '%unknown%'
+	AND name NOT LIKE '%(glasses)%'
+group by group_id
+order by group_id;
+
+set session vars.taskName = 'Word Grid: Swahili Syllables, 3x3';
+set session vars.groupId = 11;
+
+
+SELECT  
+(SELECT COUNT(*) FROM recording_entity 
+		WHERE screening_id IN(
+			SELECT screening_id FROM screening_entity
+			WHERE subject_id IN(
+				SELECT subject_id FROM subject_entity
+				where group_id = current_setting('vars.groupId')::int
+				and name NOT LIKE '%mads%'
+				AND name NOT LIKE '%Mads%'
+				AND name NOT LIKE '%qasim%'
+				AND name NOT LIKE '%Qasim%'
+				--AND name NOT LIKE '%eyex%'
+				--AND name NOT LIKE '%tx300%'
+				AND name NOT LIKE '%demo%'
+				AND name NOT LIKE '%damo%'
+				AND name NOT LIKE '%Demo%'
+				AND name NOT LIKE 'calibTest'
+				AND name NOT LIKE '??'
+				AND name NOT LIKE '%merged%'
+				AND name NOT LIKE '%unknown%'
+				AND name NOT LIKE '%(glasses)%'
+			) )
+		and name = current_setting('vars.taskName')::varchar
+	 ) as n_records,
+	(SELECT count(*) from subject_entity 
+		where subject_id in(
+			select subject_id from screening_entity
+			where screening_id in (
+				select screening_id from recording_entity
+				where name = current_setting('vars.taskName')::varchar
+		))
+	 	and group_id = current_setting('vars.groupId')::int
+		AND name NOT LIKE '%mads%'
+		AND name NOT LIKE '%Mads%'
+		AND name NOT LIKE '%qasim%'
+		AND name NOT LIKE '%Qasim%'
+		--AND name NOT LIKE '%eyex%'
+		--AND name NOT LIKE '%tx300%'
+		AND name NOT LIKE '%demo%'
+		AND name NOT LIKE '%damo%'
+		AND name NOT LIKE '%Demo%'
+		AND name NOT LIKE 'calibTest'
+		AND name NOT LIKE '??'
+		AND name NOT LIKE '%merged%'
+		AND name NOT LIKE '%unknown%'
+		AND name NOT LIKE '%(glasses)%'
+	) AS n_children;
+	
+select subj.subject_id, count(*) as n_records from recording_entity as rec
+join screening_entity as scr on rec.screening_id = scr.screening_id 
+join subject_entity as subj on subj.subject_id = scr.subject_id and subj.group_id = 11
+	AND subj.group_id != 1 
+	AND subj.group_id != 12
+	AND subj.name NOT LIKE '%mads%'
+	AND subj.name NOT LIKE '%Mads%'
+	AND subj.name NOT LIKE '%qasim%'
+	AND subj.name NOT LIKE '%Qasim%'
+	--AND subj.name NOT LIKE '%eyex%'
+	--AND subj.name NOT LIKE '%tx300%'
+	AND subj.name NOT LIKE '%demo%'
+	AND subj.name NOT LIKE '%damo%'
+	AND subj.name NOT LIKE '%Demo%'
+	AND subj.name NOT LIKE 'calibTest'
+	AND subj.name NOT LIKE '??'
+	AND subj.name NOT LIKE '%merged%'
+	AND subj.name NOT LIKE '%unknown%'
+	AND subj.name NOT LIKE '%(glasses)%' 
+group by subj.group_id, subj.name, subj.subject_id
+order by subj.subject_id;
+
+-- select subj.name from subject_entity subj 
+-- join screening_entity scr on subj.subject_id = scr.subject_id
+-- join recording_entity rec on scr.screening_id = rec.screening_id
+-- and rec.name = 'Two_letter_syllables_short'
+-- and subj.group_id = 2
+
+select subj.name, subj.group_id from recording_entity rec 
+join screening_entity scr on rec.screening_id = scr.screening_id
+join subject_entity subj on subj.subject_id = scr.subject_id
+where rec.name = 'Text: Easy_Swahili_Syllables';
+
+
+select * from subject_entity 
+where group_id = 8 or group_id = 9 or group_id = 10 or group_id = 11
+order by name;
+
+select distinct task_id from recording_entity where name = 'Horizontal'
+
+
+
+-- select tsk.id as task_id, rec.name rec_name, count(*) as n_recs from task_entity tsk
+-- join recording_entity rec on rec.task_id = tsk.id
+-- group by tsk.id, rec.name
+-- order by n_recs desc;
+
+-- select * from subject_entity sub 
+-- join screening_entity scr on scr.subject_id = sub.subject_id
+-- join recording_entity rec on rec.screening_id = scr.screening_id
+-- 	and rec.task_id = 8367;
+
+-- select * from recording_entity where task_id = 2515

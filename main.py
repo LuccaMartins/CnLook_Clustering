@@ -12,7 +12,19 @@ import clustering
 from hvl_code.analysis import *
 
 
-conn = database.connect()
+conn = connect_db("127.0.0.1", "candlook_hvl")
+
+allRecords = get_specific_recording_by_id(conn, '736')
+
+
+
+plotter.positions_HV(allRecords[0])
+
+# conn = database.connect()
+
+#cursor = psycopg2.connect(user='postgres', password='2021', host='localhost', database='candlook_hvl')
+
+# conn = connect_db("127.0.0.1", "candlook_hvl")
 #
 # recordId_1 = '946'
 # recordId_2 = '5304'
@@ -30,11 +42,11 @@ conn = database.connect()
 # X_rightPos_2 = list(map(lambda x: float(x[0]), rightPos_2))
 #
 # plotter.positions_HV(objRecord_2)
-
-
-
+#
+#
+#
 # tList = utils.normalizeLength([X_rightPos_1, X_rightPos_2])
-
+#
 # print(utils.euclid_dist(np.array(tList[0]),np.array(tList[1])))
 
 
@@ -45,29 +57,30 @@ conn = database.connect()
 
 
 #CLUSTERING WITH KMEANS
-
-records = database.getRecordsByTaskId('701')
-records_pos = []
 #
-# plotter.positions_HV(records[0])
+# records = database.getRecordsByTaskId('701')
+# records_pos = []
+# #
+# # plotter.positions_HV(records[0])
+# #
+# print('getting eyes positions...')
+# for rec in records:
+#     records_pos.append(rec.getEyesPositions_HV())
 #
-print('getting eyes positions...')
-for rec in records:
-    records_pos.append(rec.getEyesPositions_HV())
+# records_pos_right_X = []
+# print('getting right eye X positions...')
+# for rec_pos in records_pos:                                         #taking only right eye's positions
+#     records_pos_right_X.append(list(map(lambda x: float(x[0]), rec_pos[1])))
+#
+# records_pos_right_X = utils.normalizeLength(records_pos_right_X)
+#
+# y_kmeans = clustering.kMeans(records_pos_right_X, n_clusters=2)
+#
+#
+# clustering.printLabels(records, y_kmeans)
+#
+#
+#
+#
+# read_task_data(conn, "Arusha", "Animation - Task Type: Saccade Speed Test")
 
-records_pos_right_X = []
-print('getting right eye X positions...')
-for rec_pos in records_pos:                                         #taking only right eye's positions
-    records_pos_right_X.append(list(map(lambda x: float(x[0]), rec_pos[1])))
-
-records_pos_right_X = utils.normalizeLength(records_pos_right_X)
-
-y_kmeans = clustering.kMeans(records_pos_right_X, n_clusters=2)
-
-
-clustering.printLabels(records, y_kmeans)
-
-
-
-
-read_task_data(conn, "Arusha", "Animation - Task Type: Saccade Speed Test")

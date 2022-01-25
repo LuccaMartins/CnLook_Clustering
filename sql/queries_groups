@@ -1,0 +1,46 @@
+
+select grp.name, count(*) as n_records from recording_entity rec 
+join screening_entity scr on scr.screening_id = rec.screening_id
+join subject_entity sub on sub.subject_id = scr.subject_id
+join group_entity grp on grp.id = sub.group_id
+where sub.name NOT LIKE '%mads%'
+		AND sub.name NOT LIKE '%Mads%'
+		AND sub.name NOT LIKE '%qasim%'
+		AND sub.name NOT LIKE '%Qasim%'
+		--AND sub.name NOT LIKE '%eyex%'
+		--AND sub.name NOT LIKE '%tx300%'
+		AND sub.name NOT LIKE '%demo%'
+		AND sub.name NOT LIKE '%damo%'
+		AND sub.name NOT LIKE '%Demo%'
+		AND sub.name NOT LIKE 'calibTest'
+		AND sub.name NOT LIKE '??'
+		AND sub.name NOT LIKE '%merged%'
+		AND sub.name NOT LIKE '%unknown%'
+		AND sub.name NOT LIKE '%(glasses)%'
+group by grp.name;
+
+
+select distinct subj.name, count(*) as n_records from recording_entity as rec
+join screening_entity as scr on rec.screening_id = scr.screening_id 
+join subject_entity as subj on subj.subject_id = scr.subject_id and subj.group_id = 11
+	AND subj.group_id != 1 
+	AND subj.group_id != 12
+	AND subj.name NOT LIKE '%mads%'
+	AND subj.name NOT LIKE '%Mads%'
+	AND subj.name NOT LIKE '%qasim%'
+	AND subj.name NOT LIKE '%Qasim%'
+	--AND subj.name NOT LIKE '%eyex%'
+	--AND subj.name NOT LIKE '%tx300%'
+	AND subj.name NOT LIKE '%demo%'
+	AND subj.name NOT LIKE '%damo%'
+	AND subj.name NOT LIKE '%Demo%'
+	AND subj.name NOT LIKE 'calibTest'
+	AND subj.name NOT LIKE '??'
+	AND subj.name NOT LIKE '%merged%'
+	AND subj.name NOT LIKE '%unknown%'
+	AND subj.name NOT LIKE '%(glasses)%' 
+group by subj.name
+order by subj.name;
+
+
+
