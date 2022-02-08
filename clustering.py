@@ -1,6 +1,6 @@
 from sklearn.cluster import KMeans
 import pandas as pd
-import seaborn as sns; sns.set()  # for plot styling
+#import seaborn as sns; sns.set()  # for plot styling
 import matplotlib.pyplot as plt
 
 

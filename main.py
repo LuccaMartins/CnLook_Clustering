@@ -12,7 +12,7 @@ import clustering
 from hvl_code.analysis import *
 
 
-conn = connect_db("127.0.0.1", "candlook_hvl")
+conn = connect_db("127.0.0.1", "CnLook_DB")
 
 allRecords = get_specific_recording_by_id(conn, '736')
 

@@ -14,7 +14,7 @@ import ast
 
 
 def connect_db(host, dbname):
-    return psycopg2.connect(user='postgres', password='2021', host='localhost', database='candlook_hvl')
+    return psycopg2.connect(user='postgres', password='2022', host='localhost', database=dbname)
 
     #return psycopg2.connect(dbname=dbname, user="postgres", password="2021", host=host)
 
@@ -178,6 +178,45 @@ def read_task_data(conn, group, taskname):
     df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
     return df
 
+def getRecordings_ByTaskId(conn, groupId, taskId):
+    """Read the data from the database.
+
+    Returns a pandas dataframe indexed by recording_id with columns `timestamp`,
+    `left_x`, `left_y`, `right_x`, `right_y`.
+    """
+    df = pd.read_sql_query(  #
+        """
+        SELECT
+          recording_id, timestamp, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
+        FROM sample_entity AS sample
+          JOIN recording_entity AS rec USING (recording_id)
+          JOIN screening_entity AS scr USING (screening_id)
+          JOIN subject_entity AS subj USING (subject_id)
+          JOIN group_entity AS grp ON (grp.id = subj.group_id)
+        WHERE rec.task_id = %s AND grp.id = %s
+        ORDER BY recording_id, timestamp;
+        """,
+        conn,
+        index_col="recording_id",
+        params=[taskId, groupId])
+    assert df.shape[0] != 0, \
+        "no recordings found in database for task %s" % taskId
+    for eye in 'left', 'right':
+        col = '%s_normal' % eye
+        eye_data = np.array([[*ast.literal_eval(t)] for t in df[col]])
+        if eye_data.ndim == 1:
+            print(eye_data)
+            print(df, df.shape)
+        df = df.assign(**{
+            '%s_x' % eye: eye_data[:, 0],
+            '%s_y' % eye: eye_data[:, 1],
+        })
+    del df['left_normal']
+    del df['right_normal']
+    df.attrs['taskId'] = taskId
+    df.attrs['groupId'] = groupId
+    df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
+    return df.groupby(['recording_id'])
 
 class EquidistantResampler(BaseEstimator, TransformerMixin):
     """Resample the ET data to an equidistant time grid.

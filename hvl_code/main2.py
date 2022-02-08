@@ -188,7 +188,7 @@ def computePBandAUCCIndexes(partition, distanceMatrix):
     return penalty * pb, penalty * aucc, noiseSize, penalty
 
 print("Connecting to CnLook Database...")
-conn = connect_db("127.0.0.1", "candlook_hvl")
+conn = connect_db("127.0.0.1", "CnLook_DB")
 
 dsGroupName = "moivaro"
 dsTaskName = "Horizontal"
@@ -269,7 +269,7 @@ indexes = [i for i, x in enumerate(allSilhouettes_values) if x == maxSilhouette]
 
 for idx in indexes:
     print("Best Silhouette Validation: " + str(maxSilhouette) +
-      " using minCSize = " + str(allSilhouettes[idx][0]) +
+      " using minClSize = " + str(allSilhouettes[idx][0]) +
       ", and method = " + allSilhouettes[idx][1])
 
 
