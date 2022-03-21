@@ -182,12 +182,12 @@ def getRecordings_ByTaskId(conn, groupId, taskId):
     """Read the data from the database.
 
     Returns a pandas dataframe indexed by recording_id with columns `timestamp`,
-    `left_x`, `left_y`, `right_x`, `right_y`.
+    `left_x`, `left_y`, `right_x`, `right_y`, `left_pupil_diameter_mm`, `right_pupil_diameter_mm`.
     """
     df = pd.read_sql_query(  #
         """
         SELECT
-          recording_id, timestamp, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
+          recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
         FROM sample_entity AS sample
           JOIN recording_entity AS rec USING (recording_id)
           JOIN screening_entity AS scr USING (screening_id)

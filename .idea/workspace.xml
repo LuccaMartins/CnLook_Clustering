@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Clustering_CnLook/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Clustering_CnLook/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CnLook_Clustering.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CnLook_Clustering.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Clustering_CnLook/testingCatEyes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_CnLook/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_CnLook/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_CnLook/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_CnLook/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counting C&amp;Look DB.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Counting C&amp;Look DB.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FOSC/Results.png" beforeDir="false" afterPath="$PROJECT_DIR$/FOSC/Results.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hvl_code/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/hvl_code/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hvl_code/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/hvl_code/main2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/queries" beforeDir="false" afterPath="$PROJECT_DIR$/sql/queries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/queries_tasks" beforeDir="false" afterPath="$PROJECT_DIR$/sql/queries_tasks" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +44,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="20QwWxb9IxrVnphPsmXqZpKrGo3" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -54,35 +56,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lucca\Desktop\Repositórios GitHub\CnLook_Clustering" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_CnLook" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.main (1)">
-    <configuration name="fosc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CnLook_Clustering" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FOSC/util" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FOSC/util/fosc.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CnLook_Clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,6 +130,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testingCatEyes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CnLook_Clustering" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clustering_CnLook" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering_CnLook/testingCatEyes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="testingCodes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CnLook_Clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,19 +173,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.fosc" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.main2" />
       <item itemvalue="Python.testingCodes" />
       <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.testingCatEyes" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.testingCatEyes" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.main2" />
         <item itemvalue="Python.testingCodes" />
-        <item itemvalue="Python.fosc" />
       </list>
     </recent_temporary>
   </component>
@@ -240,9 +245,39 @@
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Clustering_CnLook/utils.py</url>
+          <line>259</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Clustering_CnLook/main.py</url>
-          <line>82</line>
-          <option name="timeStamp" value="155" />
+          <line>26</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Clustering_CnLook/main.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/cateyes/classification.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/nslr_hmm/nslr_hmm.py</url>
+          <line>328</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/cateyes/classification.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Clustering_CnLook/utils.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="216" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
