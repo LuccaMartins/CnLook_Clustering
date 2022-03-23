@@ -1,5 +1,5 @@
-from hvl_code.analysis import *
-from utils import *
+from Database.analysis import *
+from Clustering_Framework.utils import *
 
 import warnings
 warnings.filterwarnings('ignore')

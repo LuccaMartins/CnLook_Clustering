@@ -4,6 +4,7 @@ import numpy as np
 from dtaidistance import dtw, dtw_ndim
 from sklearn import metrics
 from scipy.cluster.hierarchy import linkage, dendrogram
+import json
 
 from cateyes import (sfreq_to_times, classify_nslr_hmm, continuous_to_discrete,
                      plot_segmentation, plot_trajectory, classify_velocity, mad_velocity_thresh, classify_dispersion,
@@ -48,14 +49,62 @@ def selectFeatures(recordings, features):
         result.append(np.array(values))
     return result
 
+def normalizeTimestamps(timestamps):
+    normalized = [0]
+    for i in range(1, len(timestamps)):
+        normalized.append(normalized[i-1] + timestamps.array[i]/1000 - timestamps.array[i-1]/1000)
+    return normalized
 
 def createFeaturedRecords(records):
     print('Starting feature engineering...')
 
+    featured_records = []
     for record in records:
-        segment_id, segment_class = identify_events(record, 'I-VT', savePlot="./Plots EventDetection")
+        segment_id, segment_class = identify_events(record, 'I-VT', savePlot="./Event Detection/Plots EventDetection")
+
+    return featured_records
+
+def getTaskPositions(task, timestamps):
+    #TODO: this function must be different depending on the parameter_type of the task.
+    # i.e., finding task position for Fixation Tasks is different from Smooth Pursuit Tasks, because
+    # the positions are store differently in the database.
+    normalized_Positions = json.loads(task.animation_blueprint.values[0])['NormalizedPositionDurations']
+
+    taskPositions = []
+    # for timestamp in timestamps:
+    #     flag = False
+    #     for position in normalized_Positions:
+    #         if position['DurationSoFarInMs'] >= timestamp:
+    #             x, y = position['ToPoint'].split(',')
+    #             taskPositions.append([float(x), float(y)])
+    #             flag = True
+    #             break
+    #     if flag == False:
+    #         taskPositions.append([float(x), float(y)])
 
 
+    # for timestamp in timestamps:
+    #     for position in normalized_Positions:
+    #         if position['DurationSoFarInMs'] <= timestamp:
+    #             x, y = position['ToPoint'].split(',')
+    #             taskPositions.append([float(x), float(y)])
+    #             break
+
+
+    for timestamp in timestamps:
+        flag = False
+        for i in range(0, len(normalized_Positions)-1):
+            if normalized_Positions[i]['DurationSoFarInMs'] <= timestamp < normalized_Positions[i+1]['DurationSoFarInMs']:
+                x, y = normalized_Positions[i]['ToPoint'].split(',')
+                taskPositions.append([float(x), float(y)])
+                flag = True
+                break
+        if flag == False:
+            # if it wasn't in any interval of the Normalized Positions, then it belongs to the last figure position
+            x, y = normalized_Positions[-1]['ToPoint'].split(',')
+            taskPositions.append([float(x), float(y)])
+
+    return taskPositions
 
 def identify_events(record, algorithm, savePlot=None):
     #TODO: the following message appeared in one of the executions...
