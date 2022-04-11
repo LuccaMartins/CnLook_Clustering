@@ -1,6 +1,6 @@
-from FOSC.util.dendrogram import DendrogramStructure
-from FOSC.util.cluster import Cluster
-from FOSC.util.utilClasses import TreeSet
+from Clustering_Framework.ClusteringMethods.FOSC.util.dendrogram import DendrogramStructure
+from Clustering_Framework.ClusteringMethods.FOSC.util.cluster import Cluster
+from Clustering_Framework.ClusteringMethods.FOSC.util.utilClasses import TreeSet
 
 import numpy as np
 

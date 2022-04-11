@@ -194,7 +194,9 @@ def getRecordings_ByTaskId(conn, groupId, taskId):
           JOIN subject_entity AS subj USING (subject_id)
           JOIN group_entity AS grp ON (grp.id = subj.group_id)
         WHERE rec.task_id = %s AND grp.id = %s
-        ORDER BY recording_id, timestamp;
+        ORDER BY recording_id, timestamp 
+        LIMIT 20000
+        ;
         """,
         conn,
         index_col="recording_id",
@@ -240,7 +242,26 @@ def getTask_ByRecordingId(conn, recId):
 
     return df
 
+def getTask_ById(conn, task_id):
+    """Read the data from the database.
 
+    Returns a pandas dataframe indexed by id with columns `id`,
+    `animation_blueprint`, `parameter_type`, `parameter_data`mm`.
+    """
+    df = pd.read_sql_query(  #
+        """
+        select * from task_entity tsk 
+        where tsk.id = %s
+        """,
+        conn,
+        index_col="id",
+        params=[task_id])
+    assert df.shape[0] != 0, \
+        "no tasks found in database for id %s" % task_id
+
+    df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
+
+    return df
 
 class EquidistantResampler(BaseEstimator, TransformerMixin):
     """Resample the ET data to an equidistant time grid.

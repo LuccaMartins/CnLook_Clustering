@@ -1,22 +1,19 @@
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 from Database.analysis import *
 from Clustering_Framework.utils import *
 
-def plot_Record_HV(record, plotTask=False):
-    record[1]['timestamp'] = normalizeTimestamps(record[1]['timestamp'])
+def plot_Record_HV(record, task):
+    timestamps = normalizeTimestamps(record[1]['timestamp'].array)
 
-    fig, axs = plt.subplots(2, 2, figsize=(16, 8))
-    fig.canvas.manager.set_window_title(f'Record ID: {record[0]}')
-    fig.suptitle('Horizontal and Vertical Gazes')
-    axs[0, 0].plot(record[1]['timestamp'].array, record[1]['left_x'], color='blue')
-    axs[0, 0].set_title('Horizontal Left')
-    axs[0, 1].plot(record[1]['timestamp'].array, record[1]['right_x'], color='red')
-    axs[0, 1].set_title('Horizontal Right')
-    axs[1, 0].plot(record[1]['timestamp'].array, record[1]['left_y'], color='blue')
-    axs[1, 0].set_title('Vertical Left')
-    axs[1, 1].plot(record[1]['timestamp'].array, record[1]['right_y'], color='red')
-    axs[1, 1].set_title('Vertical Right')
+    fig, axs = plt.subplots(2, 1, figsize=(16, 8))
+    fig.suptitle(f'Horizontal and Vertical Gazes for Record: {record[0]}')
+    axs[0].set_title('Horizontal Left/Right')
+    axs[0].plot(timestamps, record[1]['left_x'], linewidth=1, color='blue')
+    axs[0].plot(timestamps, record[1]['right_x'], linewidth=1, color='red')
+    axs[1].set_title('Vertical Left/Right')
+    axs[1].plot(timestamps, [1 - y_pos for y_pos in record[1]['left_y']], linewidth=1, color='blue') #inverting y values
+    axs[1].plot(timestamps, [1 - y_pos for y_pos in record[1]['right_y']], linewidth=1, color='red') #inverting y values
 
     for ax in axs.flat:
         ax.set(xlabel='ms', ylabel='%')
@@ -26,33 +23,35 @@ def plot_Record_HV(record, plotTask=False):
         ax.label_outer()
 
 
-    if plotTask == True:
+    if type(task) is pd.DataFrame:
         # Connecting to database
-        print("Connecting to CnLook Database...")
-        conn = connect_db("127.0.0.1", "CnLook_DB")
+        # print("Connecting to CnLook Database...")
+        # conn = connect_db("127.0.0.1", "cnlook_")
 
-        task = getTask_ByRecordingId(conn, record[0])
-        taskPositions = getTaskPositions(task, record[1]['timestamp'].array)
 
-        axs[0, 0].plot(record[1]['timestamp'].array, [pos[0] for pos in taskPositions], color='#09f919', linewidth=4, zorder=0)
-        axs[0, 1].plot(record[1]['timestamp'].array, [pos[0] for pos in taskPositions], color='#09f919', linewidth=4, zorder=0)
-        axs[1, 0].plot(record[1]['timestamp'].array, [pos[1] for pos in taskPositions], color='#09f919', linewidth=4, zorder=0)
-        axs[1, 1].plot(record[1]['timestamp'].array, [pos[1] for pos in taskPositions], color='#09f919', linewidth=4, zorder=0)
+        taskPositions = getTaskPositions(task, timestamps)
 
-        print(task)
+        # axs[0].plot(timestamps[0:len(taskPositions)], [pos[0] for pos in taskPositions], color='#09f919', linewidth=7, zorder=0, linestyle='None', markersize=10.0)
+        axs[0].plot(timestamps[0:len(taskPositions)], [pos[0] for pos in taskPositions], color='#09f919', zorder=0, linestyle='None', marker='|', ms=10)
+        axs[1].plot(timestamps[0:len(taskPositions)], [1 - pos[1] for pos in taskPositions], color='#09f919', zorder=0, linestyle='None', marker='|', ms=10) #inverting y values
+        # axs[1, 0].plot(timestamps[0:len(taskPositions)], [pos[1] for pos in taskPositions], color='#09f919', linewidth=4, zorder=0)
+        # axs[1, 1].plot(timestamps[0:len(taskPositions)], [pos[1] for pos in taskPositions], color='#09f919', linewidth=4, zorder=0)
+
+        # print(task)
 
 
     plt.show()
 
 #Connecting to database
 print("Connecting to CnLook database...")
-conn = connect_db("127.0.0.1", "CnLook_DB")
+conn = connect_db("127.0.0.1", "cnlook_")
 
 #Reading records
 groupId = "2"
-taskId = "2511"
+taskId = "2515"
 print('Reading records from database: ' + Dict_Groups.get(groupId) + " - TaskId: " + taskId)
 records = list(getRecordings_ByTaskId(conn, groupId, taskId))
+task = getTask_ById(conn, taskId)
 
 #Closing connection to database
 print("Closing connection to CnLook database...")
@@ -60,8 +59,8 @@ conn.close()
 
 
 print('testing...')
-for i in range(10, 20):
-    plot_Record_HV(records[i], plotTask=True)
+for rec in records:
+    plot_Record_HV(rec, task)
 
 
 
