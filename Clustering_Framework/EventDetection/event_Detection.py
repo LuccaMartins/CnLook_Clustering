@@ -22,6 +22,7 @@ def identify_events(record, eye, algorithm, savePlot=None):
     x_deg = np.rad2deg(x)
     y_deg = np.rad2deg(y)
 
+
     if algorithm == 'I-VT':
         #TODO:
         # It may not be a good idea to use different velocity thresholds for each record. I'll consider discussing
@@ -76,7 +77,7 @@ def getMovementsPositions(record, eye, movements_ranges):
         for idxs_range in movements_ranges[type_of_movement]:
             for i in range(idxs_range[0], idxs_range[1] + 1):
                 current_movement.append((record[1][f'{eye}_x'].values[i],
-                                        record[1][f'{eye}_x'].values[i]))
+                                        record[1][f'{eye}_y'].values[i]))
             movements_positions[type_of_movement].append({'Range': idxs_range, 'Positions': current_movement})
             current_movement = []
 

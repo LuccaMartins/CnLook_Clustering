@@ -1,0 +1,16 @@
+select * from sample_entity samp 
+join recording_entity rec on rec.recording_id = samp.recording_id
+join screening_entity scr on scr.screening_id = rec.screening_id
+join subject_entity sub on sub.subject_id = scr.subject_id
+join task_entity tsk on tsk.id = rec.task_id
+where rec.recording_id = 2413;
+
+
+-- finding subject's name, task id and parameter_data from recording_id
+select sub.name, tsk.id, tsk.parameter_data from task_entity tsk
+join recording_entity rec on tsk.id = rec.task_id
+join sample_entity samp on rec.recording_id = samp.recording_id
+join screening_entity scr on scr.screening_id = rec.screening_id
+join subject_entity sub on sub.subject_id = scr.subject_id
+where rec.recording_id = 2413
+group by sub.name, tsk.id, tsk.parameter_data
