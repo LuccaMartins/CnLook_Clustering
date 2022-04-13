@@ -28,7 +28,7 @@ def identify_events(record, eye, algorithm, savePlot=None):
         # It may not be a good idea to use different velocity thresholds for each record. I'll consider discussing
         # the best configuration with Qasim and Jadson.
         velocity_threshold = mad_velocity_thresh(x_deg, y_deg, times, th_0=100, return_past_threshs=False)
-        print(f'Velocity threshold: {velocity_threshold}')
+        # print(f'Velocity threshold: {velocity_threshold}')
 
         seg_id, seg_class = classify_velocity(x_deg, y_deg, times, velocity_threshold, return_discrete=False)
 

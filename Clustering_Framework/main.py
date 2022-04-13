@@ -4,7 +4,6 @@ from Database.analysis import *
 from ClusteringMethods.clustering_methods import *
 from utils import *
 
-
 #Connecting to database
 print("Connecting to CnLook Database...")
 conn = connect_db("127.0.0.1", "cnlook_")
@@ -20,6 +19,8 @@ task = getTask_ById(conn, 2515)
 
 #Analyze subset of records:
 Y = analyzeRecords(records)
+
+
 
 #Apply feature engineering and create objects
 X = createFeaturedRecords(task, records)

@@ -1,4 +1,5 @@
 import json
+from scipy.spatial import distance
 
 Dict_Groups = {
     '1': "default group",
@@ -55,17 +56,11 @@ def getTaskPositions(task, timestamps):
 
     return taskPositions
 
+def getDistances_ToTarget(record, taskPositions, eye):
+    recordPositions = list(zip(record[1][f'{eye}_x'].values, record[1][f'{eye}_y'].values))
+
+    distancesToTarget = list(map(distance.euclidean, recordPositions, taskPositions))
+    return distancesToTarget
+
 def getSetOfSizes(recordings):
     return sorted(set([len(x) for x in recordings]))
-
-
-
-
-
-
-
-
-
-
-
-
