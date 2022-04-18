@@ -96,7 +96,7 @@ def features_task_with_fixations(task, records):
             average_dist_figure_fixations = features_avg_dist_figFixations(record, taskPositions, eye)
 
             # identifying movements
-            segment_id, segment_class = identify_events(record, eye, 'I-VT', savePlot="./EventDetection/Plots EventDetection")
+            segment_id, segment_class = identify_events(record, eye, 'I-DT', savePlot="./EventDetection/Plots EventDetection")
             movements = getMovementsInfo(record, eye, segment_id, segment_class)
 
             # SPL - Scan path length
