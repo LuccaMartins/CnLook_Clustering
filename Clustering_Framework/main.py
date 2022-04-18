@@ -17,13 +17,16 @@ records = list(getRecordings_ByTaskId(conn, groupId, taskId))
 print('Reading task...')
 task = getTask_ById(conn, 2515)
 
+print(f'Num of records: {len(records)}')
 #Analyze subset of records:
 Y = analyzeRecords(records)
 
 
 
 #Apply feature engineering and create objects
-X = createFeaturedRecords(task, records)
+featuredRecords = createFeaturedRecords(task, records)
+
+X = shapeFeaturedRecords(featuredRecords)
 
 #Call clustering methods
 # results = startFOSC(X, savePath=f"Task Id {taskId} ")

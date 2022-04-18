@@ -1,9 +1,16 @@
 from dtaidistance import dtw_ndim
 from sklearn import metrics
+import numpy as np
+from scipy.spatial import distance_matrix as euclidian_distance_matrix
+from scipy.cluster.hierarchy import linkage, dendrogram
+
+from Clustering_Framework.ClusteringMethods.FOSC.util.fosc import FOSC
+from Clustering_Framework.ClusteringMethods.FOSC.util.plotting import plotDendrogram, plotPartition
+
 
 def startFOSC(X, savePath=None):
     # Calculating distance matrix
-    mat = generateDistanceMatrix(X, 'dtw')
+    mat = generateDistanceMatrix(X, 'euclidian')
 
     listOfMClSize = [2, 4, 5, 8, 16, 20, 30]
     methodsLinkage = ["single", "average", "ward", "complete", "weighted"]
@@ -23,9 +30,17 @@ def startFOSC(X, savePath=None):
             # validação do algoritmo: silhouette ou AUC Under Curve
             if len(set(partition)) > 1:
                 silhouette = metrics.silhouette_score(mat, partition, metric="precomputed")
-                results.append([m, lm, partition, silhouette])
+                results.append({'MinClusterSize': m,
+                                'Linkage Method': lm,
+                                'Partition': partition,
+                                'Silhouette': silhouette
+                })
             else:
-                results.append([m, lm, partition, -1])
+                results.append({'MinClusterSize': m,
+                                'Linkage Method': lm,
+                                'Partition': partition,
+                                'Silhouette': -1
+                                })
 
             if savePath != None:
                 titlePlot = f"{savePath}, mClSize: {m}\nLinkage Method: {lm}, Num of Objects: {len(X)}"
@@ -39,13 +54,15 @@ def startFOSC(X, savePath=None):
 
 def generateDistanceMatrix(X, metric):
     # drop 'tracking_status'
-    X = [np.array([s[1:] for s in record], dtype=np.double) for record in X]
-
-    # get a sample to count the features (dimensions)
-    n_dimensions = len(X[0][0])
+#     X = [np.array([s[1:] for s in record], dtype=np.double) for record in X]
 
     if metric == 'dtw':
-        print(f"Producing distance matrix with dtw for {len(X)} series of {n_dimensions}-dimensions...")
+        # get a sample to count the features (dimensions) - not working right now
+        n_dimensions = len(X[0][0])
+        # print(f"Producing distance matrix with DTW for {len(X)} series of {n_dimensions}-dimensions...")
         mat = dtw_ndim.distance_matrix_fast(X, n_dimensions)
+    elif metric == 'euclidian':
+        # print(f"Producing distance matrix with Euclidian Distance for {len(X)} series of {1}-dimensions...")
+        mat = euclidian_distance_matrix(X, X)
 
     return mat

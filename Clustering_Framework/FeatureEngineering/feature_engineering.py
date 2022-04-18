@@ -80,70 +80,82 @@ def features_event_duration(movements):
         durations = [range[1] - range[0] + 1 for range in ranges]
         average = scipy.mean(durations)
 
+        if not durations:
+            print('PROBLEM: List of movements is empty for this record...')
+            return average, 0, 0
+
         return average, max(durations), min(durations)
 
 def features_task_with_fixations(task, records):
     features = []
     featured_records = []
     for record in records:
+        print(f'\n-----> Extracting features from record {record[0]}')
         # records have different sizes...
         taskPositions = getTaskPositions(task, normalizeTimestamps(record[1]['timestamp'].array))
+        shouldAddRecord = True
         for eye in 'left', 'right':
             distancesToTarget = getDistances_ToTarget(record, taskPositions, eye)
             # ADT
             average_dist_target = scipy.mean(distancesToTarget)
-            # ADpF - Average Distance per figure Fixation
+            # ADpFF - Average Distance per figure Fixation
             average_dist_figure_fixations = features_avg_dist_figFixations(record, taskPositions, eye)
 
             # identifying movements
-            segment_id, segment_class = identify_events(record, eye, 'I-DT', savePlot="./EventDetection/Plots EventDetection")
+            segment_id, segment_class = identify_events(record, eye, 'I-VT', savePlot="./EventDetection/Plots EventDetection")
             movements = getMovementsInfo(record, eye, segment_id, segment_class)
 
-            # SPL - Scan path length
-            scan_path_length = features_path_length(record, eye)
+            if movements['Fixation'] and movements['Saccade'] and shouldAddRecord:
+                shouldAddRecord = True
+                # SPL - Scan path length
+                scan_path_length = features_path_length(record, eye)
 
-            # FC
-            fixations_count = len(movements['Fixation'])
-            # AFD, FDMa, FDMi
-            average_fix_dur, max_fix_dur, min_fix_dur = features_event_duration(movements['Fixation'])
-            # ASL
-            average_sac_lat = features_event_latency(movements['Saccade'])
-            # SC
-            saccades_count = len(movements['Saccade'])
-            # ASD, SDMa, SDMi
-            average_sac_dur, max_sac_dur, min_sac_dur = features_event_duration(movements['Saccade'])
+                # FC
+                fixations_count = len(movements['Fixation'])
+                # AFD, FDMa, FDMi
+                average_fix_dur, max_fix_dur, min_fix_dur = features_event_duration(movements['Fixation'])
+                # ASL
+                average_sac_lat = features_event_latency(movements['Saccade'])
+                # SC
+                saccades_count = len(movements['Saccade'])
+                # ASD, SDMa, SDMi
+                average_sac_dur, max_sac_dur, min_sac_dur = features_event_duration(movements['Saccade'])
 
-            # TODO: not sure about dispersion...
-            # FDT, FDA
-            # total_fix_disp, average_fix_disp = features_event_dispersion(movements['Fixation'])
-            # SDT, SDA
-            # total_sac_disp, average_sac_disp = features_event_dispersion(movements['Saccade'])
+                # TODO: not sure about dispersion...
+                # FDT, FDA
+                # total_fix_disp, average_fix_disp = features_event_dispersion(movements['Fixation'])
+                # SDT, SDA
+                # total_sac_disp, average_sac_disp = features_event_dispersion(movements['Saccade'])
 
-            # TODO: some issues with these ones.. because they need the previous and next movements positions too...
-            # # SAT, ASA, SAMa, SAMi
-            # sum_sac_amp, average_sac_amp, max_sac_amp, min_sac_amp = features_event_amplitude(movements['Saccades'], movements['Fixations'])
-            # # SSV, SVMa, SVMi
-            # sum_sac_vel, max_sac_vel, min_sac_vel = features_event_velocity(movements['Saccade'])
+                # TODO: some issues with these ones.. because they need the previous and next movements positions too...
+                # # SAT, ASA, SAMa, SAMi
+                # sum_sac_amp, average_sac_amp, max_sac_amp, min_sac_amp = features_event_amplitude(movements['Saccades'], movements['Fixations'])
+                # # SSV, SVMa, SVMi
+                # sum_sac_vel, max_sac_vel, min_sac_vel = features_event_velocity(movements['Saccade'])
 
-            features.append({f'SPL_{eye}': scan_path_length,
-                             f'FC_{eye}': fixations_count,
-                             f'AFD_{eye}': average_fix_dur,
-                             f'FDMa_{eye}': max_fix_dur,
-                             f'FDMi_{eye}': min_fix_dur,
-                             # f'FDT_{eye}': total_fix_disp,
-                             # f'FDA_{eye}': average_fix_disp,
-                             f'SC_{eye}': saccades_count,
-                             f'ASD_{eye}': average_sac_dur,
-                             f'SDMa_{eye}': max_sac_dur,
-                             f'SDMi_{eye}': min_sac_dur,
-                             # f'SDT_{eye}': total_sac_disp,
-                             # f'SDA_{eye}': average_sac_disp,
-                             f'ASL_{eye}': average_sac_lat,
-                             f'ADT_{eye}': average_dist_target,
-                             f'ADpFF{eye}': average_dist_figure_fixations})
-
-        featured_records.append({'Record id': record[0],
-                                 'Features': features})
+                features.append({f'SPL_{eye}': scan_path_length,
+                                 f'FC_{eye}': fixations_count,
+                                 f'AFD_{eye}': average_fix_dur,
+                                 f'FDMa_{eye}': max_fix_dur,
+                                 f'FDMi_{eye}': min_fix_dur,
+                                 # f'FDT_{eye}': total_fix_disp,
+                                 # f'FDA_{eye}': average_fix_disp,
+                                 f'SC_{eye}': saccades_count,
+                                 f'ASD_{eye}': average_sac_dur,
+                                 f'SDMa_{eye}': max_sac_dur,
+                                 f'SDMi_{eye}': min_sac_dur,
+                                 # f'SDT_{eye}': total_sac_disp,
+                                 # f'SDA_{eye}': average_sac_disp,
+                                 f'ASL_{eye}': average_sac_lat,
+                                 f'ADT_{eye}': average_dist_target,
+                                 # f'ADpFF_{eye}': average_dist_figure_fixations,
+                                 })
+            else:
+                print('Empty list of movements for this record...')
+                shouldAddRecord = False
+        if shouldAddRecord:
+            featured_records.append({'Record id': record[0],
+                                     'Features': features})
         features = []
 
 

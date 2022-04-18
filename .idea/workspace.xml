@@ -5,19 +5,289 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2355.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2355.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2369.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2369.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2373.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2373.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2383.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2383.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2393.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2393.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2403.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2403.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2413.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2413.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2423.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2423.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2433.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2433.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2355.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2369.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2373.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2383.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2393.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2403.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2413.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2423.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, left, Record 2433.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2355.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2369.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2373.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2383.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2393.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2403.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2413.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2423.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-DT, right, Record 2433.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2355.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2369.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2373.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2383.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2393.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2403.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2413.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2423.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2433.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2443.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2453.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2463.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2473.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2483.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2493.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2503.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2513.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2523.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2533.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2543.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2552.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2562.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2572.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2582.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2592.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2602.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2612.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2622.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2632.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2642.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2652.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2662.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2672.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2682.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2692.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2702.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2712.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2727.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2737.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2747.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2757.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2767.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2777.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2787.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2797.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2807.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2817.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2827.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2837.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2847.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2857.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2867.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2878.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2887.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2897.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2907.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2917.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2927.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2937.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2947.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2957.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2967.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2977.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2987.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 2997.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3016.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3056.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3066.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3076.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3086.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3096.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3126.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3146.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3156.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3166.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3176.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3186.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3196.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3206.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3216.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3226.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3246.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3266.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3276.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3286.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3296.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3306.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3316.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3326.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3336.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3346.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3356.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3366.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3376.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3386.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3396.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3406.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3416.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3426.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3436.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3446.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3456.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3466.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3476.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3486.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3496.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3516.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3526.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3536.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3546.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3556.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3566.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3576.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3586.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3596.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3606.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3848.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3872.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3873.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3878.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3893.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3904.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3907.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3916.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3927.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3929.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3962.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3963.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3967.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 3976.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4022.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4067.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4080.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4121.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4122.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4129.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4142.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4151.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4171.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4183.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4187.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4199.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4216.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4221.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4225.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4232.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4246.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4296.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4297.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4322.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4331.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4333.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4334.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4345.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4347.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4352.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4366.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4379.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4380.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4414.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4421.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4428.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4448.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4450.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4457.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4458.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4459.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4460.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4469.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4474.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4523.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4533.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4563.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4565.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4569.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4570.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4571.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4578.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4594.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4595.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4610.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4614.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4619.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4658.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4659.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4660.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4669.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4670.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4688.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4699.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4701.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4704.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4739.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4758.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4763.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4764.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4772.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4775.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4784.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4811.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4812.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4816.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4833.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4834.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4842.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4852.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4867.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4868.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4887.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4899.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4910.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4923.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4924.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4925.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4934.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4935.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4954.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4963.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4976.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4977.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 4994.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5063.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5071.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5125.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/I-VT, Record 5138.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/event_Detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/event_Detection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/analysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +514,7 @@
       <workItem from="1649640098066" duration="1171000" />
       <workItem from="1649783140182" duration="14739000" />
       <workItem from="1649868928119" duration="14384000" />
-      <workItem from="1650296721482" duration="6297000" />
+      <workItem from="1650296721482" duration="19943000" />
     </task>
     <servers />
   </component>
@@ -271,39 +541,40 @@
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/main.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="180" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/cateyes/classification.py</url>
-          <line>107</line>
-          <option name="timeStamp" value="194" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/nslr_hmm/nslr_hmm.py</url>
-          <line>328</line>
-          <option name="timeStamp" value="197" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/cateyes/classification.py</url>
-          <line>103</line>
-          <option name="timeStamp" value="199" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Database/visualization.py</url>
           <line>34</line>
           <option name="timeStamp" value="311" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="312" />
+          <url>file://$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="345" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Clustering_Framework/utils.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="348" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <condition expression="record['Record id'] == 2747" language="Python" />
+          <url>file://$PROJECT_DIR$/Clustering_Framework/utils.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="349" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="350" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="351" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py</url>
-          <line>149</line>
-          <option name="timeStamp" value="321" />
+          <line>160</line>
+          <option name="timeStamp" value="352" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -322,7 +593,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1650302835605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1650316903048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1649879727006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Database" />
   </component>
 </project>

@@ -64,3 +64,15 @@ def getDistances_ToTarget(record, taskPositions, eye):
 
 def getSetOfSizes(recordings):
     return sorted(set([len(x) for x in recordings]))
+
+def shapeFeaturedRecords(featuredRecords):
+    X = []
+    for record in featuredRecords:
+        print(f'Shaping featured record {record["Record id"]}')
+        if len(record['Features']) == 2:
+            X.append(list(record['Features'][0].values()) +
+                     list(record['Features'][1].values()))
+        else:
+            print("PROBLEM: This record doesn't have features for both eyes.")
+
+    return X;

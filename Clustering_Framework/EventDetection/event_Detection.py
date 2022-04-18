@@ -8,15 +8,12 @@ import numpy as np
 from Clustering_Framework.utils import *
 
 def identify_events(record, eye, algorithm, savePlot=None):
-    #TODO: the following message appeared in one of the executions...
-    # UserWarning:
-    # Irregular sampling rate detected. This can lead to impaired performance with this classifier. Consider resampling your data to a fixed sampling rate. Setting sampling rate to average sample difference.
-    #   warnings.warn(WARN_SFREQ)
-
+    print(f'Identifying events with {algorithm} for record {record[0]} on {eye} eye gaze')
 
     x = record[1][f'{eye}_x']
     y = record[1][f'{eye}_y']
-    times = normalizeTimestamps(record[1]['timestamp'].array)
+    times = sfreq_to_times(x, 90)
+    # times = normalizeTimestamps(record[1]['timestamp'].array)
 
     # convert the our radian data to degrees
     x_deg = np.rad2deg(x)
@@ -32,30 +29,34 @@ def identify_events(record, eye, algorithm, savePlot=None):
         seg_id, seg_class = classify_velocity(x_deg, y_deg, times, velocity_threshold, return_discrete=False)
 
     elif algorithm == "I-DT":
-        # seg_id, seg_class = classify_dispersion(x_deg, y_deg, times, 0.5, 50, return_discrete=False)
-        seg_id, seg_class = classify_dispersion(x_deg, y_deg, times, 0.5, 50, return_discrete=False)
+        #TODO:
+        # Can't find the right threshold and window_length for I-DT
+        seg_id, seg_class = classify_dispersion(x_deg, y_deg, times, 0.1, 50, return_discrete=False)
 
     elif algorithm == 'REMODNAV':
+        #TODO:
+        # Couldn't make it work yet
         seg_id, seg_class = classify_remodnav(x_deg, y_deg, times, px2deg=1., return_discrete=False,
-                          return_orig_output=False, simple_output=False, preproc_kwargs=dict(savgol_length=1.5))
+                          return_orig_output=False, simple_output=False, preproc_kwargs=dict(savgol_length=500))
 
     elif algorithm == 'NSLR-HMM':
+        # times = sfreq_to_times(x, 90)
         seg_id, seg_class = classify_nslr_hmm(x_deg, y_deg, times, optimize_noise=False)
 
-
-    if savePlot != None:
-        # convert continuous ids and descriptions to discrete timepoints and descriptions
-        (seg_time, seg_class) = continuous_to_discrete(times, seg_id, seg_class)
-
-        # plot the classification results
-        fig, axes = plt.subplots(2, figsize=(15, 6), sharex=True)
-        plot_segmentation(x_deg, np.array(times), segments=(seg_time, seg_class), events=None, ax=axes[0])
-        plot_segmentation(y_deg, np.array(times), segments=(seg_time, seg_class), events=None, ax=axes[1], show_legend=True)
-
-        print(f'Saving plot of EventDetection for Record id: {record[0]}, {eye} eye')
-        #plt.show()
-        plt.savefig(f'{savePlot}/{algorithm}, {eye}, Record {record[0]}')
-        plt.close(fig)
+    #NOT SAVING PLOTS FOR FASTER PERFORMANCE
+    # if savePlot != None:
+    #     # convert continuous ids and descriptions to discrete timepoints and descriptions
+    #     (seg_time, seg_class) = continuous_to_discrete(times, seg_id, seg_class)
+    #
+    #     # plot the classification results
+    #     fig, axes = plt.subplots(2, figsize=(15, 6), sharex=True)
+    #     plot_segmentation(x_deg, times, segments=(seg_time, seg_class), events=None, ax=axes[0])
+    #     plot_segmentation(y_deg, times, segments=(seg_time, seg_class), events=None, ax=axes[1], show_legend=True)
+    #
+    #     print(f'Saving plot of EventDetection for Record id: {record[0]}, {eye} eye')
+    #     #plt.show()
+    #     plt.savefig(f'{savePlot}/{algorithm}, {eye}, Record {record[0]}')
+    #     plt.close(fig)
 
     return seg_id, seg_class
 

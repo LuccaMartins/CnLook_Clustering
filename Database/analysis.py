@@ -195,7 +195,6 @@ def getRecordings_ByTaskId(conn, groupId, taskId):
           JOIN group_entity AS grp ON (grp.id = subj.group_id)
         WHERE rec.task_id = %s AND grp.id = %s
         ORDER BY recording_id, timestamp 
-        LIMIT 20000
         ;
         """,
         conn,
