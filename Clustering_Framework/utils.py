@@ -15,7 +15,6 @@ Dict_Groups = {
     '12': "DAT"
 }
 
-
 def normalizeTimestamps(timestamps):
     normalized = [0]
     for i in range(1, len(timestamps)):

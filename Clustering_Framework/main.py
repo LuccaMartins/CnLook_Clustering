@@ -21,10 +21,10 @@ print(f'Num of records: {len(records)}')
 #Analyze subset of records:
 Y = analyzeRecords(records)
 
-
+features = ['ADpFF']
 
 #Apply feature engineering and create objects
-featuredRecords = createFeaturedRecords(task, records)
+featuredRecords = createFeaturedRecords(task, records[0:10], features)
 
 X = shapeFeaturedRecords(featuredRecords)
 

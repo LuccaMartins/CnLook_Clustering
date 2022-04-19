@@ -5,23 +5,25 @@ from scipy.spatial import distance
 import pandas as pd
 import scipy
 
-class Fixation:
-  def __init__(self, idx_begin, idx_end, positions):
-    self.begin = idx_begin
-    self.end = idx_end
-    self.positions = positions
 
-  def myfunc(self):
-    print("Hello my name is " + self.name)
+all_features = [  # Check document 'Features to Extract.xlsx' in './FeatureEngineering' for explanation
+    #from Fixations
+    'FC', 'AFD', 'FDMax', 'FDMin', 'FDT', 'FDA',
+    #from Saccades
+    'SC', 'ASC',
+    'SFC', 'SDMa', 'SDMi', 'SDT', 'SDA', 'SAT', 'ASA', 'SAMa', 'SAMi', 'SSV', 'SVMa', 'SVMi', 'ASL',
+    #from Blinks
+    'BC' , 'BFC', 'BDT', 'BDA', 'BDMa', 'BDMi',
+    #Others
+    'SPL', 'ADT', 'ADpFF'
+]
 
-
-# See document 'Features to Extract' in './FeatureEngineering'
-def createFeaturedRecords(task, records):
+def createFeaturedRecords(task, records, features):
     print('Starting feature engineering...')
     parameter_data = json.loads(task.parameter_data.values[0])
 
     if parameter_data['FixationsPerLine'] > 0:
-        featured_records = features_task_with_fixations(task, records)
+        featured_records = features_task_with_fixations(task, records, features)
     else:
         print('Features not ready for smooth pursuit tasks...')
 
@@ -44,7 +46,11 @@ def features_event_latency(movements):
     for i in range(1, len(event_beginnings)):
         latencies.append(event_beginnings[i] - event_endings[i-1] - 1)
 
-    return scipy.mean(latencies)
+    average_latency = scipy.mean(latencies)
+    # if pd.isna(average_latency):
+    #     average_latency = 0
+
+    return average_latency
 
 def features_event_velocity(movements):
     # TODO: needs the last point of the last movement and the first point of the next movement
@@ -86,7 +92,7 @@ def features_event_duration(movements):
 
         return average, max(durations), min(durations)
 
-def features_task_with_fixations(task, records):
+def features_task_with_fixations(task, records, features):
     features = []
     featured_records = []
     for record in records:
@@ -95,6 +101,7 @@ def features_task_with_fixations(task, records):
         taskPositions = getTaskPositions(task, normalizeTimestamps(record[1]['timestamp'].array))
         shouldAddRecord = True
         for eye in 'left', 'right':
+
             distancesToTarget = getDistances_ToTarget(record, taskPositions, eye)
             # ADT
             average_dist_target = scipy.mean(distancesToTarget)
@@ -105,7 +112,7 @@ def features_task_with_fixations(task, records):
             segment_id, segment_class = identify_events(record, eye, 'I-VT', savePlot="./EventDetection/Plots EventDetection")
             movements = getMovementsInfo(record, eye, segment_id, segment_class)
 
-            if movements['Fixation'] and movements['Saccade'] and shouldAddRecord:
+            if len(movements['Fixation']) > 1 and len(movements['Saccade']) > 1 and shouldAddRecord:
                 shouldAddRecord = True
                 # SPL - Scan path length
                 scan_path_length = features_path_length(record, eye)
