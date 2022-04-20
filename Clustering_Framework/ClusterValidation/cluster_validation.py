@@ -1,3 +1,5 @@
+#TODO: add Silhouette and AUCC as validations
+
 def printBestSilhouettes(results):
     allSilhouettes_values = [col[3] for col in results]
     maxSilhouette = max(allSilhouettes_values)

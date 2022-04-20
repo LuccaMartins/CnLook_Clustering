@@ -75,3 +75,17 @@ def shapeFeaturedRecords(featuredRecords):
             print("PROBLEM: This record doesn't have features for both eyes.")
 
     return X;
+
+def shapeFeaturedRecords_ADpFF(featuredRecords, eye='both'):
+    X = []
+    if eye == 'both':
+        for rec in [list(x['Features'][0].values())[0] + list(x['Features'][1].values())[0] for x in [rec for rec in featuredRecords]]:
+            X.append(rec)
+    elif eye == 'left':
+        for rec in [list(x['Features'][0].values())[0] for x in [rec for rec in featuredRecords]]:
+            X.append(rec)
+    elif eye == 'right':
+        for rec in [list(x['Features'][1].values())[0] for x in [rec for rec in featuredRecords]]:
+            X.append(rec)
+    return X
+

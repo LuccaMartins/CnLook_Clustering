@@ -178,28 +178,47 @@ def read_task_data(conn, group, taskname):
     df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
     return df
 
-def getRecordings_ByTaskId(conn, groupId, taskId):
+def getRecordings_ByTaskId(conn, taskId, groupId=-1):
     """Read the data from the database.
 
     Returns a pandas dataframe indexed by recording_id with columns `timestamp`,
     `left_x`, `left_y`, `right_x`, `right_y`, `left_pupil_diameter_mm`, `right_pupil_diameter_mm`.
     """
-    df = pd.read_sql_query(  #
-        """
-        SELECT
-          recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
-        FROM sample_entity AS sample
-          JOIN recording_entity AS rec USING (recording_id)
-          JOIN screening_entity AS scr USING (screening_id)
-          JOIN subject_entity AS subj USING (subject_id)
-          JOIN group_entity AS grp ON (grp.id = subj.group_id)
-        WHERE rec.task_id = %s AND grp.id = %s
-        ORDER BY recording_id, timestamp 
-        ;
-        """,
-        conn,
-        index_col="recording_id",
-        params=[taskId, groupId])
+    if groupId != -1:
+        df = pd.read_sql_query(  #
+            """
+            SELECT
+              recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
+            FROM sample_entity AS sample
+              JOIN recording_entity AS rec USING (recording_id)
+              JOIN screening_entity AS scr USING (screening_id)
+              JOIN subject_entity AS subj USING (subject_id)
+              JOIN group_entity AS grp ON (grp.id = subj.group_id)
+            WHERE rec.task_id = %s AND grp.id = %s
+            ORDER BY recording_id, timestamp 
+            ;
+            """,
+            conn,
+            index_col="recording_id",
+            params=[taskId, groupId])
+    else:
+        df = pd.read_sql_query(  #
+            """
+            SELECT
+              recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
+            FROM sample_entity AS sample
+              JOIN recording_entity AS rec USING (recording_id)
+              JOIN screening_entity AS scr USING (screening_id)
+              JOIN subject_entity AS subj USING (subject_id)
+              JOIN group_entity AS grp ON (grp.id = subj.group_id)
+            WHERE rec.task_id = %s
+            ORDER BY recording_id, timestamp 
+            ;
+            """,
+            conn,
+            index_col="recording_id",
+            params=[taskId])
+
     assert df.shape[0] != 0, \
         "no recordings found in database for task %s" % taskId
     for eye in 'left', 'right':

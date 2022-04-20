@@ -7,6 +7,7 @@ from scipy.cluster.hierarchy import linkage, dendrogram
 from Clustering_Framework.ClusteringMethods.FOSC.util.fosc import FOSC
 from Clustering_Framework.ClusteringMethods.FOSC.util.plotting import plotDendrogram, plotPartition
 
+#TODO: test with FOSC and K-means (with Elbow method)
 
 def startFOSC(X, savePath=None):
     # Calculating distance matrix
