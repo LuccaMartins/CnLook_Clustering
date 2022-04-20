@@ -11,9 +11,9 @@ all_features = [  # Check document 'Features to Extract.xlsx' in './FeatureEngin
     'FC', 'AFD', 'FDMax', 'FDMin', 'FDT', 'FDA',
     #from Saccades
     'SC', 'ASC',
-    'SFC', 'SDMa', 'SDMi', 'SDT', 'SDA', 'SAT', 'ASA', 'SAMa', 'SAMi', 'SSV', 'SVMa', 'SVMi', 'ASL',
+    'SFC', 'SDMa', 'SDMi', 'SDT', 'SDA', 'SAT', 'ASA', 'SAMa', 'SAMi', 'SSV', 'SVMax', 'SVMin', 'ASL',
     #from Blinks
-    'BC' , 'BFC', 'BDT', 'BDA', 'BDMa', 'BDMi',
+    'BC' , 'BFC', 'BDT', 'BDA', 'BDMax', 'BDMin',
     #Others
     'SPL', 'ADT', 'ADpFF'
 ]
@@ -142,22 +142,23 @@ def features_task_with_fixations(task, records, features):
                 # # SSV, SVMax, SVMin
                 # sum_sac_vel, max_sac_vel, min_sac_vel = features_event_velocity(movements['Saccade'])
 
-                features.append({f'SPL_{eye}': scan_path_length,
+                features.append({
+                                 f'SPL_{eye}': scan_path_length,
                                  f'FC_{eye}': fixations_count,
                                  f'AFD_{eye}': average_fix_dur,
-                                 f'FDMa_{eye}': max_fix_dur,
-                                 f'FDMi_{eye}': min_fix_dur,
+                                 f'FDMax_{eye}': max_fix_dur,
+                                 f'FDMin_{eye}': min_fix_dur,
                                  # f'FDT_{eye}': total_fix_disp,
                                  # f'FDA_{eye}': average_fix_disp,
                                  f'SC_{eye}': saccades_count,
                                  f'ASD_{eye}': average_sac_dur,
-                                 f'SDMa_{eye}': max_sac_dur,
-                                 f'SDMi_{eye}': min_sac_dur,
+                                 f'SDMax_{eye}': max_sac_dur,
+                                 f'SDMin_{eye}': min_sac_dur,
                                  # f'SDT_{eye}': total_sac_disp,
                                  # f'SDA_{eye}': average_sac_disp,
                                  f'ASL_{eye}': average_sac_lat,
                                  f'ADT_{eye}': average_dist_target,
-                                 # f'ADpFF_{eye}': average_dist_figure_fixations,
+                                f'ADpFF_{eye}': average_dist_figure_fixations,
                                  })
             else:
                 print('Empty list of movements for this record...')
