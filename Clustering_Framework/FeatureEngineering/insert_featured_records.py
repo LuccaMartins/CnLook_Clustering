@@ -26,6 +26,6 @@ features = ['ADpFF-----']
 #Apply feature engineering and create objects
 featuredRecords = createFeaturedRecords(task, good_records, features)
 
-insert_records(conn, featuredRecords)
+insert_featuredRecords(conn, featuredRecords)
 
 print('end.........')

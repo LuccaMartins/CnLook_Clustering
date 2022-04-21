@@ -35,6 +35,22 @@ def read_entity(conn, entity):
     return df
 
 
+def get_info_recording(conn, recording_id):
+    cursor = conn.cursor()
+    cursor.execute(f"""
+    select rec.task_id, sub.subject_id, sub.group_id, scr.screening_id 
+    from recording_entity rec 
+        join screening_entity scr on scr.screening_id = rec.screening_id  
+        join subject_entity sub on sub.subject_id = scr.subject_id
+        where recording_id = {recording_id}
+    """)
+    taskId, subjectId, groupId, screeningId = cursor.fetchall()[0]
+    cursor.close()
+    return {'taskId': taskId,
+            'subjectId': subjectId,
+            'groupId': groupId,
+            'screeningId': screeningId}
+
 def get_subject_names_for_recordings(conn):
     """Get subject names for all recording ids.
 
