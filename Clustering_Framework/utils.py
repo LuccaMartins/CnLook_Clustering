@@ -64,28 +64,68 @@ def getDistances_ToTarget(record, taskPositions, eye):
 def getSetOfSizes(recordings):
     return sorted(set([len(x) for x in recordings]))
 
-def shapeFeaturedRecords(featuredRecords):
+def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
     X = []
-    for record in featuredRecords:
-        print(f'Shaping featured record {record["Record id"]}')
-        if len(record['Features']) == 2:
-            X.append(list(record['Features'][0].values()) +
-                     list(record['Features'][1].values()))
-        else:
-            print("PROBLEM: This record doesn't have features for both eyes.")
+
+    #IMPORTANT: ADpFF can't be used with other features.
+    if features_to_use.__contains__('ADpFF'):
+        if eye == 'both':
+            print('Shaping records for both eyes...')
+            record_features = []
+            for record in list(featuredRecords['features'].values):
+                for avrg_dist in record[0][f'ADpFF_left']:
+                    record_features.append(avrg_dist)
+                for avrg_dist in record[1][f'ADpFF_right']:
+                    record_features.append(avrg_dist)
+                X.append(record_features)
+                record_features = []
+
+        elif eye == 'left':
+            print('Shaping records for left eye...')
+            record_features = []
+            for record in list(featuredRecords['features'].values):
+                for avrg_dist in record[0][f'ADpFF_left']:
+                    record_features.append(avrg_dist)
+                X.append(record_features)
+                record_features = []
+
+        elif eye == 'right':
+            print('Shaping records for right eye...')
+            record_features = []
+            for record in list(featuredRecords['features'].values):
+                for avrg_dist in record[1][f'ADpFF_right']:
+                    record_features.append(avrg_dist)
+                X.append(record_features)
+                record_features = []
+    else:
+        if eye == 'both':
+            print('Shaping records for both eyes...')
+            record_features = []
+            for record in list(featuredRecords['features'].values):
+                for feature in features_to_use:
+                    record_features.append(record[0][f'{feature}_left'])
+                    record_features.append(record[1][f'{feature}_right'])
+                X.append(record_features)
+                record_features = []
+
+        elif eye == 'left':
+            print('Shaping records for left eye...')
+            record_features = []
+            for record in list(featuredRecords['features'].values):
+                for feature in features_to_use:
+                    record_features.append(record[0][f'{feature}_left'])
+                X.append(record_features)
+                record_features = []
+
+        elif eye == 'right':
+            print('Shaping records for right eye...')
+            record_features = []
+            for record in list(featuredRecords['features'].values):
+                for feature in features_to_use:
+                    record_features.append(record[1][f'{feature}_right'])
+                X.append(record_features)
+                record_features = []
+
 
     return X;
-
-def shapeFeaturedRecords_ADpFF(featuredRecords, eye='both'):
-    X = []
-    if eye == 'both':
-        for rec in [list(x['Features'][0].values())[0] + list(x['Features'][1].values())[0] for x in [rec for rec in featuredRecords]]:
-            X.append(rec)
-    elif eye == 'left':
-        for rec in [list(x['Features'][0].values())[0] for x in [rec for rec in featuredRecords]]:
-            X.append(rec)
-    elif eye == 'right':
-        for rec in [list(x['Features'][1].values())[0] for x in [rec for rec in featuredRecords]]:
-            X.append(rec)
-    return X
 

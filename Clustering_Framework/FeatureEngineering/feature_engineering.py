@@ -18,15 +18,12 @@ all_features = [  # Check document 'Features to Extract.xlsx' in './FeatureEngin
     'SPL', 'ADT', 'ADpFF'
 ]
 
-def createFeaturedRecords(task, records, features):
+def createFeaturedRecords(task, records):
     print('Starting feature engineering...')
     parameter_data = json.loads(task.parameter_data.values[0])
 
     if parameter_data['FixationsPerLine'] > 0:
-        if features.__contains__('ADpFF') and len(features) == 1:
-            featured_records = features_task_with_fixations_ADpFF(task, records)
-        else:
-            featured_records = features_task_with_fixations(task, records, features)
+        featured_records = features_task_with_fixations(task, records)
     else:
         print('Features not ready for smooth pursuit tasks...')
 
@@ -95,7 +92,7 @@ def features_event_duration(movements):
 
         return average, max(durations), min(durations)
 
-def features_task_with_fixations(task, records, features):
+def features_task_with_fixations(task, records):
     features = []
     featured_records = []
     for record in records:
@@ -105,29 +102,12 @@ def features_task_with_fixations(task, records, features):
         shouldAddRecord = True
         for eye in 'left', 'right':
             distancesToTarget = getDistances_ToTarget(record, taskPositions, eye)
-            # ADT
-            average_dist_target = scipy.mean(distancesToTarget)
-            # ADpFF - Average Distance per figure Fixation
-            average_dist_figure_fixations = features_avg_dist_figFixations(record, taskPositions, eye)
-            # SPL - Scan path length
-            scan_path_length = features_path_length(record, eye)
-            # identifying movements
             segment_id, segment_class = identify_events(record, eye, 'I-VT', savePlot="./EventDetection/Plots EventDetection")
             movements = getMovementsInfo(record, eye, segment_id, segment_class)
 
             if len(movements['Fixation']) > 1 and len(movements['Saccade']) > 1 and shouldAddRecord:
-                shouldAddRecord = True
-
-
-                # FC
-                fixations_count = len(movements['Fixation'])
-                # AFD, FDMax, FDMin
+                shouldAddRecord = True #flag used to check quality of movement identification on both eyes
                 average_fix_dur, max_fix_dur, min_fix_dur = features_event_duration(movements['Fixation'])
-                # ASL
-                average_sac_lat = features_event_latency(movements['Saccade'])
-                # SC
-                saccades_count = len(movements['Saccade'])
-                # ASD, SDMax, SDMin
                 average_sac_dur, max_sac_dur, min_sac_dur = features_event_duration(movements['Saccade'])
 
                 # TODO: not sure about dispersion...
@@ -143,22 +123,22 @@ def features_task_with_fixations(task, records, features):
                 # sum_sac_vel, max_sac_vel, min_sac_vel = features_event_velocity(movements['Saccade'])
 
                 features.append({
-                                 f'SPL_{eye}': scan_path_length,
-                                 f'FC_{eye}': fixations_count,
+                                 f'SPL_{eye}': features_path_length(record, eye),
+                                 f'FC_{eye}': len(movements['Fixation']),
                                  f'AFD_{eye}': average_fix_dur,
                                  f'FDMax_{eye}': max_fix_dur,
                                  f'FDMin_{eye}': min_fix_dur,
                                  # f'FDT_{eye}': total_fix_disp,
                                  # f'FDA_{eye}': average_fix_disp,
-                                 f'SC_{eye}': saccades_count,
+                                 f'SC_{eye}': len(movements['Saccade']),
                                  f'ASD_{eye}': average_sac_dur,
                                  f'SDMax_{eye}': max_sac_dur,
                                  f'SDMin_{eye}': min_sac_dur,
                                  # f'SDT_{eye}': total_sac_disp,
                                  # f'SDA_{eye}': average_sac_disp,
-                                 f'ASL_{eye}': average_sac_lat,
-                                 f'ADT_{eye}': average_dist_target,
-                                f'ADpFF_{eye}': average_dist_figure_fixations,
+                                 f'ASL_{eye}': features_event_latency(movements['Saccade']),
+                                 f'ADT_{eye}': scipy.mean(distancesToTarget),
+                                 f'ADpFF_{eye}': features_avg_dist_figFixations(record, taskPositions, eye),
                                  })
             else:
                 print('Empty list of movements for this record...')
@@ -171,28 +151,6 @@ def features_task_with_fixations(task, records, features):
 
     return featured_records
 
-
-def features_task_with_fixations_ADpFF(task, records):
-    features = []
-    featured_records = []
-    for record in records:
-        print(f'\n-----> Extracting features from record {record[0]}')
-        # records have different sizes...
-        taskPositions = getTaskPositions(task, normalizeTimestamps(record[1]['timestamp'].array))
-        for eye in 'left', 'right':
-            # ADpFF - Average Distance per figure Fixation
-            average_dist_figure_fixations = features_avg_dist_figFixations(record, taskPositions, eye)
-            # SPL - Scan path length
-            scan_path_length = features_path_length(record, eye)
-            features.append({
-                             f'ADpFF_{eye}': average_dist_figure_fixations,
-                             })
-
-        featured_records.append({'Record id': record[0],
-                                 'Features': features})
-        features = []
-
-    return featured_records
 
 def features_avg_dist_figFixations(record, taskPositions, eye):
     numFixations = len(set([pos[0] for pos in taskPositions])) * \

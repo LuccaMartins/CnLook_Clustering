@@ -1,17 +1,40 @@
 import pandas as pd
 
-def read_featuredRecords(conn, groupId=-1):
-    if groupId != -1:
-        df = pd.read_sql_query(  #
+def read_featuredRecords(conn, task, groupId=-1, subjectId=-1):
+    if subjectId != -1:
+        df = pd.read_sql_query(
             f"""
             SELECT
-                recording_id, subject_id, group_id, fc, afd, fdmax, fdmin, fdt, fda, 
-                sc, asd, sdmax, sdmin, sdt, sda, sat, asa, samax, samin, ssv, svmax, svmin, asl, 
-                bc, bfc, bdt, bda, bdmax, bdmin, 
-                spl, adt, adpff_right, adpff_left
-            FROM featured_records_task_2515
-                """,
+                 recording_id, task_id, group_id, subject_id, features
+            FROM featured_records
+            WHERE subject_id = {subjectId}
+            AND is_valid = TRUE 
+            """,
             conn,
-            index_col="recording_id")
+            index_col="recording_id",
+            )
+    elif groupId != -1 and subjectId == -1:
+        df = pd.read_sql_query(
+            f"""
+            SELECT
+                 recording_id, task_id, group_id, subject_id, features
+            FROM featured_records
+            WHERE group_id = {groupId}
+            AND is_valid = TRUE 
+            """,
+            conn,
+            index_col="recording_id",
+        )
     else:
-        df = pd.read_sql_query()
+        df = pd.read_sql_query(
+            """
+            SELECT
+                 recording_id, task_id, group_id, subject_id, features
+            FROM featured_records
+            WHERE is_valid = TRUE 
+            """,
+            conn,
+            index_col="recording_id",
+        )
+
+    return df

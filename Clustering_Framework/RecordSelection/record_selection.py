@@ -34,26 +34,3 @@ def analyzeRecords(records):
 
     print(f"Size difference in timestamps: ")
     return records
-
-
-#not sure if this function will be useful...
-def selectFeatures(recordings, features):
-    X_features = []
-    for feature in features:
-        X_features.append([np.array(rec[1][feature].values, dtype=np.double) for rec in recordings])
-        # X_features.append(list(map(lambda x: np.array(x[1][feature].values, dtype=np.double), recordings)))
-
-    result = []
-    # for each recording
-    for i in range(0, len(recordings)):
-        # T.append(np.array([T_right_x[i], T_right_y[i], T_left_x, T_left_y]))
-        values = []
-        # for each stamp
-        for j in range(0, len(recordings[i][1])):
-            # values.append(np.array([T_right_x[i][j], T_right_y[i][j], T_left_x[i][j], T_left_y[i][j]]))
-            valuesToAppend = []
-            for feature_values in X_features:
-                valuesToAppend.append(feature_values[i][j])
-            values.append(np.array(valuesToAppend))
-        result.append(np.array(values))
-    return result
