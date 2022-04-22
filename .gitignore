@@ -129,4 +129,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /Clustering_Framework/FeatureEngineering/~$Features to Extract.xlsx
+/Clustering_Framework/FeatureEngineering/$Features to Extract.xlsx
 /~$Counting C&Look DB.xlsx

@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/RecordSelection/record_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/RecordSelection/record_selection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Counting C&amp;Look DB.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Counting C&amp;Look DB.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/analysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +296,8 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1650480218826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1650656012194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$insert_featured_records.coverage" NAME="insert_featured_records Coverage Results" MODIFIED="1650579115525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1649879727006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Database" />
   </component>
 </project>
