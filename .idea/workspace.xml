@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Clustering_Framework/clustering_parameters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/RecordSelection/record_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/RecordSelection/record_selection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/testingCatEyes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/testingCatEyes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/inserting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/inserting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/reading.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/reading.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +96,9 @@
       <module name="CnLook_Clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -246,7 +241,8 @@
       <workItem from="1650296721482" duration="20433000" />
       <workItem from="1650374596131" duration="13588000" />
       <workItem from="1650469967486" duration="19779000" />
-      <workItem from="1650563250464" duration="18808000" />
+      <workItem from="1650563250464" duration="19249000" />
+      <workItem from="1650654137511" duration="3179000" />
     </task>
     <servers />
   </component>
@@ -282,6 +278,11 @@
           <line>14</line>
           <option name="timeStamp" value="388" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Clustering_Framework/main.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="389" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -299,7 +300,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1650603361019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1650656012194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$insert_featured_records.coverage" NAME="insert_featured_records Coverage Results" MODIFIED="1650579115525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1649879727006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Database" />
   </component>

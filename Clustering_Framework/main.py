@@ -6,8 +6,9 @@ from ClusteringMethods.clustering_methods import *
 from ClusteringMethods.clustering import *
 from Clustering_Framework.clustering_parameters import *
 from Clustering_Framework.ClusterValidation.cluster_validation import *
-
 from utils import *
+
+from sklearn import preprocessing
 
 #Connecting to database
 print("Connecting to CnLook Database...")
@@ -27,7 +28,7 @@ featured_records = read_featuredRecords(conn, taskId)
 allResults = []
 for eye in eyes_combination:
     for subset in subsets_of_features:
-        X = shapeFeaturedRecords(featured_records, subset, eye)
+        X = shapeFeaturedRecords(featured_records, subset, eye, normalization=True)
         results = startClusteringTests(X)
         allResults.append({
             'Parameters': {'Eye': eye,

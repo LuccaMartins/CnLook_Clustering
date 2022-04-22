@@ -24,7 +24,7 @@ from cateyes import sample_data_path
 
 #Connecting to database
 print("Connecting to CnLook Database...")
-conn = connect_db("127.0.0.1", "CnLook_DB")
+conn = connect_db("127.0.0.1", "cnlook_")
 
 #Reading records
 groupId = "2"
@@ -46,14 +46,14 @@ for record in records:
     #segment_id, segment_class = classify_nslr_hmm(x_deg, y_deg, times, optimize_noise=False)
 
     # classify the data using I-VT
-    # velocity_threshold = mad_velocity_thresh(x_deg, y_deg, times, th_0=100, return_past_threshs=False)
-    # print('velocity threshold: ' + str(velocity_threshold))
-    # segment_id, segment_class = classify_velocity(x_deg, y_deg, times, velocity_threshold, return_discrete=False)
+    velocity_threshold = mad_velocity_thresh(x_deg, y_deg, times, th_0=100, return_past_threshs=False)
+    print('velocity threshold: ' + str(velocity_threshold))
+    segment_id, segment_class = classify_velocity(x_deg, y_deg, times, velocity_threshold, return_discrete=False)
 
     print('testes...')
 
     # classify the data using I-DT
-    segment_id, segment_class = classify_dispersion(x_deg, y_deg, times, 0.5, 50, return_discrete=False)
+    # segment_id, segment_class = classify_dispersion(x_deg, y_deg, times, 0.5, 50, return_discrete=False)
 
     # classify the data using REMoDNaV
     # segment_id, segment_class = classify_remodnav(x_deg, y_deg, times, px2deg=1., return_discrete=False,

@@ -1,5 +1,6 @@
 import json
 from scipy.spatial import distance
+from sklearn import preprocessing
 
 Dict_Groups = {
     '1': "default group",
@@ -64,7 +65,7 @@ def getDistances_ToTarget(record, taskPositions, eye):
 def getSetOfSizes(recordings):
     return sorted(set([len(x) for x in recordings]))
 
-def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
+def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both', normalization=False):
     X = []
 
     #IMPORTANT: ADpFF can't be used with other features.
@@ -126,6 +127,7 @@ def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
                 X.append(record_features)
                 record_features = []
 
-
+    if normalization:
+        X = preprocessing.normalize(X)
     return X;
 
