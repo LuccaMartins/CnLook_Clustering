@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/testingCatEyes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/testingCatEyes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +62,11 @@
       <recent name="C:\Users\Lucca\Desktop\Repositórios GitHub\CnLook_Clustering" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework" />
       <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusteringMethods" />
       <recent name="C:\Git Repositories\CnLook_Clustering\Images\" />
       <recent name="C:\Git Repositories\CnLook_Clustering\Images\DTW Samples" />
       <recent name="C:\Git Repositories\CnLook_Clustering\Images" />
-      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_CnLook\Event Detection" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (2)">
@@ -82,6 +84,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="insert_featured_records" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CnLook_Clustering" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,28 +180,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testingCatEyes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CnLook_Clustering" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clustering_CnLook" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Git Repositories\CnLook_Clustering\Clustering_CnLook\Event Detection\testingCatEyes.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="visualization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CnLook_Clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,16 +207,16 @@
       <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.main (2)" />
       <item itemvalue="Python.main2" />
-      <item itemvalue="Python.testingCatEyes" />
       <item itemvalue="Python.visualization" />
+      <item itemvalue="Python.insert_featured_records" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.insert_featured_records" />
         <item itemvalue="Python.visualization" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main2" />
-        <item itemvalue="Python.testingCatEyes" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +240,9 @@
       <workItem from="1649868928119" duration="14384000" />
       <workItem from="1650296721482" duration="20433000" />
       <workItem from="1650374596131" duration="13588000" />
-      <workItem from="1650469967486" duration="10899000" />
+      <workItem from="1650469967486" duration="19779000" />
+      <workItem from="1650563250464" duration="19249000" />
+      <workItem from="1650654137511" duration="3675000" />
     </task>
     <servers />
   </component>
@@ -270,14 +274,14 @@
           <option name="timeStamp" value="311" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="364" />
+          <url>file://$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="388" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py</url>
-          <line>170</line>
-          <option name="timeStamp" value="367" />
+          <url>file://$PROJECT_DIR$/Clustering_Framework/main.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="390" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

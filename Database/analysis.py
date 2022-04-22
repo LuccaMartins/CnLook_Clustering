@@ -35,6 +35,22 @@ def read_entity(conn, entity):
     return df
 
 
+def get_info_recording(conn, recording_id):
+    cursor = conn.cursor()
+    cursor.execute(f"""
+    select rec.task_id, sub.subject_id, sub.group_id, scr.screening_id 
+    from recording_entity rec 
+        join screening_entity scr on scr.screening_id = rec.screening_id  
+        join subject_entity sub on sub.subject_id = scr.subject_id
+        where recording_id = {recording_id}
+    """)
+    taskId, subjectId, groupId, screeningId = cursor.fetchall()[0]
+    cursor.close()
+    return {'taskId': taskId,
+            'subjectId': subjectId,
+            'groupId': groupId,
+            'screeningId': screeningId}
+
 def get_subject_names_for_recordings(conn):
     """Get subject names for all recording ids.
 
@@ -186,38 +202,67 @@ def getRecordings_ByTaskId(conn, taskId, groupId=-1):
     """
     if groupId != -1:
         df = pd.read_sql_query(  #
-            """
+            f"""
             SELECT
               recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
             FROM sample_entity AS sample
               JOIN recording_entity AS rec USING (recording_id)
               JOIN screening_entity AS scr USING (screening_id)
-              JOIN subject_entity AS subj USING (subject_id)
-              JOIN group_entity AS grp ON (grp.id = subj.group_id)
-            WHERE rec.task_id = %s AND grp.id = %s
+              JOIN subject_entity AS sub USING (subject_id)
+              JOIN group_entity AS grp ON (grp.id = sub.group_id)
+            where sub.name not like '%a'
+            and sub.name not like '%b'
+            and sub.name not like '%mads%'
+            and sub.name not like '%Mads%'
+            and sub.name not like '%qasim%'
+            and sub.name not like '%Qasim%'
+            and sub.name not like '%eyex%'
+            and sub.name not like '%tx300%'
+            and sub.name not like '%demo%'
+            and sub.name not like '%damo%'
+            and sub.name not like '%Demo%'
+            and sub.name not like 'calibTest'
+            and sub.name not like '??'
+            and sub.name not like '%merged%'
+            and sub.name not like '%unknown%'
+            and sub.name not like '%(glasses)%'
+            AND rec.task_id = {taskId} AND grp.id = {groupId}
             ORDER BY recording_id, timestamp 
             ;
             """,
             conn,
-            index_col="recording_id",
-            params=[taskId, groupId])
+            index_col="recording_id")
     else:
         df = pd.read_sql_query(  #
-            """
+            f"""
             SELECT
               recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
-            FROM sample_entity AS sample
-              JOIN recording_entity AS rec USING (recording_id)
-              JOIN screening_entity AS scr USING (screening_id)
-              JOIN subject_entity AS subj USING (subject_id)
-              JOIN group_entity AS grp ON (grp.id = subj.group_id)
-            WHERE rec.task_id = %s
-            ORDER BY recording_id, timestamp 
+            FROM sample_entity sample
+              JOIN recording_entity rec USING (recording_id)
+              JOIN screening_entity scr USING (screening_id)
+              JOIN subject_entity sub USING (subject_id)
+            where sub.name not like '%a'
+            and sub.name not like '%b'
+            and sub.name not like '%mads%'
+            and sub.name not like '%Mads%'
+            and sub.name not like '%qasim%'
+            and sub.name not like '%Qasim%'
+            and sub.name not like '%eyex%'
+            and sub.name not like '%tx300%'
+            and sub.name not like '%demo%'
+            and sub.name not like '%damo%'
+            and sub.name not like '%Demo%'
+            and sub.name not like 'calibTest'
+            and sub.name not like '??'
+            and sub.name not like '%merged%'
+            and sub.name not like '%unknown%'
+            and sub.name not like '%(glasses)%'
+            AND rec.task_id = {taskId}
+            ORDER BY recording_id, timestamp
             ;
             """,
             conn,
-            index_col="recording_id",
-            params=[taskId])
+            index_col="recording_id")
 
     assert df.shape[0] != 0, \
         "no recordings found in database for task %s" % taskId
@@ -234,7 +279,6 @@ def getRecordings_ByTaskId(conn, taskId, groupId=-1):
     del df['left_normal']
     del df['right_normal']
     df.attrs['taskId'] = taskId
-    df.attrs['groupId'] = groupId
     df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
     return df.groupby(['recording_id'])
 

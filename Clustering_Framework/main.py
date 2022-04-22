@@ -1,8 +1,14 @@
 from RecordSelection.record_selection import *
 from FeatureEngineering.feature_engineering import *
 from Database.analysis import *
+from Database.reading import *
 from ClusteringMethods.clustering_methods import *
+from ClusteringMethods.clustering import *
+from Clustering_Framework.clustering_parameters import *
+from Clustering_Framework.ClusterValidation.cluster_validation import *
 from utils import *
+
+from sklearn import preprocessing
 
 #Connecting to database
 print("Connecting to CnLook Database...")
@@ -10,36 +16,30 @@ conn = connect_db("127.0.0.1", "cnlook_")
 
 
 #Reading records
-groupId = "2"
+# groupId = "2"
 taskId = "2515"
-print('Reading records from database: ' + Dict_Groups.get(groupId) + "  - TaskId: " + taskId)
+print(f'Reading records from database - TaskId: {taskId}')
 
 # records = list(getRecordings_ByTaskId(conn, taskId, groupId))
-records = list(getRecordings_ByTaskId(conn, taskId))
+featured_records = read_featuredRecords(conn, taskId)
 
-print('Reading task...')
-task = getTask_ById(conn, 2515)
+#TODO: vary the identification method....
+#for method in event_detection_methods:
+allResults = []
+for eye in eyes_combination:
+    for subset in subsets_of_features:
+        X = shapeFeaturedRecords(featured_records, subset, eye, normalization=True)
+        results = startClusteringTests(X)
+        allResults.append({
+            'Parameters': {'Eye': eye,
+                           'Features': subset,
+                           },
+            'Clustering Methods': results
+        })
 
-print(f'Num of records: {len(records)}')
-#Analyze subset of records:
-good_records = analyzeRecords(records)
+analyzeResults(allResults)
 
-features = ['ADpFFaaa']
-#Apply feature engineering and create objects
-featuredRecords = createFeaturedRecords(task, good_records, features)
-
-if features.__contains__('ADpFF') and len(features) == 1:
-    X = shapeFeaturedRecords_ADpFF(featuredRecords, eye='both')
-else:
-    X = shapeFeaturedRecords(featuredRecords)
-
-#Call clustering methods
-# results = startFOSC(X, savePath=f"Task Id {taskId} ")
-results = startFOSC(X)
-
-#Analyze FOSC results
-#printBestSilhouettes(results)
-
+print(allResults)
 
 
 

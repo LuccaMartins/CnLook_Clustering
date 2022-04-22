@@ -23,27 +23,27 @@ order by tsk.id;
 
 -- select * from task_entity where id = 2511
 
-select subj.subject_id, count(*) as n_records from recording_entity as rec
-join screening_entity as scr on rec.screening_id = scr.screening_id 
-join subject_entity as subj on subj.subject_id = scr.subject_id
-	AND subj.group_id != 1 
-	AND subj.group_id != 12
-	AND subj.name NOT LIKE '%mads%'
-	AND subj.name NOT LIKE '%Mads%'
-	AND subj.name NOT LIKE '%qasim%'
-	AND subj.name NOT LIKE '%Qasim%'
-	--AND subj.name NOT LIKE '%eyex%'
-	--AND subj.name NOT LIKE '%tx300%'
-	AND subj.name NOT LIKE '%demo%'
-	AND subj.name NOT LIKE '%damo%'
-	AND subj.name NOT LIKE '%Demo%'
-	AND subj.name NOT LIKE 'calibTest'
-	AND subj.name NOT LIKE '??'
-	AND subj.name NOT LIKE '%merged%'
-	AND subj.name NOT LIKE '%unknown%'
-	AND subj.name NOT LIKE '%(glasses)%' 
-group by subj.group_id, subj.name, subj.subject_id, subj.group_id
-order by n_records desc;
+-- select subj.subject_id, count(*) as n_records from recording_entity as rec
+-- join screening_entity as scr on rec.screening_id = scr.screening_id 
+-- join subject_entity as subj on subj.subject_id = scr.subject_id
+-- 	AND subj.group_id != 1 
+-- 	AND subj.group_id != 12
+-- 	AND subj.name NOT LIKE '%mads%'
+-- 	AND subj.name NOT LIKE '%Mads%'
+-- 	AND subj.name NOT LIKE '%qasim%'
+-- 	AND subj.name NOT LIKE '%Qasim%'
+-- 	AND subj.name NOT LIKE '%eyex%'
+-- 	AND subj.name NOT LIKE '%tx300%'
+-- 	AND subj.name NOT LIKE '%demo%'
+-- 	AND subj.name NOT LIKE '%damo%'
+-- 	AND subj.name NOT LIKE '%Demo%'
+-- 	AND subj.name NOT LIKE 'calibTest'
+-- 	AND subj.name NOT LIKE '??'
+-- 	AND subj.name NOT LIKE '%merged%'
+-- 	AND subj.name NOT LIKE '%unknown%'
+-- 	AND subj.name NOT LIKE '%(glasses)%' 
+-- group by subj.group_id, subj.name, subj.subject_id, subj.group_id
+-- order by n_records desc;
 
 
 
@@ -82,26 +82,26 @@ order by n_records desc;
 
 
 
-select tsk.id, count(*) from recording_entity rec 
-join task_entity tsk on tsk.id = rec.task_id
-join screening_entity scr on scr.screening_id = rec.screening_id
-join subject_entity sub on sub.subject_id = scr.subject_id
-and sub.name not like '%a'
-and sub.name not like '%b'
-and sub.name not like '%mads%'
-and sub.name not like '%Mads%'
-and sub.name not like '%qasim%'
-and sub.name not like '%Qasim%'
-and sub.name not like '%eyex%'
-and sub.name not like '%tx300%'
-and sub.name not like '%demo%'
-and sub.name not like '%damo%'
-and sub.name not like '%Demo%'
-and sub.name not like 'calibTest'
-and sub.name not like '??'
-and sub.name not like '%merged%'
-and sub.name not like '%unknown%'
-and sub.name not like '%(glasses)%'group by tsk.id
+-- select tsk.id, count(*) from recording_entity rec 
+-- join task_entity tsk on tsk.id = rec.task_id
+-- join screening_entity scr on scr.screening_id = rec.screening_id
+-- join subject_entity sub on sub.subject_id = scr.subject_id
+-- and sub.name not like '%a'
+-- and sub.name not like '%b'
+-- and sub.name not like '%mads%'
+-- and sub.name not like '%Mads%'
+-- and sub.name not like '%qasim%'
+-- and sub.name not like '%Qasim%'
+-- and sub.name not like '%eyex%'
+-- and sub.name not like '%tx300%'
+-- and sub.name not like '%demo%'
+-- and sub.name not like '%damo%'
+-- and sub.name not like '%Demo%'
+-- and sub.name not like 'calibTest'
+-- and sub.name not like '??'
+-- and sub.name not like '%merged%'
+-- and sub.name not like '%unknown%'
+-- and sub.name not like '%(glasses)%'group by tsk.id
 
 
 
