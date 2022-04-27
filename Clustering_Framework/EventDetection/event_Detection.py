@@ -1,17 +1,35 @@
 from cateyes import (sfreq_to_times, classify_nslr_hmm, continuous_to_discrete,
                      plot_segmentation, plot_trajectory, classify_velocity, mad_velocity_thresh, classify_dispersion,
                      classify_remodnav)
-
+from Clustering_Framework.EventDetection.ema2159.i_vt import *
+from Clustering_Framework.EventDetection.ema2159.utils import *
+from Clustering_Framework.EventDetection.ema2159.plotting import *
 import matplotlib.pyplot as plt
 import numpy as np
 
 from Clustering_Framework.utils import *
 
-def identify_events(record, eye, algorithm, savePlot=None):
+
+#
+
+def identify_events_ema(record, eye, algorithm, savePlot=None):
+    points = []
+    points.append(list(record[1]['right_x']))
+    points.append([1 - pos for pos in list(record[1]['right_y'])])
+    (saccades, fixations, centroids, centroids_count) = I_VT_alg(points, 11000, 750, 100, 200)
+
+    plot_simple(saccades, fixations, centroids)
+    return (saccades, fixations, centroids, centroids_count)
+
+
+
+#  FOR CATEYES ...
+def identify_events_catEyes(record, eye, algorithm, savePlot=None):
     print(f'Identifying events with {algorithm} for record {record[0]} on {eye} eye gaze')
 
     x = record[1][f'{eye}_x']
     y = record[1][f'{eye}_y']
+
     times = sfreq_to_times(x, 90)
     # times = normalizeTimestamps(record[1]['timestamp'].array)
 
@@ -35,7 +53,7 @@ def identify_events(record, eye, algorithm, savePlot=None):
 
     elif algorithm == 'REMODNAV':
         #TODO:
-        # Couldn't make it work yet
+        # Couldn't make it work fine yet
         seg_id, seg_class = classify_remodnav(x_deg, y_deg, times, px2deg=1., return_discrete=False,
                           return_orig_output=False, simple_output=False, preproc_kwargs=dict(savgol_length=500))
 
@@ -54,8 +72,8 @@ def identify_events(record, eye, algorithm, savePlot=None):
     #     plot_segmentation(y_deg, times, segments=(seg_time, seg_class), events=None, ax=axes[1], show_legend=True)
     #
     #     print(f'Saving plot of EventDetection for Record id: {record[0]}, {eye} eye')
-    #     #plt.show()
-    #     plt.savefig(f'{savePlot}/{algorithm}, {eye}, Record {record[0]}')
+    #     plt.show()
+    #     # plt.savefig(f'{savePlot}/{algorithm}, {eye}, Record {record[0]}')
     #     plt.close(fig)
 
     return seg_id, seg_class

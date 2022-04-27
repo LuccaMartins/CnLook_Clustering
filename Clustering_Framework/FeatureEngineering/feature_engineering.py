@@ -102,7 +102,7 @@ def features_task_with_fixations(task, records):
         shouldAddRecord = True
         for eye in 'left', 'right':
             distancesToTarget = getDistances_ToTarget(record, taskPositions, eye)
-            segment_id, segment_class = identify_events(record, eye, 'I-VT', savePlot="./EventDetection/Plots EventDetection")
+            segment_id, segment_class = identify_events_catEyes(record, eye, 'I-DT', savePlot="./EventDetection/Plots EventDetection")
             movements = getMovementsInfo(record, eye, segment_id, segment_class)
 
             if len(movements['Fixation']) > 1 and len(movements['Saccade']) > 1 and shouldAddRecord:

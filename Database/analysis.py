@@ -259,6 +259,7 @@ def getRecordings_ByTaskId(conn, taskId, groupId=-1):
             and sub.name not like '%(glasses)%'
             AND rec.task_id = {taskId}
             ORDER BY recording_id, timestamp
+            limit 200000
             ;
             """,
             conn,

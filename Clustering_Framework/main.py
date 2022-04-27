@@ -28,7 +28,7 @@ featured_records = read_featuredRecords(conn, taskId)
 allResults = []
 for eye in eyes_combination:
     for subset in subsets_of_features:
-        X = shapeFeaturedRecords(featured_records, subset, eye, normalization=True)
+        X = shapeFeaturedRecords(featured_records, subset, eye)
         results = startClusteringTests(X)
         allResults.append({
             'Parameters': {'Eye': eye,

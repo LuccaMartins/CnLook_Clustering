@@ -3,7 +3,6 @@ from Clustering_Framework.clustering_parameters import *
 
 
 def startClusteringTests(X):
-    FOSC_results = startFOSC(X)
     results = []
     for method in clustering_methods:
         if method == 'FOSC':

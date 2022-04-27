@@ -1,15 +1,19 @@
 from dtaidistance import dtw_ndim
 from sklearn import metrics
-import numpy as np
+from validclust import dunn
 from scipy.spatial import distance_matrix as euclidian_distance_matrix
+from scipy.spatial.distance import squareform
+
 from scipy.cluster.hierarchy import linkage, dendrogram
 
 from Clustering_Framework.ClusteringMethods.FOSC.util.fosc import FOSC
 from Clustering_Framework.ClusteringMethods.FOSC.util.plotting import plotDendrogram, plotPartition
+from Clustering_Framework.ClusterValidation.cluster_validation import *
 
 #TODO: test with FOSC and K-means (with Elbow method)
 
 def startFOSC(X, savePath=None):
+    print('Running FOSC...')
     # Calculating distance matrix
     mat = generateDistanceMatrix(X, 'euclidian')
 
@@ -18,30 +22,21 @@ def startFOSC(X, savePath=None):
     results = []
 
     for m in listOfMClSize:
-        print("--------------------------------------- MCLSIZE = %d ---------------------------------------" % m)
-
+        # print("--------------------------------------- MCLSIZE = %d ---------------------------------------" % m)
         for lm in methodsLinkage:
-            print("Calling linkage with " + lm + " passing the distances matrix...")
-            Z = linkage(mat, method=lm)
+            # print("Calling linkage with " + lm + " passing the distances matrix...")
+            condensed_mat = squareform(mat)
+            Z = linkage(condensed_mat, method=lm)
 
             foscFramework = FOSC(Z, mClSize=m)
             infiniteStability = foscFramework.propagateTree()
             partition = foscFramework.findProminentClusters(1, infiniteStability)
 
-            # validação do algoritmo: silhouette ou AUC Under Curve
-            if len(set(partition)) > 1:
-                silhouette = metrics.silhouette_score(mat, partition, metric="precomputed")
-                results.append({'MinClusterSize': m,
-                                'Linkage Method': lm,
-                                'Partition': partition,
-                                'Silhouette': silhouette
-                })
-            else:
-                results.append({'MinClusterSize': m,
-                                'Linkage Method': lm,
-                                'Partition': partition,
-                                'Silhouette': -1
-                                })
+            results.append({'MinClusterSize': m,
+                            'Linkage Method': lm,
+                            'Partition': partition,
+                            'Cluster Validation': getClusterValidation(X, mat, partition)
+                            })
 
             if savePath != None:
                 titlePlot = f"{savePath}, mClSize: {m}\nLinkage Method: {lm}, Num of Objects: {len(X)}"

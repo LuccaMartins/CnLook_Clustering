@@ -65,9 +65,9 @@ def getDistances_ToTarget(record, taskPositions, eye):
 def getSetOfSizes(recordings):
     return sorted(set([len(x) for x in recordings]))
 
-def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both', normalization=False):
+#TODO: IMPROVE THIS FUNCTION BASED ON 'features_to_use'
+def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
     X = []
-
     #IMPORTANT: ADpFF can't be used with other features.
     if features_to_use.__contains__('ADpFF'):
         if eye == 'both':
@@ -127,7 +127,7 @@ def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both', normaliza
                 X.append(record_features)
                 record_features = []
 
-    if normalization:
-        X = preprocessing.normalize(X)
+#TODO: use minmaxScaler
+    X = preprocessing.normalize(X)
     return X;
 
