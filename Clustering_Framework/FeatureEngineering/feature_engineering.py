@@ -102,23 +102,32 @@ def features_task_with_fixations_EMA(task, records):
         shouldAddRecord = True
         for eye in 'left', 'right':
             distancesToTarget = getDistances_ToTarget(record, taskPositions, eye)
-            (saccades, fixations, centroids, centroids_count) = identify_events_ema(record, eye)
+            (saccades, fixations, centroids, centroids_count, fixations_ranges) = identify_events_ema(record, eye)
 
-            if len(saccades) < 1 or \
-               len(fixations) < 1 or \
-               len(centroids) < 1:
+            valid_fixations_ranges = []
+            for fix_range in fixations_ranges:
+                if fix_range[1] < len(taskPositions) - 1:
+                    valid_fixations_ranges.append(fix_range)
+
+            if len(saccades) < 2 or \
+               len(fixations) < 2 or \
+               len(centroids) < 2 or \
+               len(valid_fixations_ranges) < 2:
                 shouldAddRecord = False
             else:
-                movements = {'Fixation': fixations,
-                             'Saccade': saccades}
 
+
+                ADTF = scipy.mean([scipy.mean(distancesToTarget[fix[0]:fix[1]+1]) for fix in valid_fixations_ranges])
+                if not ADTF:
+                    print('opa')
                 features.append({
-                                 f'FC_{eye}': len(movements['Fixation']),
+                                 f'FC_{eye}': len(fixations),
+                                 f'ADTF_{eye}': ADTF,
                                  f'AFD_{eye}': scipy.mean([len(x) for x in fixations]),
                                  f'FDMax_{eye}': max([len(x) for x in fixations]),
                                  f'FDMin_{eye}': min([len(x) for x in fixations]),
                                  f'FDA_{eye}': scipy.mean([np.std(fixation) for fixation in fixations]),
-                                 f'SC_{eye}': len(movements['Saccade']),
+                                 f'SC_{eye}': len(saccades),
                                  f'ASD_{eye}': scipy.mean([len(x) for x in saccades]),
                                  f'SDMax_{eye}': max([len(x) for x in saccades]),
                                  f'SDMin_{eye}': min([len(x) for x in saccades]),

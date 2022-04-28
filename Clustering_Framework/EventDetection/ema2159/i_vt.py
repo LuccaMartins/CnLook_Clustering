@@ -39,10 +39,13 @@ def I_VT_alg(points, sample_rate, up_sacc_thrs, sacc_thrs, fix_thrs, filt=True):
     saccades = []  # List to store saccades
     fixations = []  # List to store fixations
     fix_group = []  # Buffer list to store fixation groups
+    fixations_ranges = []
     saccade_group = []  # Buffer list to store saccade groups
     x_data = points[0]
     y_data = points[1]
     vels = get_vels(points, sample_rate)
+    fix_start = -1
+
     if filt:
         vels = butter_lowpass_filter(vels)
     # Saccades and fixations calculation
@@ -53,6 +56,7 @@ def I_VT_alg(points, sample_rate, up_sacc_thrs, sacc_thrs, fix_thrs, filt=True):
             # group in the buffer to fixations and clear buffer
             if fix_group:
                 fixations.append(fix_group.copy())
+                fixations_ranges.append([fix_start, i-1])
                 fix_group.clear()
             saccade_group.append([x_data[i], y_data[i]])
         # If velocity below fixation threshold, add point to fixations
@@ -60,13 +64,17 @@ def I_VT_alg(points, sample_rate, up_sacc_thrs, sacc_thrs, fix_thrs, filt=True):
             # If fixation detected and saccade_group buffer contains points, add the
             # group in the buffer to saccades and clear buffer
             if saccade_group:
+                fix_start = i
                 saccades.append(saccade_group.copy())
                 saccade_group.clear()
+            if fix_start == -1:
+                fix_start = i
             fix_group.append([x_data[i], y_data[i]])
     # If fix_group or saccade_group buffers are not empty after
     # transversing all the points,add group in buffer to fixations
     if fix_group:
         fixations.append(fix_group)
+        fixations_ranges.append([fix_start, i])
     if saccade_group:
         saccades.append(saccade_group)
     # Centroids calculation
@@ -78,4 +86,4 @@ def I_VT_alg(points, sample_rate, up_sacc_thrs, sacc_thrs, fix_thrs, filt=True):
         group = group.T
         centroids.append([group[0].mean(), group[1].mean()])
         centroids_count.append(len(group[0]))
-    return (saccades, fixations, centroids, centroids_count)
+    return (saccades, fixations, centroids, centroids_count, fixations_ranges)

@@ -1,7 +1,8 @@
 from RecordSelection.record_selection import *
 from FeatureEngineering.feature_engineering import *
 from Database.analysis import *
-from Database.reading import *
+from Database.reading  import *
+from Database.visualization import *
 from ClusteringMethods.clustering_methods import *
 from ClusteringMethods.clustering import *
 from Clustering_Framework.clustering_parameters import *
@@ -27,8 +28,9 @@ featured_records = read_featuredRecords(conn, taskId)
 #for method in event_detection_methods:
 allResults = []
 for eye in eyes_combination:
-    for subset in subsets_of_features:
+    for i, subset in enumerate(subsets_of_features):
         X = shapeFeaturedRecords(featured_records, subset, eye)
+
         results = startClusteringTests(X)
         allResults.append({
             'Parameters': {'Eye': eye,
@@ -37,6 +39,13 @@ for eye in eyes_combination:
             'Clustering Methods': results
         })
 
+        # for result in results[0]['Results']:
+        #     plot_scattered_data(X,
+        #                         config={'Eye': eye, 'Features': i, 'result': result},
+        #                         partition=list(result['Partition']))
+
+        # plot_scattered_data(X, list(results[0]['Results'][10]['Partition']))
+        # plot_scattered_data(X)
 analyzeResults(allResults)
 
 print(allResults)

@@ -16,11 +16,12 @@ def identify_events_ema(record, eye, savePlot=None):
     points = []
     points.append(list(record[1][f'{eye}_x']))
     points.append([1 - pos for pos in list(record[1][f'{eye}_y'])])
-    (saccades, fixations, centroids, centroids_count) = I_VT_alg(points, 11000, 750, 100, 200)
+    # (saccades, fixations, centroids, centroids_count) = I_VT_alg(points, 11000, 750, 100, 200)
 
-    # plot_simple(saccades, fixations, centroids)
+    (saccades, fixations, centroids, centroids_count, fixations_ranges) = I_VT_alg(points, 11000, 750, 100, 200)
+    plot_simple(saccades, fixations, centroids, record[0])
 
-    return (saccades, fixations, centroids, centroids_count)
+    return (saccades, fixations, centroids, centroids_count, fixations_ranges)
 
 
 

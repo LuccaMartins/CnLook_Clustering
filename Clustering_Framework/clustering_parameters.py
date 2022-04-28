@@ -11,6 +11,9 @@ clustering_methods = ['FOSC',
                       ]
 
 subsets_of_features = [#the working ones...
+
+                        ['FC', 'AFD', 'ADTF', 'ADT', 'FDA'],
+
                         ['FC', 'AFD', 'FDMax', 'FDMin', 'FDA',
                          'SC', 'ASD', 'SDMax', 'SDMin', 'SDA', 'ASA', 'SAMax', 'SAMin'],
 

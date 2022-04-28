@@ -20,7 +20,7 @@ records = list(getRecordings_ByTaskId(conn, taskId))
 
 print(f'Num of records: {len(records)}')
 #Analyze subset of records:
-good_records = analyzeRecords(records)
+good_records = analyzeRecords(records[100:])
 
 
 #Apply feature engineering and create objects
