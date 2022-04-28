@@ -5,25 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/ema2159/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/ema2159/i_dt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/ema2159/i_vt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/ema2159/plotting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/ema2159/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trying_PyTrack/testingPyTrack.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Trying_eyegaze/eyegaze/mainTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/event_Detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/event_Detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/clustering_parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/clustering_parameters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/inserting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/inserting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/reading.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/reading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trying_eyegaze/eyegaze" beforeDir="false" afterPath="$PROJECT_DIR$/Trying_eyegaze/eyegaze" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Trying_eyegaze/eyegaze/gaze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trying_eyegaze/eyegaze/gaze.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +172,9 @@
       <module name="CnLook_Clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Trying_eyegaze/eyegaze" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -226,8 +223,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (2)" />
-        <item itemvalue="Python.mainTest" />
         <item itemvalue="Python.insert_featured_records" />
+        <item itemvalue="Python.mainTest" />
         <item itemvalue="Python.visualization" />
         <item itemvalue="Python.main (1)" />
       </list>
@@ -258,7 +255,8 @@
       <workItem from="1650654137511" duration="3675000" />
       <workItem from="1650897098912" duration="12425000" />
       <workItem from="1650979819787" duration="10971000" />
-      <workItem from="1651063177493" duration="14319000" />
+      <workItem from="1651063177493" duration="19489000" />
+      <workItem from="1651105125332" duration="7405000" />
     </task>
     <servers />
   </component>
@@ -290,13 +288,8 @@
           <option name="timeStamp" value="311" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="391" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Clustering_Framework/EventDetection/event_Detection.py</url>
-          <line>78</line>
+          <line>79</line>
           <option name="timeStamp" value="392" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -334,6 +327,11 @@
           <line>358</line>
           <option name="timeStamp" value="412" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$APPLICATION_HOME_DIR$/plugins/python/helpers/pydev/_pydevd_bundle/pydevd_exec2.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="425" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -351,9 +349,9 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1651064987590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1651112613357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$mainTest.coverage" NAME="mainTest Coverage Results" MODIFIED="1651085152924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Trying_eyegaze/eyegaze" />
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$insert_featured_records.coverage" NAME="insert_featured_records Coverage Results" MODIFIED="1650997346683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$insert_featured_records.coverage" NAME="insert_featured_records Coverage Results" MODIFIED="1651109432544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1649879727006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Database" />
   </component>
 </project>

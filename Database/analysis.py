@@ -38,18 +38,20 @@ def read_entity(conn, entity):
 def get_info_recording(conn, recording_id):
     cursor = conn.cursor()
     cursor.execute(f"""
-    select rec.task_id, sub.subject_id, sub.group_id, scr.screening_id 
+    select rec.task_id, grp.name as group_name, sub.name as subject_name, scr.start_date, scr.screening_id 
     from recording_entity rec 
         join screening_entity scr on scr.screening_id = rec.screening_id  
         join subject_entity sub on sub.subject_id = scr.subject_id
-        where recording_id = {recording_id}
+		join group_entity grp on sub.group_id = grp.id
+    where recording_id = {recording_id}
     """)
-    taskId, subjectId, groupId, screeningId = cursor.fetchall()[0]
+    task_id, group_name, subject_name, screening_date, screening_id = cursor.fetchall()[0]
     cursor.close()
-    return {'taskId': taskId,
-            'subjectId': subjectId,
-            'groupId': groupId,
-            'screeningId': screeningId}
+    return {'taskId': task_id,
+            'groupName': group_name,
+            'subjectName': subject_name,
+            'screeningDate': screening_date,
+            'screeningId': screening_id}
 
 def get_subject_names_for_recordings(conn):
     """Get subject names for all recording ids.
@@ -259,7 +261,6 @@ def getRecordings_ByTaskId(conn, taskId, groupId=-1):
             and sub.name not like '%(glasses)%'
             AND rec.task_id = {taskId}
             ORDER BY recording_id, timestamp
-            limit 200000
             ;
             """,
             conn,

@@ -11,19 +11,20 @@ clustering_methods = ['FOSC',
                       ]
 
 subsets_of_features = [#the working ones...
-                        ['FC', 'AFD', 'FDMax', 'FDMin',
-                         'SC', 'ASD', 'SDMax', 'SDMin',
-                         'ASL', ],
+                        ['FC', 'AFD', 'FDMax', 'FDMin', 'FDA',
+                         'SC', 'ASD', 'SDMax', 'SDMin', 'SDA', 'ASA', 'SAMax', 'SAMin'],
+
+                        #only ADpFF
                         ['ADpFF'],
-                        ['ADpFF', 'ADT'],
 
                         #only fixations
-                        # ['FC', 'AFD', 'FDMax', 'FDMin', 'FDT', 'FDA'],
+                        ['FC', 'AFD', 'FDMax', 'FDMin', 'FDA'],
 
                         #only saccades
-                        # ['SC', 'ASC', 'SFC', 'SDMax', 'SDMin', 'SDT',
-                        # 'SDA', 'SAT', 'ASA', 'SAMax', 'SAMin', 'SSV',
-                        # 'SVMax', 'SVMin', 'ASL',],
+                        ['SC', 'ASD', 'SDMax', 'SDMin', 'SDA', 'ASA', 'SAMax', 'SAMin'],
+
+                        #others
+                        ['FC', 'SPL', 'ADT'],
                        ]
 
 eyes_combination = ['both',

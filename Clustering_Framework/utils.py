@@ -128,6 +128,6 @@ def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
                 record_features = []
 
 #TODO: use minmaxScaler
-    X = preprocessing.normalize(X)
+    X = preprocessing.minmax_scale(X)
     return X;
 

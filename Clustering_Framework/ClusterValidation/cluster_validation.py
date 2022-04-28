@@ -26,7 +26,8 @@ def analyzeResults(allResults):
                     if result[result_idx]['Cluster Validation']['Silhouette'] > best_silhouette:
                         best_silhouette = result[result_idx]['Cluster Validation']['Silhouette']
                         best_config_idx, best_method_idx, best_result_idx = config_idx, method_idx, result_idx
-    # print(f'Best result for Silhouette Coeficient: \n{allResults[best_config_idx][best_method_idx][best_result_idx]}')
+
+    print(f"Best result for Silhouette Coeficient: \n{allResults[best_config_idx]['Clustering Methods'][best_method_idx]['Results'][best_result_idx]['Cluster Validation']}")
 
 def printBestSilhouettes(results):
     allSilhouettes_values = [col[3] for col in results]

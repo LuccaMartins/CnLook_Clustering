@@ -23,7 +23,7 @@ def createFeaturedRecords(task, records):
     parameter_data = json.loads(task.parameter_data.values[0])
 
     if parameter_data['FixationsPerLine'] > 0:
-        featured_records = features_task_with_fixations(task, records)
+        featured_records = features_task_with_fixations_EMA(task, records)
     else:
         print('Features not ready for smooth pursuit tasks...')
 
@@ -91,6 +91,53 @@ def features_event_duration(movements):
             return average, 0, 0
 
         return average, max(durations), min(durations)
+
+def features_task_with_fixations_EMA(task, records):
+    features = []
+    featured_records = []
+    for record in records:
+        print(f'\n-----> Extracting features from record {record[0]}')
+        # records have different sizes...
+        taskPositions = getTaskPositions(task, normalizeTimestamps(record[1]['timestamp'].array))
+        shouldAddRecord = True
+        for eye in 'left', 'right':
+            distancesToTarget = getDistances_ToTarget(record, taskPositions, eye)
+            (saccades, fixations, centroids, centroids_count) = identify_events_ema(record, eye)
+
+            if len(saccades) < 1 or \
+               len(fixations) < 1 or \
+               len(centroids) < 1:
+                shouldAddRecord = False
+            else:
+                movements = {'Fixation': fixations,
+                             'Saccade': saccades}
+
+                features.append({
+                                 f'FC_{eye}': len(movements['Fixation']),
+                                 f'AFD_{eye}': scipy.mean([len(x) for x in fixations]),
+                                 f'FDMax_{eye}': max([len(x) for x in fixations]),
+                                 f'FDMin_{eye}': min([len(x) for x in fixations]),
+                                 f'FDA_{eye}': scipy.mean([np.std(fixation) for fixation in fixations]),
+                                 f'SC_{eye}': len(movements['Saccade']),
+                                 f'ASD_{eye}': scipy.mean([len(x) for x in saccades]),
+                                 f'SDMax_{eye}': max([len(x) for x in saccades]),
+                                 f'SDMin_{eye}': min([len(x) for x in saccades]),
+                                 f'SDA_{eye}': scipy.mean([np.std(saccade) for saccade in saccades]),
+                                 f'SPL_{eye}': features_path_length(record, eye),
+                                 f'ASA_{eye}': scipy.mean([distance.euclidean(saccade[0], saccade[-1]) for saccade in saccades]),
+                                 f'SAMax_{eye}': max([distance.euclidean(saccade[0], saccade[-1]) for saccade in saccades]),
+                                 f'SAMin_{eye}': min([distance.euclidean(saccade[0], saccade[-1]) for saccade in saccades]),
+                                 f'ADT_{eye}': scipy.mean(distancesToTarget),
+                                 f'ADpFF_{eye}': features_avg_dist_figFixations(record, taskPositions, eye),
+                                 })
+
+        if shouldAddRecord:
+            featured_records.append({'Record id': record[0],
+                                     'Features': features})
+        features = []
+
+
+    return featured_records
 
 def features_task_with_fixations(task, records):
     features = []

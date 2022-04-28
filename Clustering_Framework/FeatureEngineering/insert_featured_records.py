@@ -26,6 +26,6 @@ good_records = analyzeRecords(records)
 #Apply feature engineering and create objects
 featuredRecords = createFeaturedRecords(task, good_records)
 
-# insert_featuredRecords(conn, featuredRecords)
+insert_featuredRecords(conn, featuredRecords)
 
 print('end.........')

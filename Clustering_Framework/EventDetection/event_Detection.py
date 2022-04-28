@@ -12,13 +12,14 @@ from Clustering_Framework.utils import *
 
 #
 
-def identify_events_ema(record, eye, algorithm, savePlot=None):
+def identify_events_ema(record, eye, savePlot=None):
     points = []
-    points.append(list(record[1]['right_x']))
-    points.append([1 - pos for pos in list(record[1]['right_y'])])
+    points.append(list(record[1][f'{eye}_x']))
+    points.append([1 - pos for pos in list(record[1][f'{eye}_y'])])
     (saccades, fixations, centroids, centroids_count) = I_VT_alg(points, 11000, 750, 100, 200)
 
-    plot_simple(saccades, fixations, centroids)
+    # plot_simple(saccades, fixations, centroids)
+
     return (saccades, fixations, centroids, centroids_count)
 
 
