@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Trying_eyegaze/eyegaze/mainTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trying_eyegaze/eyegaze" beforeDir="false" afterPath="$PROJECT_DIR$/Trying_eyegaze/eyegaze" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trying_eyegaze/eyegaze/gaze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trying_eyegaze/eyegaze/gaze.py" afterDir="false" />
-    </list>
+    <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,8 +202,8 @@
       <item itemvalue="Python.insert_featured_records" />
       <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.main (2)" />
-      <item itemvalue="Python.mainTest" />
       <item itemvalue="Python.visualization" />
+      <item itemvalue="Python.mainTest" />
     </list>
     <recent_temporary>
       <list>

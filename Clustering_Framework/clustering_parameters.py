@@ -18,7 +18,7 @@ subsets_of_features = [#the working ones...
                          'SC', 'ASD', 'SDMax', 'SDMin', 'SDA', 'ASA', 'SAMax', 'SAMin'],
 
                         #only ADpFF
-                        ['ADpFF'],
+                        # ['ADpFF'],
 
                         #only fixations
                         ['FC', 'AFD', 'FDMax', 'FDMin', 'FDA'],
