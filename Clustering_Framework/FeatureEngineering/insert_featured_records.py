@@ -3,6 +3,7 @@ from feature_engineering import *
 from Database.analysis import *
 from Database.inserting import *
 from Clustering_Framework.utils import *
+from Database.visualization import *
 
 #Connecting to database
 print("Connecting to CnLook Database...")
@@ -17,14 +18,15 @@ task = getTask_ById(conn, taskId)
 print(f'Reading records from database:  TaskId: {taskId}')
 records = list(getRecordings_ByTaskId(conn, taskId))
 
+# plot_Record_HV(records[0], task)
 
 print(f'Num of records: {len(records)}')
 #Analyze subset of records:
-good_records = analyzeRecords(records[100:])
+# good_records = analyzeRecords(records)
 
 
 #Apply feature engineering and create objects
-featuredRecords = createFeaturedRecords(task, good_records)
+featuredRecords = createFeaturedRecords(task, records)
 
 insert_featuredRecords(conn, featuredRecords)
 

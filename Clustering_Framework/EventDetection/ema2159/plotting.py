@@ -44,7 +44,7 @@ def plot_vels(vels, sacc_thrs=None, fix_thrs=None):
     plt.legend()
     plt.show()
 
-def plot_simple(saccades, fixations, centroids, recording_id):
+def plot_simple(saccades, fixations, centroids, recording_id, savePlot=None):
     if len(fixations) < 2 or len(saccades) < 2:
         plt.title(f"Bad event detection for record {recording_id} - ignore", fontsize=20)
         plt.show()
@@ -54,7 +54,7 @@ def plot_simple(saccades, fixations, centroids, recording_id):
         fixX, fixY = np.array(flat_fix).T
         saccX, saccY = np.array(flat_saccade).T
         centX, centY = np.array(centroids).T
-        plt.title(f"Saccades, fixations and centroids\n for record {recording_id}", fontsize=20)
+        plt.title(f"Saccades, fixations and centroids\n for record {recording_id}", fontsize=17)
         plt.xlabel("x position", fontsize=14)
         plt.ylabel("y position", fontsize=14)
         plt.scatter(saccX, saccY, s=5, color="b", label="Saccades")
@@ -62,6 +62,12 @@ def plot_simple(saccades, fixations, centroids, recording_id):
         plt.scatter(centX, centY, s=300, color="r", alpha=0.7, label="Centroids")
         plt.legend(borderpad=1)
         plt.axis('equal')
+
+        if savePlot != None:
+            plt.savefig(savePlot)
+            plt.close()
+            return
+
         plt.show()
 
 def plot_centroids(centroids, centroids_count):

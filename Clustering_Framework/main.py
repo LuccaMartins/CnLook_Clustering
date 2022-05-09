@@ -1,7 +1,8 @@
 from RecordSelection.record_selection import *
 from FeatureEngineering.feature_engineering import *
 from Database.analysis import *
-from Database.reading  import *
+from Database.reading import *
+from Database.inserting import *
 from Database.visualization import *
 from ClusteringMethods.clustering_methods import *
 from ClusteringMethods.clustering import *
@@ -28,16 +29,14 @@ featured_records = read_featuredRecords(conn, taskId)
 #for method in event_detection_methods:
 allResults = []
 for eye in eyes_combination:
-    for i, subset in enumerate(subsets_of_features):
-        X = shapeFeaturedRecords(featured_records, subset, eye)
+    for subset in subsets_of_features:
+        X = shapeFeaturedRecords(featured_records, subsets_of_features.get(subset), eye)
 
         results = startClusteringTests(X)
-        allResults.append({
-            'Parameters': {'Eye': eye,
-                           'Features': subset,
-                           },
-            'Clustering Methods': results
-        })
+        for result in results:
+            result['Eye'] = eye
+            result['Features Subset'] = subset
+            allResults.append(result)
 
         # for result in results[0]['Results']:
         #     plot_scattered_data(X,
@@ -46,9 +45,13 @@ for eye in eyes_combination:
 
         # plot_scattered_data(X, list(results[0]['Results'][10]['Partition']))
         # plot_scattered_data(X)
-analyzeResults(allResults)
+bestResults = analyzeResults(allResults, list(featured_records.index))
 
-print(allResults)
+
+
+insert_bestClusterings(conn, bestResults, featured_records)
+
+print('END...')
 
 
 

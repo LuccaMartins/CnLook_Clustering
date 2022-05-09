@@ -1,5 +1,5 @@
 from scipy.cluster.hierarchy import linkage, dendrogram
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 #Plotting...
@@ -64,7 +64,8 @@ def plotDendrogram(Z, result, title, saveDescription=None):
     plt.title(title, fontsize=12)
 
     if saveDescription != None:
-        plt.savefig(saveDescription)
+        print('Saving Dendrogram...')
+        plt.savefig(saveDescription + title)
         plt.close(fig)
         return
 

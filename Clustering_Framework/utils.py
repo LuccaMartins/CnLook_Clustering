@@ -56,9 +56,15 @@ def getTaskPositions(task, timestamps):
 
     return taskPositions
 
+def getDistances_betweenEyes(record):
+    rightPositions = list(zip(record[1][f'right_x'].values, record[1][f'right_y'].values))
+    leftPositions = list(zip(record[1][f'left_x'].values, record[1][f'left_y'].values))
+    distancesBetween = list(map(distance.euclidean, rightPositions, leftPositions))
+    return distancesBetween
+
+
 def getDistances_ToTarget(record, taskPositions, eye):
     recordPositions = list(zip(record[1][f'{eye}_x'].values, record[1][f'{eye}_y'].values))
-
     distancesToTarget = list(map(distance.euclidean, recordPositions, taskPositions))
     return distancesToTarget
 
@@ -73,12 +79,14 @@ def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
         if eye == 'both':
             print('Shaping records for both eyes...')
             record_features = []
+            i = 0
             for record in list(featuredRecords['features'].values):
                 for avrg_dist in record[0][f'ADpFF_left']:
                     record_features.append(avrg_dist)
                 for avrg_dist in record[1][f'ADpFF_right']:
                     record_features.append(avrg_dist)
                 X.append(record_features)
+                i += 1
                 record_features = []
 
         elif eye == 'left':
@@ -104,8 +112,12 @@ def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
             record_features = []
             for record in list(featuredRecords['features'].values):
                 for feature in features_to_use:
-                    record_features.append(record[0][f'{feature}_left'])
-                    record_features.append(record[1][f'{feature}_right'])
+                    if feature == 'ADB':
+                        record_features.append(record[2][f'{feature}'])
+                    else:
+                        record_features.append(record[0][f'{feature}_left'])
+                        record_features.append(record[1][f'{feature}_right'])
+
                 X.append(record_features)
                 record_features = []
 
@@ -114,7 +126,10 @@ def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
             record_features = []
             for record in list(featuredRecords['features'].values):
                 for feature in features_to_use:
-                    record_features.append(record[0][f'{feature}_left'])
+                    if feature == 'ADB':
+                        record_features.append(record[2][f'{feature}'])
+                    else:
+                        record_features.append(record[0][f'{feature}_left'])
                 X.append(record_features)
                 record_features = []
 
@@ -123,11 +138,13 @@ def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
             record_features = []
             for record in list(featuredRecords['features'].values):
                 for feature in features_to_use:
-                    record_features.append(record[1][f'{feature}_right'])
+                    if feature == 'ADB':
+                        record_features.append(record[2][f'{feature}'])
+                    else:
+                        record_features.append(record[1][f'{feature}_right'])
                 X.append(record_features)
                 record_features = []
 
-#TODO: use minmaxScaler
     X = preprocessing.minmax_scale(X)
     return X;
 
