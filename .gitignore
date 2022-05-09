@@ -124,10 +124,11 @@ venv.bak/
 # mypy
 .mypy_cache/
 .dmypy.json
-dmypy.json
+dmypy.jsongit
 
 # Pyre type checker
 .pyre/
 /Clustering_Framework/FeatureEngineering/~$Features to Extract.xlsx
 /Clustering_Framework/FeatureEngineering/$Features to Extract.xlsx
 /~$Counting C&Look DB.xlsx
+.idea/workspace.xml

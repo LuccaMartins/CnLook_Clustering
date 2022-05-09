@@ -115,14 +115,9 @@ def features_task_with_fixations_EMA(task, records):
                len(valid_fixations_ranges) < 2:
                 shouldAddRecord = False
             else:
-
-
-                ADTF = scipy.mean([scipy.mean(distancesToTarget[fix[0]:fix[1]+1]) for fix in valid_fixations_ranges])
-                if not ADTF:
-                    print('opa')
                 features.append({
                                  f'FC_{eye}': len(fixations),
-                                 f'ADTF_{eye}': ADTF,
+                                 f'ADTF_{eye}': scipy.mean([scipy.mean(distancesToTarget[fix[0]:fix[1]+1]) for fix in valid_fixations_ranges]),
                                  f'AFD_{eye}': scipy.mean([len(x) for x in fixations]),
                                  f'FDMax_{eye}': max([len(x) for x in fixations]),
                                  f'FDMin_{eye}': min([len(x) for x in fixations]),
@@ -138,7 +133,11 @@ def features_task_with_fixations_EMA(task, records):
                                  f'SAMin_{eye}': min([distance.euclidean(saccade[0], saccade[-1]) for saccade in saccades]),
                                  f'ADT_{eye}': scipy.mean(distancesToTarget),
                                  f'ADpFF_{eye}': features_avg_dist_figFixations(record, taskPositions, eye),
+
                                  })
+        features.append({
+            'ADB': scipy.mean(getDistances_betweenEyes(record))
+        })
 
         if shouldAddRecord:
             featured_records.append({'Record id': record[0],
