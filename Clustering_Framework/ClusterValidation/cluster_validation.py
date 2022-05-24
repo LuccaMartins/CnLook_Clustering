@@ -1,92 +1,71 @@
-import pandas as pd
+import operator
 import scipy.cluster.hierarchy
 from sklearn import metrics
 from validclust import dunn
-import numpy as np
 from Database.visualization import *
-from Clustering_Framework.clustering_parameters import *
-from scipy.spatial.distance import squareform
 from scipy.stats import pointbiserialr
-from sklearn.tree import DecisionTreeClassifier
-
+from DBCV import DBCV
 
 def getClusterValidation(X, mat, partition):
-    if set(partition).__contains__(-1): #checkinf if partition contains noise
-        min = 3
-    else:
-        min = 2
-
+    #Removing noisy elements for cluster validation
     idx_to_remove = []
     for i, el in enumerate(partition):
         if el == -1:
             idx_to_remove.append(i)
+    partition_noNoise = np.delete(partition, idx_to_remove)
+    X_noNoise = np.delete(X, idx_to_remove, axis=0)
+    mat_noNoise = np.delete(np.delete(mat, idx_to_remove, axis=0), idx_to_remove, axis=1)
 
-    partition = np.delete(partition, idx_to_remove)
-    X = np.delete(X, idx_to_remove, axis=0)
-    mat = np.delete(np.delete(mat, idx_to_remove, axis=0), idx_to_remove, axis=1)
-
-    if len(set(partition)) >= min:
+    penalty, noiseSize = getPenalty(partition)
+    #todo: apply penalty for everyone but AUCC
+    # https://www.dbs.ifi.lmu.de/~zimek/publications/SDM2014/DBCV.pdf usar para o DBSCAN
+    if len(set(partition_noNoise)) >= 2:
         return {
-            'Silhouette': metrics.silhouette_score(mat, partition, metric="precomputed"),
-            # 'AUCC': computePBandAUCCIndexes(partition, mat),
-            'Calinski-Harabasz Index': metrics.calinski_harabasz_score(X, partition),
-            'David-Bouldin Index': metrics.davies_bouldin_score(X, partition),
-            'Dunn Index': dunn(mat, partition)
+            'Silhouette': penalty * round(metrics.silhouette_score(mat_noNoise, partition_noNoise, metric="precomputed"), 4),
+            'AUCC': round(computePBandAUCCIndexes(partition, mat)[1], 4), #sends partition with noise because the function deals with it.
+            'Calinski-Harabasz Index': penalty * round(metrics.calinski_harabasz_score(X_noNoise, partition_noNoise), 4),
+            'David-Bouldin Index': penalty * round(metrics.davies_bouldin_score(X_noNoise, partition_noNoise), 4),
+            'Dunn Index': penalty * round(dunn(mat_noNoise, partition_noNoise), 4),
+            # 'DBCV': penalty * round(DBCV(X_noNoise, partition_noNoise), 4)
         }
     else:
         return {
             'Error': '\nThe partition has a single cluster.\n'
         }
 
-def build_decision_tree(result):
-    Z = result['Method Info']['Hierarchy']
-    n_clusters = len(set(result['Partition']))
-    cut = scipy.cluster.hierarchy.cut_tree(Z, n_clusters=n_clusters)
 
-    labels = list([i[0] for i in cut])
-    labeled_data = pd.DataFrame(result['Data'], columns=subsets_of_features.get(result['Features Subset']))
-    labeled_data['label'] = labels
-
-    fig, axes = plt.subplots(nrows=1,
-                            ncols=1,
-                            figsize=(4, 4),
-                            dpi=300)
-
-    clf = DecisionTreeClassifier(random_state=1234)
-    model = clf.fit(result['Data'], labels)
-
-    sklearn.tree.plot_tree(model,
-                           feature_names=labeled_data.columns,
-                           filled=True,
-                           class_names=True);
-
-    plt.show()
-
+#remover noiseeee para d dsd
 def analyzeResults(allResults, rec_ids):
     bestResults = []
     thrs_best_silhouette = 0.75
     thrs_best_aucc = 0.7
+    thrs_best_dbcv = 0.6
     for i, result in enumerate(allResults):
         if 'Error' not in result['Cluster Validation'].keys():
             if result['Cluster Validation']['Silhouette'] >= thrs_best_silhouette:
-                    # or result['Cluster Validation']['AUCC'] >= thrs_best_aucc:
+            # or result['Cluster Validation']['AUCC'] >= thrs_best_aucc:
+            # or result['Cluster Validation']['DBCV'] >= thrs_best_dbcv:
                 bestResults.append(result)
         else:
             print('No Cluster Validation for this result. Partition must be invalid.')
     print(f"\nNUMBER OF BEST RESULTS {len(bestResults)}, (thrs_best_silhouette = {thrs_best_silhouette}),"
           f" (thrs_best_silhouette = {thrs_best_aucc}")
 
-    #Plotting scattered data with PCA
     for i, result in enumerate(bestResults):
-        plot_scattered_data_PCA(result['Data'], rec_ids, result, savePlot=False, resultIdx=i)
-        build_decision_tree(result)
+        plot_result(result, rec_ids, savePlot=True)
+        # plot_scattered_data_PCA(result['Data'], rec_ids, result, savePlot=False, resultIdx=i)
+        # plot_decision_tree(result)
 
 
 
 
-    objects_pairwise, means1 = getObjectsPairwiseFrequency(bestResults, rec_ids)
+    objects_pairwise, means = getObjectsPairwiseFrequency(bestResults, rec_ids)
     # objects_correlations, means2 = getObjectsCorrelationMatrix(bestResults, rec_ids)
 
+    ordered = []
+
+    sorted_pairs = sorted(enumerate(means), key=operator.itemgetter(1))
+    sorted_pairs_ids = [(rec_ids[pair[0]], pair[1]) for pair in sorted_pairs]
     print('so what...')
 
     # >>>>>>>>>>>> RAND INDEX
@@ -113,12 +92,7 @@ def printBestSilhouettes(results):
 
 
 def computePBandAUCCIndexes(partition, distanceMatrix):
-    noiseSize = 0
-    for value in partition:
-        if value == 0:
-            noiseSize += 1
-
-    penalty = (len(partition) - noiseSize) / len(partition)
+    penalty, noiseSize = getPenalty(partition)
 
     if (noiseSize == len(partition)): return np.nan, np.nan, noiseSize, penalty
 
@@ -129,9 +103,9 @@ def computePBandAUCCIndexes(partition, distanceMatrix):
     yAucc = []
 
     for i in range(len(partition) - 1):
-        if partition[i] == 0: continue
+        if partition[i] == -1: continue
         for j in range(i, len(partition)):
-            if partition[j] == 0: continue
+            if partition[j] == -1: continue
             yPointBiserial.append(dm[i, j])
             yAucc.append(1 / (1 + dm[i, j]))
 
@@ -142,8 +116,9 @@ def computePBandAUCCIndexes(partition, distanceMatrix):
 
     # Compute internal validity index (point biserial)
     pb, pv = pointbiserialr(x, yPointBiserial)
-
-    if any(label>1 for label in partition):
+    set_partition = set(partition)
+    if (set_partition.__contains__(-1) and len(set_partition) >= 3)\
+    or (not set_partition.__contains__(-1) and len(set_partition) >= 2):
         # Compute area under the curve
         aucc = metrics.roc_auc_score(x, yAucc)
         return penalty * pb, penalty * aucc, noiseSize, penalty
@@ -199,3 +174,13 @@ def getObjectsCorrelationMatrix(results, rec_ids):
     plt.show()
 
     return norm_correlations, means
+
+
+def getPenalty(partition):
+    noiseSize = 0
+    for value in partition:
+        if value == -1:
+            noiseSize += 1
+
+    penalty = (len(partition) - noiseSize) / len(partition)
+    return penalty, noiseSize

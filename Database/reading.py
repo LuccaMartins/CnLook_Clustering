@@ -1,6 +1,6 @@
 import pandas as pd
 
-def read_featuredRecords(conn, task, groupId=-1, subjectId=-1):
+def read_featuredRecords(conn, groupId=-1, subjectId=-1):
     if subjectId != -1:
         df = pd.read_sql_query(
             f"""

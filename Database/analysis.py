@@ -196,6 +196,69 @@ def read_task_data(conn, group, taskname):
     df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
     return df
 
+def getRecordings_SameTasks(conn, taskId=2515):
+    if taskId == 2515:
+        df = pd.read_sql_query(  #
+            f"""
+                    SELECT
+                      recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
+                    FROM sample_entity sample
+                      JOIN recording_entity rec USING (recording_id)
+                      JOIN screening_entity scr USING (screening_id)
+                      JOIN subject_entity sub USING (subject_id)
+                      JOIN task_entity tsk ON rec.task_id = tsk.id
+                    where sub.name not like '%a'
+                    and sub.name not like '%b'
+                    and sub.name not like '%mads%'
+                    and sub.name not like '%Mads%'
+                    and sub.name not like '%qasim%'
+                    and sub.name not like '%Qasim%'
+                    and sub.name not like '%eyex%'
+                    and sub.name not like '%tx300%'
+                    and sub.name not like '%demo%'
+                    and sub.name not like '%damo%'
+                    and sub.name not like '%Demo%'
+                    and sub.name not like 'calibTest'
+                    and sub.name not like '??'
+                    and sub.name not like '%merged%'
+                    and sub.name not like '%unknown%'
+                    and sub.name not like '%(glasses)%'
+                    AND tsk.id in (2515, 7688, 7699, 7710, 7721, 7732, 7743, 7754, 7774, 7775,
+                                 7787, 7798, 7809, 7820, 7966, 7977, 7988, 7999, 8010, 8021, 8032, 8043,
+                                 8054, 8065, 8076, 8087, 8098, 8221, 8230, 8239, 8248, 8257, 8288, 8308,
+                                 8317, 8337, 8357, 8378, 8421, 8441, 8450, 8470, 8512, 8542, 8551, 8560)
+                    AND rec.recording_id not in (808, 890, 936, 1054, 1098, 1792, 1806, 1818, 1852, 1885, 1896,
+                                   1920, 1953, 1971, 1984, 2063, 2582, 2757, 2907, 3296, 3649, 3660,
+                                   3671, 3682, 3697, 3749, 4022, 4122, 5147, 8059, 8070, 8213, 4187, 4129,
+                                   877, 1208, 1832, 1935, 1997, 2652, 2737, 3186, 3627, 3793, 3904, 4067,
+                                   4699, 4701, 4704, 4758, 4772, 5201, 5222, 5267, 7757, 7770, 7792, 7803,
+                                   8048)
+                    ORDER BY recording_id, timestamp
+                    ;
+                    """,
+            conn,
+            index_col="recording_id")
+
+    assert df.shape[0] != 0, \
+        "no recordings found in database"
+    for eye in 'left', 'right':
+        col = '%s_normal' % eye
+        eye_data = np.array([[*ast.literal_eval(t)] for t in df[col]])
+        if eye_data.ndim == 1:
+            print(eye_data)
+            print(df, df.shape)
+        df = df.assign(**{
+            '%s_x' % eye: eye_data[:, 0],
+            '%s_y' % eye: eye_data[:, 1],
+        })
+    del df['left_normal']
+    del df['right_normal']
+    # df.attrs['taskId'] = taskId
+    df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
+    # return df.groupby(['recording_id'])
+    return df
+
+
 def getRecordings_ByTaskId(conn, taskId, groupId=-1):
     """Read the data from the database.
 
@@ -301,6 +364,25 @@ def getTask_ByRecordingId(conn, recId):
         params=[recId])
     assert df.shape[0] != 0, \
         "no recordings found in database for id %s" % recId
+
+    df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
+
+    return df
+
+def getTasks(conn):
+    df = pd.read_sql_query(
+        """
+        select * from task_entity 
+        where id in (2515, 7688, 7699, 7710, 7721, 7732, 7743, 7754, 7774, 7775,
+				 7787, 7798, 7809, 7820, 7966, 7977, 7988, 7999, 8010, 8021, 8032, 8043,
+				 8054, 8065, 8076, 8087, 8098, 8221, 8230, 8239, 8248, 8257, 8288, 8308,
+				 8317, 8337, 8357, 8378, 8421, 8441, 8450, 8470, 8512, 8542, 8551, 8560)
+         """,
+        conn,
+        index_col="id",
+        )
+    assert df.shape[0] != 0, \
+        "no tasks found in database"
 
     df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
 

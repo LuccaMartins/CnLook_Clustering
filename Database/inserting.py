@@ -28,7 +28,6 @@ def insert_bestClusterings(conn, bestClusterings, featured_records):
         sql = f"INSERT INTO clustering_results(method, method_info, data, partition, cluster_validation, features, data_recordings_ids)" \
               f"VALUES('{clustering['Method']}', " \
               f"'{json.dumps(clustering['Method Info'], cls=NumpyEncoder)}', " \
-              f"'{json.dumps(clustering['Data'], cls=NumpyEncoder)}', " \
               f"'{json.dumps(clustering['Partition'], cls=NumpyEncoder)}'," \
               f"'{json.dumps(clustering['Cluster Validation'], cls=NumpyEncoder)}', " \
               f"'{json.dumps(subsets_of_features.get(clustering['Features Subset']), cls=NumpyEncoder)}', " \

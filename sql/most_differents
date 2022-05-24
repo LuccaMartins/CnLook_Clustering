@@ -1,0 +1,103 @@
+update featured_records 
+set is_valid = false
+where recording_id = 1885 
+or recording_id = 1818
+or recording_id = 4187
+or recording_id = 4129
+or recording_id = 1896
+or recording_id = 1971
+or recording_id = 890
+or recording_id = 3671
+or recording_id = 1953
+or recording_id = 2063 -- 10
+or recording_id = 936
+or recording_id = 808
+or recording_id = 3682
+or recording_id = 3749
+or recording_id = 1572
+or recording_id = 2757
+or recording_id = 4222
+or recording_id = 3660
+or recording_id = 3697
+or recording_id = 1366 -- 20
+or recording_id = 3296
+or recording_id = 4594
+or recording_id = 1489
+or recording_id = 2369
+or recording_id = 1098
+or recording_id = 1451
+or recording_id = 2907
+or recording_id = 2977
+or recording_id = 3649
+or recording_id = 4887 -- 30
+or recording_id = 1528
+or recording_id = 811
+or recording_id = 852
+or recording_id = 907
+or recording_id = 1517
+or recording_id = 1542
+or recording_id = 1641
+or recording_id = 1663
+or recording_id = 1806
+or recording_id = 1852 -- 40
+or recording_id = 1792
+or recording_id = 2453
+or recording_id = 2582
+or recording_id = 2827
+or recording_id = 3156
+or recording_id = 3793
+or recording_id = 3815
+or recording_id = 4460
+or recording_id = 3206
+or recording_id = 1984
+
+
+
+
+-- or recording_id = 1920
+-- or recording_id = 2917
+-- or recording_id = 4080
+-- or recording_id = 4160
+-- or recording_id = 4670
+-- or recording_id = 4868
+-- or recording_id = 712
+-- or recording_id = 731
+-- or recording_id = 736
+-- or recording_id = 753 -- 50
+-- or recording_id = 764
+-- or recording_id = 767
+-- or recording_id = 786
+-- or recording_id = 789
+-- or recording_id = 822
+-- or recording_id = 833
+-- or recording_id = 874
+-- or recording_id = 877
+-- or recording_id = 918
+-- or recording_id = 929 -- 60
+-- or recording_id = 943
+-- or recording_id = 954
+-- or recording_id = 965
+-- or recording_id = 987
+-- or recording_id = 999
+-- or recording_id = 1021
+-- or recording_id = 1034
+-- or recording_id = 1051
+-- or recording_id = 1054
+-- or recording_id = 1065 -- 70
+-- or recording_id = 1084
+-- or recording_id = 1095
+-- or recording_id = 1128
+-- or recording_id = 1139
+-- or recording_id = 1146
+-- or recording_id = 1161
+-- or recording_id = 1164
+-- or recording_id = 1175
+-- or recording_id = 1186
+-- or recording_id = 1205 -- 80
+
+
+--  1208, 1227, 1230, 1241, 1260, 1271, 1282, 1293, 1300, 1307, 1326, 1337, 1348, 1351, 1377, 1396, 1410, 1429, 1440, 1465, 1484, 1506, 1583, 1586, 1605, 1608, 1630, 1660, 1674, 1693, 1704, 1715, 1719, 1737, 1740, 1759, 1770, 1781, 1792, 1984, 2355, 2373, 2383, 2393, 2403, 2413, 2423, 2433, 2443, 2453, 2463, 2473, 2483, 2493, 2503, 2513, 2523, 2533, 2543, 2552, 2562, 2572, 2582, 2592, 2602, 2612, 2622, 2642, 2652, 2662, 2672, 2682, 2692, 2702, 2712, 2727, 2737, 2747, 2767, 2777, 2787, 2797, 2807, 2817, 2827, 2837, 2847, 2857, 2867, 2878, 2887, 2897, 2927, 2937, 2947, 2957, 2967, 2987, 2997, 3006, 3016, 3026, 3036, 3046, 3056, 3066, 3076, 3086, 3096, 3106, 3116, 3126, 3146, 3156, 3166, 3176, 3186, 3196, 3206, 3216, 3226, 3236, 3246, 3256, 3266, 3276, 3286, 3306, 3316, 3326, 3336, 3346, 3356, 3376, 3386, 3396, 3406, 3416, 3426, 3436, 3446, 3456, 3466, 3476, 3486, 3496, 3506, 3516, 3526, 3536, 3546, 3556, 3566, 3576, 3586, 3596, 3606, 3616, 3627, 3705, 3716, 3727, 3738, 3760, 3771, 3782, 3793, 3804, 3815, 3826, 3837, 3872, 3873, 3893, 3904, 3907, 3916, 3927, 3929, 3962, 3963, 3967, 3976, 4003, 4004, 4022, 4023, 4029, 4030, 4047, 4067, 4097, 4120, 4121, 4122, 4142, 4144, 4150, 4151, 4171, 4183, 4199, 4214, 4216, 4225, 4232, 4240, 4241, 4246, 4296, 4297, 4322, 4331, 4333, 4334, 4345, 4347, 4352, 4366, 4379, 4380, 4414, 4421, 4428, 4448, 4450, 4457, 4458, 4459, 4460, 4469, 4474, 4506, 4512, 4523, 4533, 4563, 4565, 4569, 4570, 4571, 4578, 4595, 4610, 4614, 4619, 4669, 4688, 4699, 4700, 4701, 4704, 4739, 4758, 4763, 4764, 4772, 4775, 4784, 4811, 4812, 4816, 4833, 4834, 4842, 4852, 4867, 4899, 4910, 4923, 4924, 4925, 4934, 4935, 4954, 4963, 4976, 4977, 4994, 5003, 5019, 5020, 5036, 5037, 5063, 5071, 5109, 5113, 5138, 5147, 5156, 5165, 5174, 5183, 5192, 5204, 5213, 5222, 5231, 5240, 5249, 5267, 5276
+
+
+
+

@@ -16,6 +16,19 @@ Dict_Groups = {
     '12': "DAT"
 }
 
+def columnsForBothEyes(features):
+    features_both_eyes = []
+    for feature in features:
+        if feature == 'ADB':
+            features_both_eyes.append(f'{feature}')
+        else:
+            features_both_eyes.append(f'{feature}_left')
+            features_both_eyes.append(f'{feature}_right')
+
+    return features_both_eyes
+
+
+
 def normalizeTimestamps(timestamps):
     normalized = [0]
     for i in range(1, len(timestamps)):
@@ -63,9 +76,9 @@ def getDistances_betweenEyes(record):
     return distancesBetween
 
 
-def getDistances_ToTarget(record, taskPositions, eye):
-    recordPositions = list(zip(record[1][f'{eye}_x'].values, record[1][f'{eye}_y'].values))
-    distancesToTarget = list(map(distance.euclidean, recordPositions, taskPositions))
+def getDistances_ToTarget(record, taskPositions, eye, last_valid_idx):
+    record_valid_Positions = list(zip(record[1][f'{eye}_x'].values, record[1][f'{eye}_y'].values))[:last_valid_idx]
+    distancesToTarget = list(map(distance.euclidean, record_valid_Positions, taskPositions))
     return distancesToTarget
 
 def getSetOfSizes(recordings):

@@ -1,6 +1,4 @@
 from dtaidistance import dtw_ndim
-from sklearn import metrics
-from validclust import dunn
 from scipy.spatial import distance_matrix as euclidian_distance_matrix
 from scipy.spatial.distance import squareform
 
@@ -14,19 +12,18 @@ from Clustering_Framework.ClusterValidation.cluster_validation import *
 #TODO: test with FOSC and K-means (with Elbow method)
 
 def adjustPartition(partition, method):
-    #noise = 0
-    for i, label in enumerate(partition):
-        if label == -1:
-            partition[i] = 0
-        else:
-            partition[i] = label + 1
-    # if method == 'FOSC':
-    #     for i, label in enumerate(partition):
-    #         if label == -1:
-    #             partition[i] = 0
-    #         else:
-    #             partition[i] = label + 1
-    # # elif method == 'K-Means':
+    #noise = -1
+    # for i, label in enumerate(partition):
+    #     if label == -1:
+    #         partition[i] = 0
+    #     else:
+    #         partition[i] = label + 1
+    if method == 'FOSC':
+        for i, label in enumerate(partition):
+            if label == 0:
+                partition[i] = -1
+
+    # elif method == 'K-Means':
     # elif method == 'DBSCAN':
     #     for i, label in enumerate(partition):
     #         if label == -1:
@@ -46,7 +43,6 @@ def startDBSCAN(X):
         for eps in eps_list:
             db = DBSCAN(eps, min_samples=min_samples, metric='precomputed').fit(mat)
             # print('Getting Cluster Validation...')
-            cv = getClusterValidation(X, mat, adjustPartition(db.labels_, 'DBSCAN'))
             results.append({'Method': 'DBSCAN',
                             'Method Info': {
                                 'Eps': eps,
@@ -55,9 +51,8 @@ def startDBSCAN(X):
                             'Data': X,
                             'Partition': adjustPartition(db.labels_, 'DBSCAN'),
                             'Distance Matrix': mat,
-                            'Cluster Validation': cv
+                            'Cluster Validation': getClusterValidation(X, mat, adjustPartition(db.labels_, 'K-Means'))
                             })
-
     return results
 
 def startKMeans(X):

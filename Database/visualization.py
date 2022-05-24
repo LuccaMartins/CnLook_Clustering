@@ -6,6 +6,8 @@ from Clustering_Framework.utils import *
 from Clustering_Framework.ClusteringMethods.FOSC.util.plotting import *
 from sklearn.decomposition import PCA
 import seaborn as sns
+from sklearn.tree import DecisionTreeClassifier
+from datetime import datetime
 
 
 from matplotlib import colors as mcolors
@@ -33,6 +35,81 @@ def getMethodInfo(result):
 
     return string
 
+def get_PCA_data(X):
+    pca = PCA(2)
+    pca.fit(X)
+    pca_data = pd.DataFrame(pca.transform(X))
+    x = np.array(pca_data[0])
+    y = np.array(pca_data[1])
+
+    return x, y
+
+def plot_result(result, rec_ids, savePlot=False):
+    #TODO: Usar outros algoritmos para visualizar os dados em 2d:
+    # - https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
+    # - https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html
+    #Plotting Scattered data
+    pca_x, pca_y = get_PCA_data(result['Data'])
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(30, 15))
+    # axes[0].scatter()
+
+    for g in np.unique(result['Partition']):
+        ix = np.where(result['Partition'] == g)
+        axes[0].scatter(pca_x[ix], pca_y[ix], c=plt.viridis(), label=g, s=100)
+    axes[0].legend()
+    axes[0].set_title(f'Method: {result["Method"]}, Parameters-> {getMethodInfo(result)}\n' 
+              f'Eye: {result["Eye"]}, Features Subset ({result["Features Subset"]}): {str(subsets_of_features.get(result["Features Subset"]))}, \n'
+              f'Silhouette: {result["Cluster Validation"]["Silhouette"]}, '
+              f'AUCC: {result["Cluster Validation"]["AUCC"]}\n'
+              f'Calinski-Harabasz Index: {result["Cluster Validation"]["Calinski-Harabasz Index"]}\n'
+              f'David-Bouldin Index": {result["Cluster Validation"]["David-Bouldin Index"]}, '
+              f'Dunn Index: {result["Cluster Validation"]["Dunn Index"]}\n'
+            )
+    for i in range(len(pca_x)):
+        axes[0].annotate(rec_ids[i], (pca_x[i] + 0.003, pca_y[i]), fontsize=8)
+
+
+    #Plotting decision tree
+    if result['Eye'] == 'both':
+        labeled_data = pd.DataFrame(result['Data'], columns=columnsForBothEyes(subsets_of_features.get(result['Features Subset'])))
+    else:
+        labeled_data = pd.DataFrame(result['Data'], columns=subsets_of_features.get(result['Features Subset']))
+    labeled_data['label'] = result['Partition']
+
+    # fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(4, 4), dpi=300)
+    clf = DecisionTreeClassifier(random_state=1234)
+    model = clf.fit(result['Data'], result['Partition'])
+    sklearn.tree.plot_tree(model, feature_names=labeled_data.columns,
+                           filled=True, class_names=True, ax=axes[1]);
+    axes[1].set_title("Decision Tree", fontsize=40)
+
+    if savePlot != False:
+        print("Saving plot of clustering result...")
+        title = f'{result["Method"]}_{result["Eye"]}_{result["Features Subset"]}_' \
+                f'{datetime.now().strftime("%b-%d-%Y %Hh%Mm%Ss")} {str(datetime.now().microsecond)}ms'
+
+        plt.savefig(f'./ClusterValidation/Plots Best Clusterings/{title}')
+        plt.close(fig)
+        return
+    plt.show()
+
+
+def plot_decision_tree(result):
+    if result['Eye'] == 'both':
+        labeled_data = pd.DataFrame(result['Data'], columns=columnsForBothEyes(subsets_of_features.get(result['Features Subset'])))
+    else:
+        labeled_data = pd.DataFrame(result['Data'], columns=subsets_of_features.get(result['Features Subset']))
+    labeled_data['label'] = result['Partition']
+
+    fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(4, 4), dpi=300)
+    clf = DecisionTreeClassifier(random_state=1234)
+    model = clf.fit(result['Data'], result['Partition'])
+    sklearn.tree.plot_tree(model,
+                           feature_names=labeled_data.columns,
+                           filled=True,
+                           class_names=True);
+
+    plt.show()
 
 def plot_scattered_data_PCA(X, rec_ids, result=None, savePlot=False, resultIdx=None):
     pca = PCA(2)
@@ -50,7 +127,8 @@ def plot_scattered_data_PCA(X, rec_ids, result=None, savePlot=False, resultIdx=N
             ax.scatter(x[ix], y[ix], c=plt.viridis(), label=g, s=100)
     ax.legend()
 
-    plt.title(f'Method: {result["Method"]}, Eye: {result["Eye"]}, Features Subset: {result["Features Subset"]}, '
+    plt.title(f'Method: {result["Method"]}, Eye: {result["Eye"]}, \n'
+              f'Features Subset ({result["Features Subset"]}): {str(subsets_of_features.get(result["Features Subset"]))}, \n'
               f'Parameters-> {getMethodInfo(result)}\n'
               f'Silhouette: {result["Cluster Validation"]["Silhouette"]}\n'
               # f'AUCC: {result["Cluster Validation"]["AUCC"]}\n'

@@ -5,10 +5,871 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/export_to_csv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trying_PyTrack/testingPyTrack.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trying_eyegaze/eyegaze" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_left_4_idx 0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_left_4_idx 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_left_4_idx 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/FOSC_right_4_idx 9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/FOSC/Results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1010, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1010, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1021, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1021, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1034, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1034, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1051, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1051, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1054, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1054, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1065, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1065, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1084, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1084, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1095, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1095, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1098, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1098, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1109, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1109, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1128, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1128, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1139, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1139, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1146, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1146, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1161, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1161, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1164, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1164, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1175, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1175, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1186, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1186, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1205, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1205, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1208, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1208, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1227, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1227, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1230, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1230, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1241, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1241, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1260, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1260, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1271, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1271, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1282, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1282, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1293, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1293, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1300, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1300, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1307, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1307, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1326, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1326, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1337, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1337, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1348, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1348, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1351, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1351, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1364, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1364, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1366, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1366, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1377, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1377, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1396, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1396, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1407, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1407, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1410, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1410, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1429, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1429, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1440, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1440, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1451, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1451, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1458, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1458, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1465, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1465, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1484, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1484, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1489, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1489, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1506, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1506, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1517, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1517, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1528, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1528, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1539, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1539, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1542, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1542, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1560, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1560, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1572, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1572, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1583, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1583, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1586, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1586, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1605, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1605, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1608, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1608, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1619, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1619, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1630, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1630, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1641, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1641, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1660, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1660, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1663, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1663, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1674, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1674, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1693, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1693, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1704, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1704, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1715, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1715, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1719, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1719, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1737, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1737, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1740, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1740, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1759, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1759, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1770, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1770, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1781, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1781, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1792, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1792, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1797, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1797, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1806, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1806, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1818, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1818, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1832, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1843, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1843, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1852, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1852, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1865, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1865, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1873, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1873, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1885, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1885, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1896, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1896, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1909, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1909, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1920, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1920, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1942, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1942, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1953, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1953, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1964, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1964, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1971, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1971, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1984, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1984, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1997, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2015, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2015, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2052, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2052, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2063, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2063, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2072, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2355, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2355, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2369, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2369, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2373, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2373, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2383, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2383, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2393, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2393, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2403, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2403, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2413, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2413, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2423, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2423, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2433, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2433, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2443, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2443, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2453, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2453, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2463, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2463, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2473, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2473, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2483, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2483, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2493, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2493, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2503, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2503, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2513, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2513, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2523, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2523, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2533, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2533, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2543, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2543, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2552, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2552, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2562, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2562, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2572, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2572, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2582, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2582, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2592, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2592, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2602, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2602, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2612, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2612, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2622, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2622, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2632, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2632, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2642, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2642, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2652, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2652, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2662, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2662, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2672, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2672, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2682, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2682, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2692, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2692, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2702, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2702, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2712, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2712, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2727, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2727, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2737, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2737, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2747, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2747, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2757, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2757, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2767, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2767, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2777, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2777, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2787, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2787, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2797, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2797, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2807, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2807, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2817, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2817, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2827, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2827, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2837, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2837, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2847, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2847, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2857, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2857, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2867, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2867, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2878, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2878, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2887, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2887, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2897, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2897, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2907, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2907, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2917, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2917, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2927, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2927, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2937, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2937, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2947, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2947, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2957, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2957, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2967, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2967, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2977, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2977, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2987, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2987, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2997, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 2997, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3006, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3006, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3016, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3016, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3026, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3026, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3036, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3036, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3046, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3046, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3056, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3056, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3066, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3066, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3076, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3076, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3086, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3086, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3096, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3096, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3106, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3106, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3116, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3116, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3126, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3126, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3136, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3146, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3146, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3156, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3156, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3166, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3166, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3176, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3176, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3186, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3186, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3196, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3196, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3206, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3206, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3216, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3216, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3226, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3226, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3236, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3236, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3246, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3246, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3256, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3256, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3266, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3266, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3276, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3276, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3286, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3286, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3296, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3296, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3306, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3306, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3316, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3316, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3326, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3326, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3336, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3336, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3346, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3346, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3356, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3356, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3366, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3366, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3376, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3376, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3386, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3386, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3396, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3396, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3406, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3406, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3416, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3416, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3426, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3426, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3436, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3436, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3446, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3446, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3456, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3456, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3466, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3466, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3476, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3476, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3486, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3486, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3496, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3496, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3506, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3506, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3516, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3516, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3526, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3526, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3536, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3536, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3546, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3546, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3556, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3556, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3566, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3566, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3576, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3576, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3586, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3586, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3596, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3596, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3606, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3606, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3616, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3616, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3627, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3627, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3638, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3638, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3649, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3649, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3660, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3660, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3671, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3671, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3682, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3682, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3697, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3697, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3705, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3705, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3716, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3716, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3727, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3727, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3738, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3738, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3749, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3749, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3760, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3760, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3771, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3771, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3782, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3782, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3793, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3793, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3804, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3804, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3815, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3815, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3826, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3826, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3837, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3837, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3872, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3872, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3873, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3873, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3893, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3893, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3904, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3904, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3907, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3907, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3916, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3916, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3927, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3927, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3929, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3929, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3962, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3962, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3963, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3963, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3967, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3967, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3976, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 3976, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4003, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4003, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4004, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4004, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4022, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4022, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4023, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4023, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4029, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4029, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4030, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4030, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4047, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4047, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4067, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4067, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4080, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4080, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4097, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4097, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4120, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4120, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4121, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4121, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4122, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4122, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4129, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4129, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4142, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4142, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4144, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4144, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4150, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4150, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4151, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4151, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4160, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4160, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4171, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4171, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4183, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4183, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4187, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4187, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4199, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4199, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4214, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4214, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4216, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4216, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4221, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4221, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4222, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4222, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4225, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4225, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4232, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4232, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4240, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4240, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4241, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4241, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4246, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4246, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4296, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4296, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4297, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4297, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4322, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4322, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4331, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4331, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4333, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4333, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4334, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4334, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4345, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4345, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4347, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4347, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4352, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4352, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4366, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4366, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4379, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4379, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4380, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4380, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4414, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4414, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4421, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4421, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4428, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4428, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4448, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4448, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4450, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4450, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4457, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4457, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4458, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4458, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4459, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4459, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4460, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4460, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4469, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4469, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4474, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4474, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4506, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4506, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4512, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4512, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4523, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4523, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4533, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4533, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4563, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4563, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4565, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4565, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4569, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4569, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4570, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4570, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4571, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4571, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4578, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4578, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4594, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4594, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4595, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4595, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4610, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4610, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4614, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4614, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4619, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4619, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4658, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4658, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4659, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4659, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4660, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4660, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4669, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4669, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4670, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4670, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4688, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4688, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4699, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4699, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4700, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4700, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4701, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4701, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4704, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4704, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4739, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4739, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4758, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4758, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4763, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4763, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4764, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4764, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4772, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4772, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4775, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4775, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4784, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4784, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4811, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4811, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4812, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4812, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4816, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4816, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4833, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4833, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4834, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4834, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4842, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4842, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4852, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4852, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4867, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4867, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4868, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4868, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4887, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4887, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4899, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4899, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4910, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4910, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4923, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4923, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4924, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4924, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4925, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4925, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4934, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4934, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4935, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4935, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4954, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4954, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4963, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4963, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4976, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4976, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4977, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4977, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4994, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 4994, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5003, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5003, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5019, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5019, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5020, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5020, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5036, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5036, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5037, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5037, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5063, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5063, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5071, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5071, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5076, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5076, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5077, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5077, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5095, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5095, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5109, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5109, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5113, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5113, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5138, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5138, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5147, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5147, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5156, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5156, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5165, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5165, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5174, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5174, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5183, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5183, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5192, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5192, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5204, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5204, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5213, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5213, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5222, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5222, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5231, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5231, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5240, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5240, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5249, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5249, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5258, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5258, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5267, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5267, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5276, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 5276, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 701, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 701, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 712, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 712, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 731, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 731, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 736, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 736, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 753, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 753, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 764, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 764, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 767, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 767, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 786, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 786, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 789, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 789, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 808, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 808, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 811, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 811, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 822, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 822, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 833, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 833, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 852, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 852, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 859, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 859, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 874, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 874, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 877, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 877, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 890, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 890, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 907, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 907, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 918, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 918, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 929, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 929, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 936, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 936, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 943, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 943, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 954, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 954, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 965, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 965, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 984, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 984, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 987, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 987, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 998, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 998, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 999, EMA_IVT, left eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 999, EMA_IVT, right eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/event_Detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/event_Detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/RecordSelection/record_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/RecordSelection/record_selection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/clustering_parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/clustering_parameters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/inserting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/inserting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/reading.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/reading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/visualization.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +896,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/venv/Lib/site-packages/scipy/spatial/kdtree.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/metrics/cluster/_unsupervised.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/venv/Lib/site-packages/DBCV/DBCV.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,7 +918,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Área de Trabalho/emotion recognition" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -69,7 +932,7 @@
       <recent name="C:\Git Repositories\CnLook_Clustering\Images\DTW Samples" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (2)">
+  <component name="RunManager" selected="Python.insert_featured_records">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="CnLook_Clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,6 +947,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="export_to_csv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CnLook_Clustering" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Database/export_to_csv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -108,28 +993,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CnLook_Clustering" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clustering_CnLook" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering_CnLook/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -205,18 +1068,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.insert_featured_records" />
-      <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.main (2)" />
       <item itemvalue="Python.visualization" />
       <item itemvalue="Python.mainTest" />
+      <item itemvalue="Python.export_to_csv" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.insert_featured_records" />
+        <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.export_to_csv" />
         <item itemvalue="Python.mainTest" />
         <item itemvalue="Python.visualization" />
-        <item itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -249,6 +1112,15 @@
       <workItem from="1651105125332" duration="10601000" />
       <workItem from="1651118271334" duration="4301000" />
       <workItem from="1651162926658" duration="14252000" />
+      <workItem from="1652131942572" duration="5646000" />
+      <workItem from="1652184645671" duration="21511000" />
+      <workItem from="1652282902817" duration="8902000" />
+      <workItem from="1652467931818" duration="7830000" />
+      <workItem from="1652737113069" duration="1644000" />
+      <workItem from="1652805562669" duration="8075000" />
+      <workItem from="1652815964018" duration="8276000" />
+      <workItem from="1653061732253" duration="17672000" />
+      <workItem from="1653400187493" duration="3969000" />
     </task>
     <servers />
   </component>
@@ -273,16 +1145,6 @@
           <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python310/Lib/site-packages/dtaidistance/dtw.py</url>
           <line>795</line>
           <option name="timeStamp" value="121" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/EventDetection/event_Detection.py</url>
-          <line>80</line>
-          <option name="timeStamp" value="392" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/main.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="397" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Trying_eyegaze/eyegaze/maingaze.py</url>
@@ -315,14 +1177,19 @@
           <option name="timeStamp" value="412" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$APPLICATION_HOME_DIR$/plugins/python/helpers/pydev/_pydevd_bundle/pydevd_exec2.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="425" />
+          <url>file://$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="565" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="469" />
+          <url>file://$PROJECT_DIR$/Database/visualization.py</url>
+          <line>187</line>
+          <option name="timeStamp" value="578" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Database/export_to_csv.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="584" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -342,9 +1209,10 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1652113250641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1653403675158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$mainTest.coverage" NAME="mainTest Coverage Results" MODIFIED="1651085152924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Trying_eyegaze/eyegaze" />
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$insert_featured_records.coverage" NAME="insert_featured_records Coverage Results" MODIFIED="1651719892596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$export_to_csv.coverage" NAME="export_to_csv Coverage Results" MODIFIED="1653332189225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Database" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$insert_featured_records.coverage" NAME="insert_featured_records Coverage Results" MODIFIED="1653400580797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1649879727006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Database" />
   </component>
 </project>

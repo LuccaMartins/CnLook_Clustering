@@ -20,10 +20,19 @@ conn = connect_db("127.0.0.1", "cnlook_")
 #Reading records
 # groupId = "2"
 taskId = "2515"
-print(f'Reading records from database - TaskId: {taskId}')
+
+# tasks = getTasks(conn)
+# jsonsss = []
+# for param_data in list(tasks['animation_blueprint']):
+#     jsonsss.append(json.loads(param_data))
+#
+# df2 = pd.DataFrame(jsonsss)
+
+
+print(f'Reading records from database ')
 
 # records = list(getRecordings_ByTaskId(conn, taskId, groupId))
-featured_records = read_featuredRecords(conn, taskId)
+featured_records = read_featuredRecords(conn)
 
 #TODO: vary the identification method....
 #for method in event_detection_methods:
