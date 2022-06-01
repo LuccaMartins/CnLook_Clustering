@@ -196,16 +196,16 @@ def read_task_data(conn, group, taskname):
     df.attrs['dbname'] = conn.get_dsn_parameters()['dbname']
     return df
 
-def getRecordings_SameTasks(conn, taskId=2515):
+def getRecordings_SimilarTasks(conn, taskId):
     if taskId == 2515:
         df = pd.read_sql_query(  #
             f"""
                     SELECT
-                      recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
+                      rec.recording_id, timestamp, tracking_status, left_normal, right_normal, left_pupil_diameter_mm, right_pupil_diameter_mm
                     FROM sample_entity sample
-                      JOIN recording_entity rec USING (recording_id)
-                      JOIN screening_entity scr USING (screening_id)
-                      JOIN subject_entity sub USING (subject_id)
+                      JOIN recording_entity rec on rec.recording_id = sample.recording_id
+                      JOIN screening_entity scr on rec.screening_id = scr.screening_id
+                      JOIN subject_entity sub on scr.subject_id = sub.subject_id
                       JOIN task_entity tsk ON rec.task_id = tsk.id
                     where sub.name not like '%a'
                     and sub.name not like '%b'
@@ -227,13 +227,7 @@ def getRecordings_SameTasks(conn, taskId=2515):
                                  7787, 7798, 7809, 7820, 7966, 7977, 7988, 7999, 8010, 8021, 8032, 8043,
                                  8054, 8065, 8076, 8087, 8098, 8221, 8230, 8239, 8248, 8257, 8288, 8308,
                                  8317, 8337, 8357, 8378, 8421, 8441, 8450, 8470, 8512, 8542, 8551, 8560)
-                    AND rec.recording_id not in (808, 890, 936, 1054, 1098, 1792, 1806, 1818, 1852, 1885, 1896,
-                                   1920, 1953, 1971, 1984, 2063, 2582, 2757, 2907, 3296, 3649, 3660,
-                                   3671, 3682, 3697, 3749, 4022, 4122, 5147, 8059, 8070, 8213, 4187, 4129,
-                                   877, 1208, 1832, 1935, 1997, 2652, 2737, 3186, 3627, 3793, 3904, 4067,
-                                   4699, 4701, 4704, 4758, 4772, 5201, 5222, 5267, 7757, 7770, 7792, 7803,
-                                   8048)
-                    ORDER BY recording_id, timestamp
+                    ORDER BY rec.recording_id, timestamp
                     ;
                     """,
             conn,

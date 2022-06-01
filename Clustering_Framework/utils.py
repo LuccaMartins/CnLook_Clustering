@@ -1,4 +1,6 @@
 import json
+import scipy
+from matplotlib.pyplot import sci
 from scipy.spatial import distance
 from sklearn import preprocessing
 
@@ -84,79 +86,147 @@ def getDistances_ToTarget(record, taskPositions, eye, last_valid_idx):
 def getSetOfSizes(recordings):
     return sorted(set([len(x) for x in recordings]))
 
-#TODO: IMPROVE THIS FUNCTION BASED ON 'features_to_use'
-def shapeFeaturedRecords(featuredRecords, features_to_use, eye='both'):
+def shapeFeaturedRecords_ADpFF(featuredRecords, features_to_use, eye='both'):
+    # getting mean for means of fixations in right and left side of the screen
     X = []
-    #IMPORTANT: ADpFF can't be used with other features.
+    if eye == 'both':
+        print('Shaping records for both eyes...')
+        record_features = []
+        for record in list(featuredRecords['features'].values):
+            for feature in features_to_use:
+                if feature == 'ADpFF':
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][0:5]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][5:10]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][10:15]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][15:20]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][20:25]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][25:30]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][0:5]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][5:10]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][10:15]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][15:20]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][20:25]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][25:30]))
+                    record_features.append(scipy.mean(record[0][f'ADpFF_left'][0:5] + record[0][f'ADpFF_left'][10:15] + record[0][f'ADpFF_left'][20:25]))
+                    record_features.append(scipy.mean(record[0][f'ADpFF_left'][5:10] + record[0][f'ADpFF_left'][15:20] + record[0][f'ADpFF_left'][25:30]))
+                    record_features.append(scipy.mean(record[1][f'ADpFF_right'][0:5] + record[1][f'ADpFF_right'][10:15] + record[1][f'ADpFF_right'][20:25]))
+                    record_features.append(scipy.mean(record[1][f'ADpFF_right'][5:10] + record[1][f'ADpFF_right'][15:20] + record[1][f'ADpFF_right'][25:30]))
+                else:
+                    if feature == 'ADB':
+                        record_features.append(record[2][f'{feature}'])
+                    else:
+                        record_features.append(record[0][f'{feature}_left'])
+                        record_features.append(record[1][f'{feature}_right'])
+
+                    # for avrg_dist in record[0][f'ADpFF_left']:
+                    #     record_features.append(avrg_dist)
+                    # for avrg_dist in record[1][f'ADpFF_right']:
+                    #     record_features.append(avrg_dist)
+            X.append(record_features)
+            record_features = []
+
+    elif eye == 'left':
+        print('Shaping records for left eye...')
+        record_features = []
+        for record in list(featuredRecords['features'].values):
+            for feature in features_to_use:
+                if feature == 'ADpFF':
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][0:5]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][5:10]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][10:15]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][15:20]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][20:25]))
+                    # record_features.append(scipy.mean(record[0][f'ADpFF_left'][25:30]))
+                    record_features.append(scipy.mean(
+                        record[0][f'ADpFF_left'][0:5] + record[0][f'ADpFF_left'][10:15] + record[0][f'ADpFF_left'][20:25]))
+                    record_features.append(scipy.mean(
+                        record[0][f'ADpFF_left'][5:10] + record[0][f'ADpFF_left'][15:20] + record[0][f'ADpFF_left'][25:30]))
+                else:
+                    if feature == 'ADB':
+                        record_features.append(record[2][f'{feature}'])
+                    else:
+                        record_features.append(record[0][f'{feature}_left'])
+            # for avrg_dist in record[0][f'ADpFF_left']:
+            #     record_features.append(avrg_dist)
+            X.append(record_features)
+            record_features = []
+
+    elif eye == 'right':
+        print('Shaping records for right eye...')
+        record_features = []
+        for record in list(featuredRecords['features'].values):
+            for feature in features_to_use:
+                if feature == 'ADpFF':
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][0:5]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][5:10]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][10:15]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][15:20]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][20:25]))
+                    # record_features.append(scipy.mean(record[1][f'ADpFF_right'][25:30]))
+                    record_features.append(scipy.mean(
+                        record[0][f'ADpFF_left'][0:5] + record[0][f'ADpFF_left'][10:15] + record[0][f'ADpFF_left'][20:25]))
+                    record_features.append(scipy.mean(
+                        record[0][f'ADpFF_left'][5:10] + record[0][f'ADpFF_left'][15:20] + record[0][f'ADpFF_left'][25:30]))
+
+                else:
+                    if feature == 'ADB':
+                        record_features.append(record[2][f'{feature}'])
+                    else:
+                        record_features.append(record[1][f'{feature}_right'])
+
+            # for avrg_dist in record[1][f'ADpFF_right']:
+            #     record_features.append(avrg_dist)
+            X.append(record_features)
+            record_features = []
+
+
+    X = preprocessing.minmax_scale(X)
+    return X
+
+
+
+def shapeFeaturedRecords(featuredRecords, features_to_use, eye):
     if features_to_use.__contains__('ADpFF'):
-        if eye == 'both':
-            print('Shaping records for both eyes...')
-            record_features = []
-            i = 0
-            for record in list(featuredRecords['features'].values):
-                for avrg_dist in record[0][f'ADpFF_left']:
-                    record_features.append(avrg_dist)
-                for avrg_dist in record[1][f'ADpFF_right']:
-                    record_features.append(avrg_dist)
-                X.append(record_features)
-                i += 1
-                record_features = []
+        return shapeFeaturedRecords_ADpFF(featuredRecords, features_to_use, eye)
 
-        elif eye == 'left':
-            print('Shaping records for left eye...')
-            record_features = []
-            for record in list(featuredRecords['features'].values):
-                for avrg_dist in record[0][f'ADpFF_left']:
-                    record_features.append(avrg_dist)
-                X.append(record_features)
-                record_features = []
+    X = []
+    if eye == 'both':
+        print('Shaping records for both eyes...')
+        record_features = []
+        for record in list(featuredRecords['features'].values):
+            for feature in features_to_use:
+                if feature == 'ADB':
+                    record_features.append(record[2][f'{feature}'])
+                else:
+                    record_features.append(record[0][f'{feature}_left'])
+                    record_features.append(record[1][f'{feature}_right'])
 
-        elif eye == 'right':
-            print('Shaping records for right eye...')
+            X.append(record_features)
             record_features = []
-            for record in list(featuredRecords['features'].values):
-                for avrg_dist in record[1][f'ADpFF_right']:
-                    record_features.append(avrg_dist)
-                X.append(record_features)
-                record_features = []
-    else:
-        if eye == 'both':
-            print('Shaping records for both eyes...')
-            record_features = []
-            for record in list(featuredRecords['features'].values):
-                for feature in features_to_use:
-                    if feature == 'ADB':
-                        record_features.append(record[2][f'{feature}'])
-                    else:
-                        record_features.append(record[0][f'{feature}_left'])
-                        record_features.append(record[1][f'{feature}_right'])
 
-                X.append(record_features)
-                record_features = []
-
-        elif eye == 'left':
-            print('Shaping records for left eye...')
+    elif eye == 'left':
+        print('Shaping records for left eye...')
+        record_features = []
+        for record in list(featuredRecords['features'].values):
+            for feature in features_to_use:
+                if feature == 'ADB':
+                    record_features.append(record[2][f'{feature}'])
+                else:
+                    record_features.append(record[0][f'{feature}_left'])
+            X.append(record_features)
             record_features = []
-            for record in list(featuredRecords['features'].values):
-                for feature in features_to_use:
-                    if feature == 'ADB':
-                        record_features.append(record[2][f'{feature}'])
-                    else:
-                        record_features.append(record[0][f'{feature}_left'])
-                X.append(record_features)
-                record_features = []
 
-        elif eye == 'right':
-            print('Shaping records for right eye...')
+    elif eye == 'right':
+        print('Shaping records for right eye...')
+        record_features = []
+        for record in list(featuredRecords['features'].values):
+            for feature in features_to_use:
+                if feature == 'ADB':
+                    record_features.append(record[2][f'{feature}'])
+                else:
+                    record_features.append(record[1][f'{feature}_right'])
+            X.append(record_features)
             record_features = []
-            for record in list(featuredRecords['features'].values):
-                for feature in features_to_use:
-                    if feature == 'ADB':
-                        record_features.append(record[2][f'{feature}'])
-                    else:
-                        record_features.append(record[1][f'{feature}_right'])
-                X.append(record_features)
-                record_features = []
 
     X = preprocessing.minmax_scale(X)
     return X;

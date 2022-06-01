@@ -8,7 +8,7 @@ from sklearn.decomposition import PCA
 import seaborn as sns
 from sklearn.tree import DecisionTreeClassifier
 from datetime import datetime
-
+import operator
 
 from matplotlib import colors as mcolors
 import math
@@ -39,10 +39,53 @@ def get_PCA_data(X):
     pca = PCA(2)
     pca.fit(X)
     pca_data = pd.DataFrame(pca.transform(X))
-    x = np.array(pca_data[0])
-    y = np.array(pca_data[1])
+    x = np.array(preprocessing.minmax_scale(pca_data[0]))
+    y = np.array(preprocessing.minmax_scale(pca_data[1]))
 
     return x, y
+
+def plot_pairwise_frequency_info(obj_pairwise_freq, means, rec_ids, savePlot=False):
+    sorted_pairs = sorted(enumerate(means), key=operator.itemgetter(1))
+    sorted_pairs_ids = [(rec_ids[pair[0]], pair[1]) for pair in sorted_pairs]
+    # sorted_pairs_means = [(rec_ids[pair[0]], pair[1]) for pair in sorted_pairs]
+
+    # sorted_pairs_
+    # it doesn't need to be so rigid, could also use like the second or third best frequency...
+    best_frequency = max([pair[1] for pair in sorted_pairs_ids])
+
+    worst_records = filter(lambda x: x[1] < best_frequency, sorted_pairs_ids)
+    worst_records_ids = [rec[0] for rec in worst_records]
+
+    cmap = plt.cm.get_cmap('flare')
+    rec_colors = []
+    for mean in [pair[1] for pair in sorted_pairs_ids]:
+        rgba = cmap(mean)
+        rec_colors.append(rgba)
+
+    print("Plotting pairwise frequency..")
+    plt.figure(figsize=(30, 20))
+
+    plt.text(500, 0.1, f'{len(worst_records_ids)} Worst Records:\n', fontsize=30, ha='right', va='top')
+
+
+    for i, rec in enumerate(worst_records_ids[:120]):
+        if i < 40:
+            plt.text(450, 20+(i*10), rec, fontsize=30, ha='right', va='top', color=rec_colors[i])
+        elif i < 80:
+            plt.text(480, 20+((i-40)*10), rec, fontsize=30, ha='right', va='top', color=rec_colors[i])
+        else:
+            plt.text(510, 20+((i-80)*10), rec, fontsize=30, ha='right', va='top', color=rec_colors[i])
+
+    sns.heatmap(round(pd.DataFrame(obj_pairwise_freq), 2), cmap='flare', vmin=0, vmax=1)
+    plt.title(f'Pairwise Frequency of {len(rec_ids)} Recors', fontsize=80)
+
+    if savePlot:
+        plt.savefig(f'./ClusterValidation/Plots Best Clusterings/Results_{len(rec_ids)}_records_3_features/Pairwise Frequency')
+        plt.close();
+    plt.show()
+
+
+
 
 def plot_result(result, rec_ids, savePlot=False):
     #TODO: Usar outros algoritmos para visualizar os dados em 2d:
@@ -71,9 +114,15 @@ def plot_result(result, rec_ids, savePlot=False):
 
     #Plotting decision tree
     if result['Eye'] == 'both':
-        labeled_data = pd.DataFrame(result['Data'], columns=columnsForBothEyes(subsets_of_features.get(result['Features Subset'])))
+        if subsets_of_features.get(result['Features Subset']).__contains__('ADpFF'):
+            labeled_data = pd.DataFrame(result['Data'])
+        else:
+            labeled_data = pd.DataFrame(result['Data'], columns=columnsForBothEyes(subsets_of_features.get(result['Features Subset'])))
     else:
-        labeled_data = pd.DataFrame(result['Data'], columns=subsets_of_features.get(result['Features Subset']))
+        if subsets_of_features.get(result['Features Subset']).__contains__('ADpFF'):
+            labeled_data = pd.DataFrame(result['Data'])
+        else:
+            labeled_data = pd.DataFrame(result['Data'], columns=subsets_of_features.get(result['Features Subset']))
     labeled_data['label'] = result['Partition']
 
     # fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(4, 4), dpi=300)
@@ -88,7 +137,7 @@ def plot_result(result, rec_ids, savePlot=False):
         title = f'{result["Method"]}_{result["Eye"]}_{result["Features Subset"]}_' \
                 f'{datetime.now().strftime("%b-%d-%Y %Hh%Mm%Ss")} {str(datetime.now().microsecond)}ms'
 
-        plt.savefig(f'./ClusterValidation/Plots Best Clusterings/{title}')
+        plt.savefig(f'./ClusterValidation/Plots Best Clusterings/Results_{len(rec_ids)}_records_3_features/{title}')
         plt.close(fig)
         return
     plt.show()

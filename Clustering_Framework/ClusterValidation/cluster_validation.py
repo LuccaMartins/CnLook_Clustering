@@ -5,6 +5,7 @@ from validclust import dunn
 from Database.visualization import *
 from scipy.stats import pointbiserialr
 from DBCV import DBCV
+from math import exp
 
 def getClusterValidation(X, mat, partition):
     #Removing noisy elements for cluster validation
@@ -21,12 +22,13 @@ def getClusterValidation(X, mat, partition):
     # https://www.dbs.ifi.lmu.de/~zimek/publications/SDM2014/DBCV.pdf usar para o DBSCAN
     if len(set(partition_noNoise)) >= 2:
         return {
-            'Silhouette': penalty * round(metrics.silhouette_score(mat_noNoise, partition_noNoise, metric="precomputed"), 4),
-            'AUCC': round(computePBandAUCCIndexes(partition, mat)[1], 4), #sends partition with noise because the function deals with it.
-            'Calinski-Harabasz Index': penalty * round(metrics.calinski_harabasz_score(X_noNoise, partition_noNoise), 4),
-            'David-Bouldin Index': penalty * round(metrics.davies_bouldin_score(X_noNoise, partition_noNoise), 4),
-            'Dunn Index': penalty * round(dunn(mat_noNoise, partition_noNoise), 4),
-            # 'DBCV': penalty * round(DBCV(X_noNoise, partition_noNoise), 4)
+            'Silhouette': round(penalty * metrics.silhouette_score(mat_noNoise, partition_noNoise, metric="precomputed"), 4),
+            # 'AUCC': round(computePBandAUCCIndexes(partition, mat)[1], 4), #sends partition with noise because the function deals with it.
+            'AUCC': round(penalty * myAUCC(partition_noNoise, mat_noNoise), 4),
+            'Calinski-Harabasz Index': round(penalty * metrics.calinski_harabasz_score(X_noNoise, partition_noNoise), 4),
+            'David-Bouldin Index': round(penalty * metrics.davies_bouldin_score(X_noNoise, partition_noNoise), 4),
+            'Dunn Index': round(penalty * dunn(mat_noNoise, partition_noNoise), 4),
+            'DBCV': penalty * round(DBCV(X_noNoise, partition_noNoise), 4)
         }
     else:
         return {
@@ -34,10 +36,10 @@ def getClusterValidation(X, mat, partition):
         }
 
 
-#remover noiseeee para d dsd
+
 def analyzeResults(allResults, rec_ids):
     bestResults = []
-    thrs_best_silhouette = 0.75
+    thrs_best_silhouette = 0.6
     thrs_best_aucc = 0.7
     thrs_best_dbcv = 0.6
     for i, result in enumerate(allResults):
@@ -52,21 +54,15 @@ def analyzeResults(allResults, rec_ids):
           f" (thrs_best_silhouette = {thrs_best_aucc}")
 
     for i, result in enumerate(bestResults):
+        print(f'Best Result {i+1} of {len(bestResults)}')
         plot_result(result, rec_ids, savePlot=True)
-        # plot_scattered_data_PCA(result['Data'], rec_ids, result, savePlot=False, resultIdx=i)
-        # plot_decision_tree(result)
+
+    objects_pairwise_frequency, means = getObjectsPairwiseFrequency(bestResults, rec_ids)
+    plot_pairwise_frequency_info(objects_pairwise_frequency, means, rec_ids, savePlot=True)
 
 
 
 
-    objects_pairwise, means = getObjectsPairwiseFrequency(bestResults, rec_ids)
-    # objects_correlations, means2 = getObjectsCorrelationMatrix(bestResults, rec_ids)
-
-    ordered = []
-
-    sorted_pairs = sorted(enumerate(means), key=operator.itemgetter(1))
-    sorted_pairs_ids = [(rec_ids[pair[0]], pair[1]) for pair in sorted_pairs]
-    print('so what...')
 
     # >>>>>>>>>>>> RAND INDEX
     # pairwise_rand_scores = []
@@ -90,6 +86,21 @@ def printBestSilhouettes(results):
               " using minCSize = " + str(results[idx][0]) +
               ", and method = " + results[idx][1])
 
+def myAUCC(partition, distanceMatrix):
+    clusteringArray = []
+    similarityArray = []
+    for i in range(len(partition)):
+        for j in range(i+1, len(partition)):
+            if partition[i] == partition[j]:
+                clusteringArray.append(1)
+            else:
+                clusteringArray.append(0)
+            # similarityArray.append(1/(1 + distanceMatrix[i][j]))
+            similarityArray.append(1/(1 + math.exp(distanceMatrix[i][j])))
+
+    aucc = metrics.roc_auc_score(clusteringArray, similarityArray)
+
+    return aucc
 
 def computePBandAUCCIndexes(partition, distanceMatrix):
     penalty, noiseSize = getPenalty(partition)
@@ -133,7 +144,6 @@ def getObjectsPairwiseFrequency(results, rec_ids):
 
     all_objects_pairwiseCount = []
     for i in range(len(rec_ids)): #for each object
-
         object_pairwiseCount = np.zeros(len(rec_ids))
         for partition in partitions: #analyze each partition
             for j, label in enumerate(partition): #and get how many times each object is in the same cluster
@@ -147,12 +157,6 @@ def getObjectsPairwiseFrequency(results, rec_ids):
     means = []
     for i in range(len(all_objects_pairwiseFrequency)):
         means.append(scipy.mean(all_objects_pairwiseFrequency[i]))
-
-    print("Plotting pairwise frequency..")
-    plt.figure(figsize=(30, 20))
-    sns.heatmap(round(pd.DataFrame(all_objects_pairwiseFrequency), 2), cmap='flare', vmin=0, vmax=1)
-    plt.title('Pairwise frequency', fontsize=80)
-    plt.show()
 
     return all_objects_pairwiseFrequency, means
 

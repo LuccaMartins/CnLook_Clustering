@@ -13,9 +13,9 @@ def analyzeRecords(records):
         right_untracked = list(record[1]['tracking_status'].values).count(2)
         left_untracked = list(record[1]['tracking_status'].values).count(3)
         # checking percentage of untracked eyes
-        if (both_untracked*100)/len(record[1]) > 10 or \
-           (right_untracked + both_untracked)*100/len(record[1]) > 15 or \
-           (left_untracked + both_untracked)*100/len(record[1]) > 15:
+        if (both_untracked*100)/len(record[1]) > 15 or \
+           (right_untracked + both_untracked)*100/len(record[1]) > 20 or \
+           (left_untracked + both_untracked)*100/len(record[1]) > 20:
             bad_records_idxs.append(i)
             print(f'The record {record[0]} will be dropped because of the number of stamps with untracked eyes'
                   f'. Both: {both_untracked}, right: {right_untracked}, left: {left_untracked}.')

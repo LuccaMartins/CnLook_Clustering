@@ -25,7 +25,7 @@ def insert_bestClusterings(conn, bestClusterings, featured_records):
 
     cursor = conn.cursor()
     for clustering in bestClusterings:
-        sql = f"INSERT INTO clustering_results(method, method_info, data, partition, cluster_validation, features, data_recordings_ids)" \
+        sql = f"INSERT INTO clustering_results(method, method_info, partition, cluster_validation, features, data_recordings_ids)" \
               f"VALUES('{clustering['Method']}', " \
               f"'{json.dumps(clustering['Method Info'], cls=NumpyEncoder)}', " \
               f"'{json.dumps(clustering['Partition'], cls=NumpyEncoder)}'," \

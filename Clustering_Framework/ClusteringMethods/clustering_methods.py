@@ -32,10 +32,9 @@ def adjustPartition(partition, method):
     #             partition[i] = label + 1
     return partition
 
-def startDBSCAN(X):
-    print('Running DBSCAN...')
+def startDBSCAN(X, mat):
+    print('Running DBSCAN...', end='')
     # Calculating distance matrix
-    mat = generateDistanceMatrix(X, 'euclidian')
     eps_list = [0.1, 0.2, 0.3, 0.4, 0.5]
     results = []
     min_list = [5, 10, 15, 20, 25]
@@ -53,13 +52,12 @@ def startDBSCAN(X):
                             'Distance Matrix': mat,
                             'Cluster Validation': getClusterValidation(X, mat, adjustPartition(db.labels_, 'K-Means'))
                             })
+    print(' Done.')
     return results
 
-def startKMeans(X):
-    print('Running K-Means...')
-    # Calculating distance matrix
-    mat = generateDistanceMatrix(X, 'euclidian')
-    k_clusters = [3, 4, 5]
+def startKMeans(X, mat):
+    print('Running K-Means...', end='')
+    k_clusters = [2, 3, 4, 5]
     results = []
 
     for k in k_clusters:
@@ -75,13 +73,11 @@ def startKMeans(X):
                         'Distance Matrix': mat,
                         'Cluster Validation': getClusterValidation(X, mat, adjustPartition(partition, 'K-Means'))
                         })
-
+    print(' Done.')
     return results
 
-def startFOSC(X, savePath=None):
-    print('Running FOSC...')
-    # Calculating distance matrix
-    mat = generateDistanceMatrix(X, 'euclidian')
+def startFOSC(X, mat, savePath=None):
+    print('Running FOSC...', end='')
 
     listOfMClSize = [4, 5, 8, 16, 20, 30]
     methodsLinkage = ["single", "average", "ward", "complete", "weighted"]
@@ -117,7 +113,7 @@ def startFOSC(X, savePath=None):
                 # Plot results
                 plotDendrogram(Z, partition, titlePlot, saveDendrogram)
                 #plotDendrogram(Z, partition, titlePlot)
-
+    print(' Done.')
     return results
 
 def generateDistanceMatrix(X, metric):
@@ -132,5 +128,6 @@ def generateDistanceMatrix(X, metric):
     elif metric == 'euclidian':
         # print(f"Producing distance matrix with Euclidian Distance for {len(X)} series of {1}-dimensions...")
         mat = euclidian_distance_matrix(X, X)
+
 
     return mat
