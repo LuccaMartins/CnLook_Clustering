@@ -12,182 +12,189 @@ clustering_methods = [
                       'K-Means',
                        'FOSC'
                      ]
-subsets_of_features = {
+# subsets_of_features = {
+#     0: ['FC', 'ADTF', 'AFD', 'FDMax', 'FDMin'],
+#     1: ['FC', 'ADTF', 'AFD', 'ASD', 'FDMin']
+# }
 
-                    # -------------- 2 FEATURES -------------------
-
-                    # 0: ['FC', 'AFD'],
-                    # 1: ['FC', 'AFDisp'],
-                    # 2: ['FC', 'AFDispH'],  # no result over 6.5 silhouette
-                    # 3: ['FC', 'AFDispV'],  # no result over 6.5 silhouette
-                    # 4: ['FC', 'ASA'],  # no result over 6.5 silhouette
-                    # 5: ['FC', 'SPL'],
-                    # 6: ['FC', 'ADT'],  # no result over 6.5 silhouette
-                    # 7: ['FC', 'ADpFF'],  # no result over 6.5 silhouette
-                    # 8: ['FC', 'ADTF'],
-                    # 9: ['FC', 'ADB'],
-                    #
-                    # 10: ['AFD', 'AFDisp'],  # no result over 6.5 silhouette
-                    # 11: ['AFD', 'AFDispH'],  # no result over 6.5 silhouette
-                    # 12: ['AFD', 'AFDispV'],  # no result over 6.5 silhouette
-                    # 13: ['AFD', 'ASA'],  # no result over 6.5 silhouette
-                    # 14: ['AFD', 'SPL'],  # no result over 6.5 silhouette
-                    # 15: ['AFD', 'ADT'],  # no result over 6.5 silhouette
-                    # 16: ['AFD', 'ADpFF'],  # no result over 6.5 silhouette
-                    # 17: ['AFD', 'ADTF'],  # no result over 6.5 silhouette
-                    # 18: ['AFD', 'ADB'],  # no result over 6.5 silhouette
-                    #
-                    # 19: ['AFDisp', 'AFDispH'],
-                    # 20: ['AFDisp', 'AFDispV'],
-                    # 21: ['AFDisp', 'ASA'],  # no result over 6.5 silhouette
-                    # 22: ['AFDisp', 'SPL'],
-                    # 23: ['AFDisp', 'ADT'],  # no result over 6.5 silhouette
-                    # 24: ['AFDisp', 'ADpFF'],  # no result over 6.5 silhouette
-                    # 25: ['AFDisp', 'ADTF'],  # no result over 6.5 silhouette
-                    # 26: ['AFDisp', 'ADB'],  # no result over 6.5 silhouette
-                    #
-                    # 27: ['ASA', 'SPL'],  # no result over 6.5 silhouette
-                    # 28: ['ASA', 'ADT'],  # no result over 6.5 silhouette
-                    # 29: ['ASA', 'ADpFF'],  # no result over 6.5 silhouette
-                    # 30: ['ASA', 'ADTF'],  # no result over 6.5 silhouette
-                    # 31: ['ASA', 'ADB'],  # no result over 6.5 silhouette
-                    #
-                    # 32: ['SPL', 'ADT'],  # no result over 6.5 silhouette
-                    # 33: ['SPL', 'ADpFF'],  # no result over 6.5 silhouette
-                    # 34: ['SPL', 'ADTF'],  # no result over 6.5 silhouette
-                    # 35: ['SPL', 'ADB'],  # no result over 6.5 silhouette
-                    #
-                    # 36: ['ADT', 'ADpFF'],  # no result over 6.5 silhouette
-                    # 37: ['ADT', 'ADTF'],  # no result over 6.5 silhouette
-                    # 39: ['ADT', 'ADB'],  # no result over 6.5 silhouette
-                    #
-                    # 40: ['ADpFF', 'ADTF'],  # no result over 6.5 silhouette
-                    # 41: ['ADpFF', 'ADB'],  # no result over 6.5 silhouette
-                    #
-                    # 42: ['ADTF', 'ADB']
-
-
-                    # -------------- 3 FEATURES -------------------
-
-                    43: ['FC', 'AFD', 'AFDisp'],  # no result over 6 silhouette
-                    44: ['FC', 'AFD', 'AFDispH'],  # no result over 6 silhouette
-                    45: ['FC', 'AFD', 'AFDispV'],  # no result over 6 silhouette
-                    46: ['FC', 'AFD', 'ASA'],  # no result over 6 silhouette
-                    47: ['FC', 'AFD', 'SPL'],  # no result over 6 silhouette
-                    48: ['FC', 'AFD', 'ADT'],  # no result over 6 silhouette
-                    49: ['FC', 'AFD', 'ADpFF'],  # no result over 6 silhouette
-                    50: ['FC', 'AFD', 'ADTF'],  # no result over 6 silhouette
-                    51: ['FC', 'AFD', 'ADB'],  # no result over 6 silhouette
-
-
-                    52: ['FC', 'AFDisp', 'AFDispH'],
-                    53: ['FC', 'AFDisp', 'AFDispV'],
-                    54: ['FC', 'AFDisp', 'ASA'],  # no result over 6 silhouette
-                    55: ['FC', 'AFDisp', 'SPL'],
-                    56: ['FC', 'AFDisp', 'ADT'],  # no result over 6 silhouette
-                    57: ['FC', 'AFDisp', 'ADpFF'],  # no result over 6 silhouette
-                    58: ['FC', 'AFDisp', 'ADTF'],  # no result over 6 silhouette
-                    59: ['FC', 'AFDisp', 'ADB'],  # no result over 6 silhouette
-
-
-                    60: ['FC', 'SPL', 'AFDispH'],
-                    61: ['FC', 'SPL', 'AFDispV'],  # no result over 6 silhouette
-                    62: ['FC', 'SPL', 'ASA'],  # no result over 6 silhouette
-                    63: ['FC', 'SPL', 'ADT'],  # no result over 6 silhouette
-                    64: ['FC', 'SPL', 'ADpFF'],  # no result over 6 silhouette
-                    65: ['FC', 'SPL', 'ADTF'],  # no result over 6 silhouette
-                    66: ['FC', 'SPL', 'ADB'],  # no result over 6 silhouette
-
-
-                    67: ['FC', 'ADTF', 'AFDispH'],  # no result over 6 silhouette
-                    68: ['FC', 'ADTF', 'AFDispV'],  # no result over 6 silhouette
-                    69: ['FC', 'ADTF', 'ASA'],  # no result over 6 silhouette
-                    70: ['FC', 'ADTF', 'ADT'],  # no result over 6 silhouette
-                    71: ['FC', 'ADTF', 'ADpFF'],  # no result over 6 silhouette
-                    72: ['FC', 'ADTF', 'ADB'],  # no result over 6 silhouette
-
-
-                    73: ['FC', 'ADB', 'AFDispH'],  # no result over 6 silhouette
-                    74: ['FC', 'ADB', 'AFDispV'],  # no result over 6 silhouette
-                    75: ['FC', 'ADB', 'ASA'],  # no result over 6 silhouette
-                    76: ['FC', 'ADB', 'ADT'],  # no result over 6 silhouette
-                    77: ['FC', 'ADB', 'ADpFF'],  # no result over 6 silhouette
-                    # 78: ['FC', 'ADB', 'ADB'], - invalid
-
-
-                    79: ['AFDisp', 'AFDispH', 'AFD'],  # no result over 6 silhouette
-                    80: ['AFDisp', 'AFDispH', 'ASA'],  # no result over 6 silhouette
-                    81: ['AFDisp', 'AFDispH', 'SPL'],
-                    82: ['AFDisp', 'AFDispH', 'ADT'],  # no result over 6 silhouette
-                    83: ['AFDisp', 'AFDispH', 'ADpFF'],  # no result over 6 silhouette
-                    84: ['AFDisp', 'AFDispH', 'ADTF'],
-                    85: ['AFDisp', 'AFDispH', 'ADB'],
-
-
-                    86: ['AFDisp', 'AFDispV', 'AFD'],
-                    87: ['AFDisp', 'AFDispV', 'ASA'],
-                    88: ['AFDisp', 'AFDispV', 'SPL'],
-                    89: ['AFDisp', 'AFDispV', 'ADT'],
-                    90: ['AFDisp', 'AFDispV', 'ADpFF'],
-                    91: ['AFDisp', 'AFDispV', 'ADTF'],
-                    92: ['AFDisp', 'AFDispV', 'ADB'],
-
-
-                    93: ['AFDisp', 'SPL', 'ASA'],  # no result over 6 silhouette
-                    94: ['AFDisp', 'SPL', 'ADT'],  # no result over 6 silhouette
-                    95: ['AFDisp', 'SPL', 'ADpFF'],  # no result over 6 silhouette
-                    96: ['AFDisp', 'SPL', 'ADTF'],
-                    97: ['AFDisp', 'SPL', 'ADB'],
-
-
-                    98: ['ADTF', 'ADB', 'FC'],  # no result over 6 silhouette
-                    99: ['ADTF', 'ADB', 'AFD'],  # no result over 6 silhouette
-                    100: ['ADTF', 'ADB', 'AFDisp'],  # no result over 6 silhouette
-                    101: ['ADTF', 'ADB', 'AFDispH'],  # no result over 6 silhouette
-                    102: ['ADTF', 'ADB', 'AFDispV'],  # no result over 6 silhouette
-                    103: ['ADTF', 'ADB', 'ASA'],  # no result over 6 silhouette
-                    104: ['ADTF', 'ADB', 'SPL'],  # no result over 6 silhouette
-                    105: ['ADTF', 'ADB', 'ADT'],  # no result over 6 silhouette
-                    106: ['ADTF', 'ADB', 'ADpFF'],  # no result over 6 silhouette
-
-
-                    107: ['ADT', 'FC', 'AFD'],  # no result over 6 silhouette
-                    108: ['ADT', 'FC', 'AFDisp'],  # no result over 6 silhouette
-                    109: ['ADT', 'FC', 'AFDispH'],  # no result over 6 silhouette
-                    110: ['ADT', 'FC', 'AFDispV'],  # no result over 6 silhouette
-                    111: ['ADT', 'FC', 'ASA'],  # no result over 6 silhouette
-                    112: ['ADT', 'FC', 'SPL'],  # no result over 6 silhouette
-                    113: ['ADT', 'FC', 'ADpFF'],  # no result over 6 silhouette
-                    114: ['ADT', 'FC', 'ADTF'],  # no result over 6 silhouette
-                    115: ['ADT', 'FC', 'ADB'],  # no result over 6 silhouette
-
-                    116: ['ADT', 'ADB', 'AFD'],  # no result over 6 silhouette
-                    117: ['ADT', 'ADB', 'AFDisp'],  # no result over 6 silhouette
-                    118: ['ADT', 'ADB', 'AFDispH'],  # no result over 6 silhouette
-                    119: ['ADT', 'ADB', 'AFDispV'],  # no result over 6 silhouette
-                    120: ['ADT', 'ADB', 'ASA'],  # no result over 6 silhouette
-                    121: ['ADT', 'ADB', 'SPL'],  # no result over 6 silhouette
-                    122: ['ADT', 'ADB', 'ADpFF'],  # no result over 6 silhouette
-                    123: ['ADT', 'ADB', 'ADTF'],  # no result over 6 silhouette
-                    124: ['ADT', 'ADB', 'FC'],  # no result over 6 silhouette
-
-                    125: ['ADpFF', 'ADB', 'AFD'],  # no result over 6 silhouette
-                    126: ['ADpFF', 'ADB', 'AFDisp'],  # no result over 6 silhouette
-                    127: ['ADpFF', 'ADB', 'AFDispH'],  # no result over 6 silhouette
-                    128: ['ADpFF', 'ADB', 'AFDispV'],  # no result over 6 silhouette
-                    129: ['ADpFF', 'ADB', 'ASA'],  # no result over 6 silhouette
-                    130: ['ADpFF', 'ADB', 'SPL'],  # no result over 6 silhouette
-                    131: ['ADpFF', 'ADB', 'ADTF'],  # no result over 6 silhouette
-                    132: ['ADpFF', 'ADB', 'FC'],  # no result over 6 silhouette
-
-
-
-
-
-}
+#
+#                     # -------------- 2 FEATURES -------------------
+#
+#                     0: ['FC', 'AFD'],
+#                     # 1: ['FC', 'AFDisp'],
+#                     # 2: ['FC', 'AFDispH'],
+#                     # 3: ['FC', 'AFDispV'],
+#                     # 4: ['FC', 'ASA'],
+#                     5: ['FC', 'SPL'],
+#                     6: ['FC', 'ADT'],
+#                     7: ['FC', 'ADpFF'],
+#                     8: ['FC', 'ADTF'],
+#                     9: ['FC', 'ADB'],
+#                     # 10: ['FC', 'ADpFFL'],
+#                     # 11: ['FC', 'ADpFFR'],
+#                     # 11: ['FC', 'ADFF'],
+#                     # #
+#                     # 10: ['AFD', 'AFDisp'],
+#                     # 11: ['AFD', 'AFDispH'],
+#                     # 12: ['AFD', 'AFDispV'],
+#                     # 13: ['AFD', 'ASA'],
+#                     # 14: ['AFD', 'SPL'],
+#                     # 15: ['AFD', 'ADT'],
+#                     16: ['AFD', 'ADpFF'],
+#                     # 17: ['AFD', 'ADTF'],
+#                     18: ['AFD', 'ADB'],
+#
+#                     19: ['AFDisp', 'AFDispH'],
+#                     20: ['AFDisp', 'AFDispV'],
+#                     # 21: ['AFDisp', 'ASA'],
+#                     # 22: ['AFDisp', 'SPL'],
+#                     23: ['AFDisp', 'ADT'],
+#                     24: ['AFDisp', 'ADpFF'],
+#                     # 25: ['AFDisp', 'ADTF'],
+#                     26: ['AFDisp', 'ADB'],
+#                     #
+#                     # 27: ['ASA', 'SPL'],
+#                     # 28: ['ASA', 'ADT'],
+#                     # 29: ['ASA', 'ADpFF'],
+#                     # 30: ['ASA', 'ADTF'],
+#                     31: ['ASA', 'ADB'],
+#                     #
+#                     # 32: ['SPL', 'ADT'],
+#                     # 33: ['SPL', 'ADpFF'],
+#                     # 34: ['SPL', 'ADTF'],
+#                     35: ['SPL', 'ADB'],
+#                     #
+#                     36: ['ADT', 'ADpFF'],
+#                     37: ['ADT', 'ADTF'],
+#                     39: ['ADT', 'ADB'],
+#                     #
+#                     40: ['ADpFF', 'ADTF'],
+#                     41: ['ADpFF', 'ADB'],
+#                     #
+#                     42: ['ADTF', 'ADB'],
+#                     #
+#                     #
+#                     # # -------------- 3 FEATURES -------------------
+#                     #
+#                     # 43: ['FC', 'AFD', 'AFDisp'],
+#                     # 44: ['FC', 'AFD', 'AFDispH'],
+#                     # 45: ['FC', 'AFD', 'AFDispV'],
+#                     # 46: ['FC', 'AFD', 'ASA'],
+#                     # 47: ['FC', 'AFD', 'SPL'],
+#                     # 48: ['FC', 'AFD', 'ADT'],
+#                     # 49: ['FC', 'AFD', 'ADpFF'],
+#                     # 50: ['FC', 'AFD', 'ADTF'],
+#                     51: ['FC', 'AFD', 'ADB'],
+#                     #
+#                     #
+#                     # 52: ['FC', 'AFDisp', 'AFDispH'],
+#                     53: ['FC', 'AFDisp', 'AFDispV'],
+#                     # 54: ['FC', 'AFDisp', 'ASA'],
+#                     # 55: ['FC', 'AFDisp', 'SPL'],
+#                     # 56: ['FC', 'AFDisp', 'ADT'],
+#                     # 57: ['FC', 'AFDisp', 'ADpFF'],
+#                     # 58: ['FC', 'AFDisp', 'ADTF'],
+#                     59: ['FC', 'AFDisp', 'ADB'],
+#                     #
+#                     #
+#                     # 60: ['FC', 'SPL', 'AFDispH'],
+#                     # 61: ['FC', 'SPL', 'AFDispV'],
+#                     # 62: ['FC', 'SPL', 'ASA'],
+#                     # 63: ['FC', 'SPL', 'ADT'],
+#                     # 64: ['FC', 'SPL', 'ADpFF'],
+#                     65: ['FC', 'SPL', 'ADTF'],
+#                     # 66: ['FC', 'SPL', 'ADB'],
+#                     #
+#                     #
+#                     # 67: ['FC', 'ADTF', 'AFDispH'],
+#                     # 68: ['FC', 'ADTF', 'AFDispV'],
+#                     # 69: ['FC', 'ADTF', 'ASA'],
+#                     70: ['FC', 'ADTF', 'ADT'],
+#                     71: ['FC', 'ADTF', 'ADpFF'],
+#                     72: ['FC', 'ADTF', 'ADB'],
+#                     #
+#                     #
+#                     # 73: ['FC', 'ADB', 'AFDispH'],
+#                     # 74: ['FC', 'ADB', 'AFDispV'],
+#                     # 75: ['FC', 'ADB', 'ASA'],
+#                     76: ['FC', 'ADB', 'ADT'],
+#                     77: ['FC', 'ADB', 'ADpFF'],
+#                     # # 78: ['FC', 'ADB', 'ADB'], - invalid
+#                     #
+#                     #
+#                     # 79: ['AFDisp', 'AFDispH', 'AFD'],
+#                     # 80: ['AFDisp', 'AFDispH', 'ASA'],
+#                     # 81: ['AFDisp', 'AFDispH', 'SPL'],
+#                     # 82: ['AFDisp', 'AFDispH', 'ADT'],
+#                     # 83: ['AFDisp', 'AFDispH', 'ADpFF'],
+#                     # 84: ['AFDisp', 'AFDispH', 'ADTF'],
+#                     85: ['AFDisp', 'AFDispH', 'ADB'],
+#                     #
+#                     #
+#                     # 86: ['AFDisp', 'AFDispV', 'AFD'],
+#                     # 87: ['AFDisp', 'AFDispV', 'ASA'],
+#                     # 88: ['AFDisp', 'AFDispV', 'SPL'],
+#                     89: ['AFDisp', 'AFDispV', 'ADT'],
+#                     90: ['AFDisp', 'AFDispV', 'ADpFF'],
+#                     91: ['AFDisp', 'AFDispV', 'ADTF'],
+#                     92: ['AFDisp', 'AFDispV', 'ADB'],
+#                     #
+#                     #
+#                     # 93: ['AFDisp', 'SPL', 'ASA'],
+#                     # 94: ['AFDisp', 'SPL', 'ADT'],
+#                     # 95: ['AFDisp', 'SPL', 'ADpFF'],
+#                     # 96: ['AFDisp', 'SPL', 'ADTF'],
+#                     # 97: ['AFDisp', 'SPL', 'ADB'],
+#                     #
+#                     #
+#                     98: ['ADTF', 'ADB', 'FC'],
+#                     99: ['ADTF', 'ADB', 'AFD'],
+#                     # 100: ['ADTF', 'ADB', 'AFDisp'],
+#                     # 101: ['ADTF', 'ADB', 'AFDispH'],
+#                     102: ['ADTF', 'ADB', 'AFDispV'],
+#                     # 103: ['ADTF', 'ADB', 'ASA'],
+#                     # 104: ['ADTF', 'ADB', 'SPL'],
+#                     105: ['ADTF', 'ADB', 'ADT'],
+#                     106: ['ADTF', 'ADB', 'ADpFF'],
+#                     #
+#                     #
+#                     # 107: ['ADT', 'FC', 'AFD'],
+#                     # 108: ['ADT', 'FC', 'AFDisp'],
+#                     # 109: ['ADT', 'FC', 'AFDispH'],
+#                     # 110: ['ADT', 'FC', 'AFDispV'],
+#                     # 111: ['ADT', 'FC', 'ASA'],
+#                     # 112: ['ADT', 'FC', 'SPL'],
+#                     113: ['ADT', 'FC', 'ADpFF'],
+#                     114: ['ADT', 'FC', 'ADTF'],
+#                     115: ['ADT', 'FC', 'ADB'],
+#                     #
+#                     116: ['ADT', 'ADB', 'AFD'],
+#                     117: ['ADT', 'ADB', 'AFDisp'],
+#                     # 118: ['ADT', 'ADB', 'AFDispH'],
+#                     119: ['ADT', 'ADB', 'AFDispV'],
+#                     # 120: ['ADT', 'ADB', 'ASA'],
+#                     121: ['ADT', 'ADB', 'SPL'],
+#                     122: ['ADT', 'ADB', 'ADpFF'],
+#                     123: ['ADT', 'ADB', 'ADTF'],
+#                     124: ['ADT', 'ADB', 'FC'],
+#                     #
+#                     125: ['ADpFF', 'ADB', 'AFD'],
+#                     126: ['ADpFF', 'ADB', 'AFDisp'],
+#                     127: ['ADpFF', 'ADB', 'AFDispH'],
+#                     128: ['ADpFF', 'ADB', 'AFDispV'],
+#                     129: ['ADpFF', 'ADB', 'ASA'],
+#                     130: ['ADpFF', 'ADB', 'SPL'],
+#                     131: ['ADpFF', 'ADB', 'ADTF'],
+#                     132: ['ADpFF', 'ADB', 'FC'],
+#
+#
+#
+#
+#
+# }
 
 eyes_combination = [
-                    'both',
+                    # 'both',
                     'left',
                     'right'
                    ]

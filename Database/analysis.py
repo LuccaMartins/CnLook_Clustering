@@ -227,6 +227,7 @@ def getRecordings_SimilarTasks(conn, taskId):
                                  7787, 7798, 7809, 7820, 7966, 7977, 7988, 7999, 8010, 8021, 8032, 8043,
                                  8054, 8065, 8076, 8087, 8098, 8221, 8230, 8239, 8248, 8257, 8288, 8308,
                                  8317, 8337, 8357, 8378, 8421, 8441, 8450, 8470, 8512, 8542, 8551, 8560)
+                    AND rec.recording_id not in (5201) --this one is a recording not complete
                     ORDER BY rec.recording_id, timestamp
                     ;
                     """,

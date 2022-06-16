@@ -80,12 +80,21 @@ def plot_pairwise_frequency_info(obj_pairwise_freq, means, rec_ids, savePlot=Fal
     plt.title(f'Pairwise Frequency of {len(rec_ids)} Recors', fontsize=80)
 
     if savePlot:
-        plt.savefig(f'./ClusterValidation/Plots Best Clusterings/Results_{len(rec_ids)}_records_3_features/Pairwise Frequency')
+        plt.savefig(f'./ClusterValidation/Plots Best Clusterings/Results_{len(rec_ids)}_records/Pairwise Frequency')
         plt.close();
     plt.show()
 
 
+def columnsForBothEyes(features):
+    features_both_eyes = []
+    for feature in features:
+        if feature == 'ADB':
+            features_both_eyes.append(f'{feature}')
+        else:
+            features_both_eyes.append(f'{feature}_left')
+            features_both_eyes.append(f'{feature}_right')
 
+    return features_both_eyes
 
 def plot_result(result, rec_ids, savePlot=False):
     #TODO: Usar outros algoritmos para visualizar os dados em 2d:
@@ -101,31 +110,21 @@ def plot_result(result, rec_ids, savePlot=False):
         axes[0].scatter(pca_x[ix], pca_y[ix], c=plt.viridis(), label=g, s=100)
     axes[0].legend()
     axes[0].set_title(f'Method: {result["Method"]}, Parameters-> {getMethodInfo(result)}\n' 
-              f'Eye: {result["Eye"]}, Features Subset ({result["Features Subset"]}): {str(subsets_of_features.get(result["Features Subset"]))}, \n'
+              f'Eye: {result["Eye"]}, Features Subset: {result["Features Subset"]},\n'
               f'Silhouette: {result["Cluster Validation"]["Silhouette"]}, '
-              f'AUCC: {result["Cluster Validation"]["AUCC"]}\n'
-              f'Calinski-Harabasz Index: {result["Cluster Validation"]["Calinski-Harabasz Index"]}\n'
-              f'David-Bouldin Index": {result["Cluster Validation"]["David-Bouldin Index"]}, '
-              f'Dunn Index: {result["Cluster Validation"]["Dunn Index"]}\n'
+              # f'AUCC: {result["Cluster Validation"]["AUCC"]}\n'
+              # f'Calinski-Harabasz Index: {result["Cluster Validation"]["Calinski-Harabasz Index"]}\n'
+              # f'David-Bouldin Index": {result["Cluster Validation"]["David-Bouldin Index"]}, '
+              # f'Dunn Index: {result["Cluster Validation"]["Dunn Index"]}\n'
             )
     for i in range(len(pca_x)):
         axes[0].annotate(rec_ids[i], (pca_x[i] + 0.003, pca_y[i]), fontsize=8)
 
 
     #Plotting decision tree
-    if result['Eye'] == 'both':
-        if subsets_of_features.get(result['Features Subset']).__contains__('ADpFF'):
-            labeled_data = pd.DataFrame(result['Data'])
-        else:
-            labeled_data = pd.DataFrame(result['Data'], columns=columnsForBothEyes(subsets_of_features.get(result['Features Subset'])))
-    else:
-        if subsets_of_features.get(result['Features Subset']).__contains__('ADpFF'):
-            labeled_data = pd.DataFrame(result['Data'])
-        else:
-            labeled_data = pd.DataFrame(result['Data'], columns=subsets_of_features.get(result['Features Subset']))
+    labeled_data = pd.DataFrame(result['Data'], columns=result['Features Subset'])
     labeled_data['label'] = result['Partition']
 
-    # fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(4, 4), dpi=300)
     clf = DecisionTreeClassifier(random_state=1234)
     model = clf.fit(result['Data'], result['Partition'])
     sklearn.tree.plot_tree(model, feature_names=labeled_data.columns,
@@ -137,17 +136,31 @@ def plot_result(result, rec_ids, savePlot=False):
         title = f'{result["Method"]}_{result["Eye"]}_{result["Features Subset"]}_' \
                 f'{datetime.now().strftime("%b-%d-%Y %Hh%Mm%Ss")} {str(datetime.now().microsecond)}ms'
 
-        plt.savefig(f'./ClusterValidation/Plots Best Clusterings/Results_{len(rec_ids)}_records_3_features/{title}')
+        plt.savefig(f'./ClusterValidation/Plots Best Clusterings/{len(rec_ids)} recordings/{result["Method"]}/{title}')
         plt.close(fig)
         return
     plt.show()
 
 
+def plotCorrelationMatrix(df):
+    f = plt.figure(figsize=(19, 15))
+    plt.matshow(df.corr(), fignum=f.number, cmap='flare')
+    plt.xticks(range(df.select_dtypes(['number']).shape[1]), df.select_dtypes(['number']).columns,
+               fontsize=14,
+               rotation=45)
+    plt.yticks(range(df.select_dtypes(['number']).shape[1]), df.select_dtypes(['number']).columns,
+               fontsize=14)
+    cb = plt.colorbar(cmap='flare')
+    cb.ax.tick_params(labelsize=14)
+    plt.title('Correlation Matrix', fontsize=16);
+    plt.show()
+    plt.close(f)
+
 def plot_decision_tree(result):
     if result['Eye'] == 'both':
-        labeled_data = pd.DataFrame(result['Data'], columns=columnsForBothEyes(subsets_of_features.get(result['Features Subset'])))
+        labeled_data = pd.DataFrame(result['Data'], columns=columnsForBothEyes(result['Features Subset']))
     else:
-        labeled_data = pd.DataFrame(result['Data'], columns=subsets_of_features.get(result['Features Subset']))
+        labeled_data = pd.DataFrame(result['Data'], columns=result['Features Subset'])
     labeled_data['label'] = result['Partition']
 
     fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(4, 4), dpi=300)
@@ -177,13 +190,13 @@ def plot_scattered_data_PCA(X, rec_ids, result=None, savePlot=False, resultIdx=N
     ax.legend()
 
     plt.title(f'Method: {result["Method"]}, Eye: {result["Eye"]}, \n'
-              f'Features Subset ({result["Features Subset"]}): {str(subsets_of_features.get(result["Features Subset"]))}, \n'
+              f'Features Subset: {result["Features Subset"]}, \n'
               f'Parameters-> {getMethodInfo(result)}\n'
               f'Silhouette: {result["Cluster Validation"]["Silhouette"]}\n'
               # f'AUCC: {result["Cluster Validation"]["AUCC"]}\n'
-              f'Calinski-Harabasz Index: {result["Cluster Validation"]["Calinski-Harabasz Index"]}\n'
-              f'David-Bouldin Index": {result["Cluster Validation"]["David-Bouldin Index"]}\n'
-              f'Dunn Index: {result["Cluster Validation"]["Dunn Index"]}\n'
+              # f'Calinski-Harabasz Index: {result["Cluster Validation"]["Calinski-Harabasz Index"]}\n'
+              # f'David-Bouldin Index": {result["Cluster Validation"]["David-Bouldin Index"]}\n'
+              # f'Dunn Index: {result["Cluster Validation"]["Dunn Index"]}\n'
               )
     for i in range(len(x)):
         plt.annotate(rec_ids[i], (x[i] + 0.003, y[i]), fontsize=8)

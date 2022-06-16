@@ -21,14 +21,14 @@ def getClusterValidation(X, mat, partition):
     #todo: apply penalty for everyone but AUCC
     # https://www.dbs.ifi.lmu.de/~zimek/publications/SDM2014/DBCV.pdf usar para o DBSCAN
     if len(set(partition_noNoise)) >= 2:
+        # print('aucc: ' + str(round(penalty * myAUCC(partition_noNoise, mat_noNoise), 4)), end=' - ')
+        # print('silh: ' + str(round(penalty * metrics.silhouette_score(mat_noNoise, partition_noNoise, metric="precomputed"), 4)))
+
         return {
             'Silhouette': round(penalty * metrics.silhouette_score(mat_noNoise, partition_noNoise, metric="precomputed"), 4),
             # 'AUCC': round(computePBandAUCCIndexes(partition, mat)[1], 4), #sends partition with noise because the function deals with it.
             'AUCC': round(penalty * myAUCC(partition_noNoise, mat_noNoise), 4),
-            'Calinski-Harabasz Index': round(penalty * metrics.calinski_harabasz_score(X_noNoise, partition_noNoise), 4),
-            'David-Bouldin Index': round(penalty * metrics.davies_bouldin_score(X_noNoise, partition_noNoise), 4),
-            'Dunn Index': round(penalty * dunn(mat_noNoise, partition_noNoise), 4),
-            'DBCV': penalty * round(DBCV(X_noNoise, partition_noNoise), 4)
+            # 'DBCV': penalty * round(DBCV(X_noNoise, partition_noNoise), 4)
         }
     else:
         return {
@@ -36,29 +36,46 @@ def getClusterValidation(X, mat, partition):
         }
 
 
+def goodClustering(result, rec_ids):
+    if 'Error' not in result['Cluster Validation'].keys():
+        if result['Cluster Validation']['Silhouette'] >= 0.5:
+            # bestResults.append(result)
+            plot_result(result, rec_ids, savePlot=True)
 
-def analyzeResults(allResults, rec_ids):
-    bestResults = []
-    thrs_best_silhouette = 0.6
-    thrs_best_aucc = 0.7
-    thrs_best_dbcv = 0.6
-    for i, result in enumerate(allResults):
-        if 'Error' not in result['Cluster Validation'].keys():
-            if result['Cluster Validation']['Silhouette'] >= thrs_best_silhouette:
-            # or result['Cluster Validation']['AUCC'] >= thrs_best_aucc:
-            # or result['Cluster Validation']['DBCV'] >= thrs_best_dbcv:
-                bestResults.append(result)
-        else:
-            print('No Cluster Validation for this result. Partition must be invalid.')
-    print(f"\nNUMBER OF BEST RESULTS {len(bestResults)}, (thrs_best_silhouette = {thrs_best_silhouette}),"
-          f" (thrs_best_silhouette = {thrs_best_aucc}")
 
-    for i, result in enumerate(bestResults):
-        print(f'Best Result {i+1} of {len(bestResults)}')
-        plot_result(result, rec_ids, savePlot=True)
 
-    objects_pairwise_frequency, means = getObjectsPairwiseFrequency(bestResults, rec_ids)
-    plot_pairwise_frequency_info(objects_pairwise_frequency, means, rec_ids, savePlot=True)
+    # for i, result in enumerate(bestResults):
+    #     print(f'Best Result {i+1} of {len(bestResults)}')
+    #     plot_result(result, result[0], savePlot=True)
+
+    # objects_pairwise_frequency, means = getObjectsPairwiseFrequency(bestResults, rec_ids)
+    # plot_pairwise_frequency_info(objects_pairwise_frequency, means, rec_ids, savePlot=True)
+
+
+
+
+# def analyzeResults(allResults, rec_ids):
+#     bestResults = []
+#     thrs_best_silhouette = 0.65
+#     # thrs_best_aucc = 0.9
+#     # thrs_best_dbcv = 0.6
+#     for i, result in enumerate(allResults):
+#         if 'Error' not in result['Cluster Validation'].keys():
+#             if result['Cluster Validation']['Silhouette'] >= thrs_best_silhouette:
+#             # or result['Cluster Validation']['AUCC'] >= thrs_best_aucc:
+#             # or result['Cluster Validation']['DBCV'] >= thrs_best_dbcv:
+#                 bestResults.append(result)
+#         else:
+#             print('No Cluster Validation for this result. Partition must be invalid.')
+#     print(f"\nNUMBER OF BEST RESULTS {len(bestResults)}, (thrs_best_silhouette = {thrs_best_silhouette}),")
+#           # f" (thrs_best_silhouette = {thrs_best_aucc}")
+#
+#     for i, result in enumerate(bestResults):
+#         print(f'Best Result {i+1} of {len(bestResults)}')
+#         plot_result(result, rec_ids, savePlot=True)
+
+    # objects_pairwise_frequency, means = getObjectsPairwiseFrequency(bestResults, rec_ids)
+    # plot_pairwise_frequency_info(objects_pairwise_frequency, means, rec_ids, savePlot=True)
 
 
 
@@ -73,7 +90,7 @@ def analyzeResults(allResults, rec_ids):
     #         rand_scores.append(metrics.rand_score(A, B))
     #     pairwise_rand_scores.append(rand_scores)
 
-    return bestResults
+    # return bestResults
 
 
 def printBestSilhouettes(results):
@@ -86,6 +103,7 @@ def printBestSilhouettes(results):
               " using minCSize = " + str(results[idx][0]) +
               ", and method = " + results[idx][1])
 
+
 def myAUCC(partition, distanceMatrix):
     clusteringArray = []
     similarityArray = []
@@ -95,6 +113,7 @@ def myAUCC(partition, distanceMatrix):
                 clusteringArray.append(1)
             else:
                 clusteringArray.append(0)
+
             # similarityArray.append(1/(1 + distanceMatrix[i][j]))
             similarityArray.append(1/(1 + math.exp(distanceMatrix[i][j])))
 
@@ -102,10 +121,12 @@ def myAUCC(partition, distanceMatrix):
 
     return aucc
 
+
 def computePBandAUCCIndexes(partition, distanceMatrix):
     penalty, noiseSize = getPenalty(partition)
 
-    if (noiseSize == len(partition)): return np.nan, np.nan, noiseSize, penalty
+    if noiseSize == len(partition):
+        return np.nan, np.nan, noiseSize, penalty
 
     # dm = squareform(distanceMatrix)
     dm = distanceMatrix
@@ -162,7 +183,6 @@ def getObjectsPairwiseFrequency(results, rec_ids):
 
 
 def getObjectsCorrelationMatrix(results, rec_ids):
-
     clusterings = pd.DataFrame([result['Partition'] for result in results])
     print("Getting objects correlation matrix")
     correlations = clusterings.corr()

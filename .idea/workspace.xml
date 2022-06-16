@@ -5,24 +5,952 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbea00e6-3067-4e81-ac13-8b46410aeeea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Correlation Matrix/both_265.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Correlation Matrix/both_313.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Correlation Matrix/both_375.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Correlation Matrix/left_265.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Correlation Matrix/right_265.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h05m59s 804261ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h06m00s 654467ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h06m01s 442356ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h06m02s 233186ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h06m03s 170771ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h06m03s 965718ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h06m04s 894518ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h06m05s 749916ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_left_9_May-24-2022 18h06m06s 670575ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_12_May-24-2022 18h06m27s 891530ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_12_May-24-2022 18h06m28s 555130ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_13_May-24-2022 18h06m29s 219841ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_13_May-24-2022 18h06m29s 952231ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_14_May-24-2022 18h06m30s 612467ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_21_May-24-2022 18h06m31s 274711ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_21_May-24-2022 18h06m31s 996548ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_21_May-24-2022 18h06m32s 696697ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_26_May-24-2022 18h06m34s 425640ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_26_May-24-2022 18h06m35s 105459ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_26_May-24-2022 18h06m35s 803565ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_26_May-24-2022 18h06m36s 482081ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_26_May-24-2022 18h06m37s 194602ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_26_May-24-2022 18h06m38s 1695ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_28_May-24-2022 18h06m38s 793578ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_28_May-24-2022 18h06m39s 749090ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_28_May-24-2022 18h06m40s 710696ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_28_May-24-2022 18h06m41s 658986ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_28_May-24-2022 18h06m42s 607323ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_28_May-24-2022 18h06m43s 565092ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_3_May-24-2022 18h06m07s 434701ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_4_May-24-2022 18h06m08s 129802ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_4_May-24-2022 18h06m09s 49132ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_4_May-24-2022 18h06m09s 961326ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_4_May-24-2022 18h06m10s 946252ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_6_May-24-2022 18h06m13s 492132ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_6_May-24-2022 18h06m14s 109182ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m14s 728515ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m15s 544653ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m16s 366181ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m17s 176095ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m17s 921063ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m18s 740804ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m19s 561272ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m20s 370989ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m21s 187736ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m22s 16559ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m22s 831592ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m23s 661606ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m24s 517057ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m25s 396865ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m26s 224134ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/FOSC_right_9_May-24-2022 18h06m27s 82814ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/K-Means_left_5_May-24-2022 18h05m58s 761397ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/K-Means_right_26_May-24-2022 18h06m33s 424861ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/K-Means_right_5_May-24-2022 18h06m11s 850836ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_114_records/K-Means_right_5_May-24-2022 18h06m12s 642405ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/DBSCAN_left_4_May-24-2022 17h50m20s 922666ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m22s 142220ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m23s 79499ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m24s 79263ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m25s 266443ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m26s 235008ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m27s 160739ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m28s 129258ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m29s 207132ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m30s 253803ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m31s 175420ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m32s 190851ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m33s 253057ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m34s 185291ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m35s 153818ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m36s 309756ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m37s 293897ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m38s 227172ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m39s 195651ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m40s 273522ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m41s 304530ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m42s 228155ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m43s 215311ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_4_May-24-2022 17h50m44s 277602ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_6_May-24-2022 17h50m45s 230462ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_6_May-24-2022 17h50m46s 42812ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_6_May-24-2022 17h50m46s 917607ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_6_May-24-2022 17h50m47s 740460ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_6_May-24-2022 17h50m48s 537147ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_left_6_May-24-2022 17h50m49s 349500ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m50s 177428ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m51s 261179ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m52s 267141ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m53s 282569ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m54s 282293ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m55s 297679ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m56s 297485ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m57s 406599ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m58s 406364ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h50m59s 421750ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h51m00s 437220ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h51m01s 483886ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h51m02s 563941ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h51m03s 566484ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h51m04s 581829ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_208_records/FOSC_right_4_May-24-2022 17h51m05s 581637ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/DBSCAN_right_26_May-24-2022 17h25m52s 537502ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/DBSCAN_right_26_May-24-2022 17h26m55s 959684ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/DBSCAN_right_27_May-24-2022 17h27m05s 795347ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_27_May-24-2022 17h25m53s 959028ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_27_May-24-2022 17h25m55s 130601ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_27_May-24-2022 17h25m56s 333487ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_27_May-24-2022 17h25m57s 505082ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_27_May-24-2022 17h25m58s 707680ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_27_May-24-2022 17h25m59s 977214ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_27_May-24-2022 17h26m01s 191282ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_28_May-24-2022 17h26m02s 381795ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_28_May-24-2022 17h26m03s 673559ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_28_May-24-2022 17h26m04s 923270ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_28_May-24-2022 17h26m06s 190529ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_both_28_May-24-2022 17h26m07s 724905ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m31s 818293ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m33s 373473ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m34s 773500ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m36s 266217ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m37s 562830ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m38s 843777ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m40s 155932ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m41s 641886ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m42s 891634ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m44s 297537ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_26_May-24-2022 17h26m45s 531594ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m09s 106125ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m10s 309287ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m11s 496543ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m12s 652528ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m13s 917855ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m15s 58220ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m16s 229820ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m17s 323317ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m18s 479283ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m19s 675520ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m20s 847164ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m22s 8070ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m23s 210949ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_4_May-24-2022 17h26m24s 445034ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_8_May-24-2022 17h26m25s 647877ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_8_May-24-2022 17h26m26s 928825ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_8_May-24-2022 17h26m28s 147248ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_9_May-24-2022 17h26m29s 318888ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_left_9_May-24-2022 17h26m30s 568553ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_26_May-24-2022 17h26m57s 362366ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_26_May-24-2022 17h26m58s 851392ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_26_May-24-2022 17h27m00s 548707ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_26_May-24-2022 17h27m01s 882851ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_26_May-24-2022 17h27m03s 231864ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_26_May-24-2022 17h27m04s 451910ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_27_May-24-2022 17h27m07s 411631ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_27_May-24-2022 17h27m08s 788927ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_28_May-24-2022 17h27m10s 44831ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_28_May-24-2022 17h27m11s 341672ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_28_May-24-2022 17h27m12s 826138ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_28_May-24-2022 17h27m14s 50189ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_28_May-24-2022 17h27m15s 503014ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_28_May-24-2022 17h27m16s 659323ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_28_May-24-2022 17h27m17s 909030ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_4_May-24-2022 17h25m51s 240932ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_4_May-24-2022 17h26m46s 736307ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_4_May-24-2022 17h26m48s 79744ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_4_May-24-2022 17h26m49s 391938ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_4_May-24-2022 17h26m50s 657306ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_4_May-24-2022 17h26m51s 953873ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_9_May-24-2022 17h26m53s 266065ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_347_records/FOSC_right_9_May-24-2022 17h26m54s 584795ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_0_May-31-2022 11h20m56s 814591ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_0_May-31-2022 11h20m58s 602964ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_19_May-31-2022 11h21m11s 822985ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_19_May-31-2022 11h21m13s 976131ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m16s 40508ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m17s 986634ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m19s 733684ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m21s 625137ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m23s 379522ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m25s 147179ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m27s 114428ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m29s 80759ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m31s 323662ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m33s 323032ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_20_May-31-2022 11h21m35s 203069ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_22_May-31-2022 11h21m37s 63010ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_22_May-31-2022 11h21m38s 806855ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_5_May-31-2022 11h21m00s 294697ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_5_May-31-2022 11h21m02s 203314ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_5_May-31-2022 11h21m04s 97008ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_9_May-31-2022 11h21m05s 967924ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_9_May-31-2022 11h21m07s 918300ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_left_9_May-31-2022 11h21m09s 805909ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m11s 628239ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m13s 447508ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m15s 265165ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m17s 66915ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m18s 945192ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m20s 751140ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m22s 565777ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m24s 402465ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_19_May-31-2022 11h22m26s 236734ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_1_May-31-2022 11h21m40s 515201ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_20_May-31-2022 11h22m28s 30867ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_22_May-31-2022 11h22m29s 790857ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_22_May-31-2022 11h22m31s 534604ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_22_May-31-2022 11h22m33s 318335ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_42_May-31-2022 11h22m35s 67238ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_42_May-31-2022 11h22m36s 835011ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_42_May-31-2022 11h22m38s 666819ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_42_May-31-2022 11h22m40s 453137ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_42_May-31-2022 11h22m42s 218367ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_42_May-31-2022 11h22m43s 989246ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_5_May-31-2022 11h21m42s 314639ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_5_May-31-2022 11h21m44s 287314ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_5_May-31-2022 11h21m46s 256192ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_8_May-31-2022 11h21m48s 203530ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_8_May-31-2022 11h21m50s 28330ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h21m51s 791907ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h21m53s 621817ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h21m55s 426666ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h21m57s 198655ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h21m59s 42694ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h22m00s 880466ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h22m02s 646029ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h22m04s 417432ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h22m06s 188712ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h22m07s 956971ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/FOSC_right_9_May-31-2022 11h22m09s 820425ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_2_features/Pairwise Frequency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_81_May-31-2022 13h16m21s 402630ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_81_May-31-2022 13h16m23s 374739ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_81_May-31-2022 13h16m25s 252342ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_81_May-31-2022 13h16m27s 107607ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_88_May-31-2022 13h16m28s 961935ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_88_May-31-2022 13h16m30s 838458ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_88_May-31-2022 13h16m32s 698000ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_88_May-31-2022 13h16m34s 635603ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_92_May-31-2022 13h16m36s 465365ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_97_May-31-2022 13h16m38s 140139ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_both_97_May-31-2022 13h16m40s 23295ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_52_May-31-2022 13h16m41s 882871ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_52_May-31-2022 13h16m43s 701834ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_53_May-31-2022 13h16m45s 432347ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_53_May-31-2022 13h16m47s 250082ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_55_May-31-2022 13h16m49s 66938ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_55_May-31-2022 13h16m50s 836664ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_60_May-31-2022 13h16m52s 596355ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_81_May-31-2022 13h16m54s 520276ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_81_May-31-2022 13h16m56s 573823ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_81_May-31-2022 13h16m58s 453150ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_81_May-31-2022 13h17m00s 633994ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_81_May-31-2022 13h17m02s 469156ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_84_May-31-2022 13h17m04s 500820ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_84_May-31-2022 13h17m06s 230840ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_84_May-31-2022 13h17m08s 34982ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_84_May-31-2022 13h17m09s 773833ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_85_May-31-2022 13h17m11s 590276ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_85_May-31-2022 13h17m13s 320989ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_85_May-31-2022 13h17m15s 127225ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_86_May-31-2022 13h17m16s 848336ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_86_May-31-2022 13h17m18s 591034ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_86_May-31-2022 13h17m20s 260480ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_86_May-31-2022 13h17m22s 26334ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_87_May-31-2022 13h17m23s 798206ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_87_May-31-2022 13h17m25s 654050ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_87_May-31-2022 13h17m27s 309148ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_88_May-31-2022 13h17m29s 11090ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_88_May-31-2022 13h17m31s 40304ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_88_May-31-2022 13h17m33s 95358ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_88_May-31-2022 13h17m35s 210691ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_88_May-31-2022 13h17m37s 257570ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_88_May-31-2022 13h17m39s 249027ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_88_May-31-2022 13h17m41s 306012ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_88_May-31-2022 13h17m43s 291253ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_89_May-31-2022 13h17m45s 327306ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_89_May-31-2022 13h17m47s 67845ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_89_May-31-2022 13h17m48s 720095ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_91_May-31-2022 13h17m50s 391417ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_91_May-31-2022 13h17m52s 218772ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_91_May-31-2022 13h17m54s 118063ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_91_May-31-2022 13h17m55s 938977ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_92_May-31-2022 13h17m57s 759326ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_92_May-31-2022 13h17m59s 556778ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_92_May-31-2022 13h18m01s 356267ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_97_May-31-2022 13h18m03s 149631ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_97_May-31-2022 13h18m05s 44211ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_left_97_May-31-2022 13h18m06s 835230ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m08s 633785ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m10s 444764ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m12s 173959ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m13s 978615ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m15s 774393ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m17s 497863ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m19s 229262ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m21s 30490ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m22s 767327ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m24s 581288ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m26s 381600ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m28s 107483ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m29s 844882ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m31s 669535ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_52_May-31-2022 13h18m33s 480105ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_53_May-31-2022 13h18m35s 189884ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_53_May-31-2022 13h18m36s 835122ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_55_May-31-2022 13h18m38s 526928ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_55_May-31-2022 13h18m40s 700456ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_55_May-31-2022 13h18m42s 775615ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_55_May-31-2022 13h18m44s 881935ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_55_May-31-2022 13h18m46s 924436ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_55_May-31-2022 13h18m48s 963028ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_60_May-31-2022 13h18m50s 987555ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_60_May-31-2022 13h18m52s 951119ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_81_May-31-2022 13h18m55s 5659ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_81_May-31-2022 13h18m56s 801825ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_81_May-31-2022 13h18m58s 537256ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_81_May-31-2022 13h19m00s 394226ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_81_May-31-2022 13h19m02s 258917ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_81_May-31-2022 13h19m04s 161293ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_81_May-31-2022 13h19m05s 887015ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_81_May-31-2022 13h19m07s 616928ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_84_May-31-2022 13h19m09s 345282ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_84_May-31-2022 13h19m11s 78481ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_84_May-31-2022 13h19m12s 818110ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_84_May-31-2022 13h19m14s 648898ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_84_May-31-2022 13h19m16s 371420ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_86_May-31-2022 13h19m18s 86547ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_87_May-31-2022 13h19m19s 764605ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_87_May-31-2022 13h19m21s 584944ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_87_May-31-2022 13h19m23s 598753ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_88_May-31-2022 13h19m25s 462937ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_88_May-31-2022 13h19m27s 984025ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_88_May-31-2022 13h19m29s 847563ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_88_May-31-2022 13h19m31s 835728ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_88_May-31-2022 13h19m33s 593113ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_88_May-31-2022 13h19m35s 642066ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_89_May-31-2022 13h19m37s 364192ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_89_May-31-2022 13h19m39s 18115ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_90_May-31-2022 13h19m40s 706605ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_90_May-31-2022 13h19m42s 665534ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_91_May-31-2022 13h19m44s 418754ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_91_May-31-2022 13h19m46s 67600ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_92_May-31-2022 13h19m47s 730133ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_92_May-31-2022 13h19m49s 559563ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_96_May-31-2022 13h19m51s 246254ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_96_May-31-2022 13h19m53s 14792ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_96_May-31-2022 13h19m54s 982172ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_96_May-31-2022 13h19m56s 716998ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_96_May-31-2022 13h19m58s 568296ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/FOSC_right_96_May-31-2022 13h20m00s 306739ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_374_records_3_features/Pairwise Frequency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/DBSCAN_right_26_May-25-2022 01h37m25s 412435ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/DBSCAN_right_35_May-25-2022 01h37m45s 93361ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_22_May-25-2022 01h36m09s 222342ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_22_May-25-2022 01h36m10s 423549ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_26_May-25-2022 01h36m11s 584805ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_28_May-25-2022 01h36m13s 32499ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_28_May-25-2022 01h36m14s 409784ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_28_May-25-2022 01h36m15s 649585ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_28_May-25-2022 01h36m16s 967602ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_31_May-25-2022 01h36m18s 97735ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_31_May-25-2022 01h36m19s 180421ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_32_May-25-2022 01h36m20s 279331ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_32_May-25-2022 01h36m21s 408873ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_32_May-25-2022 01h36m22s 538478ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_32_May-25-2022 01h36m23s 763452ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_32_May-25-2022 01h36m24s 877551ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_32_May-25-2022 01h36m26s 7011ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_35_May-25-2022 01h36m27s 184598ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_37_May-25-2022 01h36m28s 628267ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_37_May-25-2022 01h36m30s 71884ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_37_May-25-2022 01h36m31s 296850ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_37_May-25-2022 01h36m32s 537056ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_4_May-25-2022 01h36m03s 220685ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_4_May-25-2022 01h36m04s 429312ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_4_May-25-2022 01h36m05s 621761ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_4_May-25-2022 01h36m06s 829824ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_both_4_May-25-2022 01h36m08s 22541ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_14_May-25-2022 01h36m49s 878264ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_14_May-25-2022 01h36m51s 70749ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_22_May-25-2022 01h36m52s 263084ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_22_May-25-2022 01h36m53s 518495ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_22_May-25-2022 01h36m54s 805180ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_26_May-25-2022 01h36m56s 138810ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_26_May-25-2022 01h36m57s 425555ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_26_May-25-2022 01h36m58s 728374ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_2_May-25-2022 01h36m33s 666458ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_2_May-25-2022 01h36m34s 858991ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_2_May-25-2022 01h36m35s 910951ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_2_May-25-2022 01h36m37s 56324ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_35_May-25-2022 01h37m00s 124985ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_35_May-25-2022 01h37m01s 411938ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_35_May-25-2022 01h37m02s 777530ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_39_May-25-2022 01h37m04s 165492ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_39_May-25-2022 01h37m05s 304151ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_3_May-25-2022 01h36m38s 154415ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_3_May-25-2022 01h36m39s 347973ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_49_May-25-2022 01h37m06s 449493ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_49_May-25-2022 01h37m07s 595615ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_49_May-25-2022 01h37m08s 803892ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_4_May-25-2022 01h36m40s 540986ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_4_May-25-2022 01h36m41s 733305ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_4_May-25-2022 01h36m42s 879171ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_4_May-25-2022 01h36m44s 87435ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_4_May-25-2022 01h36m45s 139124ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_7_May-25-2022 01h36m46s 206236ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_7_May-25-2022 01h36m47s 398755ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_left_7_May-25-2022 01h36m48s 591040ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_0_May-25-2022 01h37m09s 949922ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_14_May-25-2022 01h35m26s 363127ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_14_May-25-2022 01h37m18s 977842ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_1_May-25-2022 01h37m11s 79598ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_22_May-25-2022 01h35m28s 36360ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_22_May-25-2022 01h37m20s 29953ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_24_May-25-2022 01h37m21s 159962ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_24_May-25-2022 01h37m22s 210896ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_25_May-25-2022 01h37m23s 262833ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_25_May-25-2022 01h37m24s 298299ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m27s 29383ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m28s 241781ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m29s 807851ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m31s 31778ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m32s 554942ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m33s 763112ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m35s 269606ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m36s 384275ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m37s 843340ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m38s 957347ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_26_May-25-2022 01h37m40s 385607ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_2_May-25-2022 01h37m12s 193666ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_31_May-25-2022 01h37m41s 530985ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_31_May-25-2022 01h37m42s 707911ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_31_May-25-2022 01h37m43s 869303ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m46s 631995ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m47s 840122ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m49s 472258ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m50s 700357ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m52s 250501ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m53s 443206ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m54s 871262ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m56s 64331ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m57s 491940ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h37m58s 605856ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_35_May-25-2022 01h38m00s 34061ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_3_May-25-2022 01h37m13s 245182ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_49_May-25-2022 01h38m01s 133594ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_49_May-25-2022 01h38m02s 456364ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_49_May-25-2022 01h38m03s 801944ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_49_May-25-2022 01h38m05s 119728ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_49_May-25-2022 01h38m06s 453712ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_49_May-25-2022 01h38m07s 756555ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_4_May-25-2022 01h37m14s 358799ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_4_May-25-2022 01h37m15s 441202ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_6_May-25-2022 01h37m16s 853578ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_375_records/FOSC_right_7_May-25-2022 01h37m17s 926412ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/DBSCAN_right_13_May-24-2022 16h56m43s 114224ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/DBSCAN_right_22_May-24-2022 16h56m51s 825842ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/DBSCAN_right_28_May-24-2022 16h57m14s 879551ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/DBSCAN_right_4_May-24-2022 16h56m21s 191396ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/DBSCAN_right_5_May-24-2022 16h56m38s 814285ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_26_May-24-2022 16h56m11s 24134ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_26_May-24-2022 16h56m13s 367375ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_28_May-24-2022 16h56m16s 540379ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_4_May-24-2022 16h55m57s 430217ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_4_May-24-2022 16h55m59s 524110ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_4_May-24-2022 16h56m01s 410983ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_4_May-24-2022 16h56m03s 285577ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_4_May-24-2022 16h56m05s 141365ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_4_May-24-2022 16h56m07s 61195ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_left_5_May-24-2022 16h56m08s 930915ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_13_May-24-2022 16h56m45s 489603ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_13_May-24-2022 16h56m47s 912227ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_13_May-24-2022 16h56m49s 807689ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_22_May-24-2022 16h56m54s 263662ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_22_May-24-2022 16h56m56s 611486ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_22_May-24-2022 16h56m58s 932924ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_22_May-24-2022 16h57m00s 902434ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_26_May-24-2022 16h57m02s 983023ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_26_May-24-2022 16h57m05s 76233ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_26_May-24-2022 16h57m06s 875290ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_27_May-24-2022 16h57m08s 733734ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_27_May-24-2022 16h57m11s 102667ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_27_May-24-2022 16h57m13s 1653ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_28_May-24-2022 16h57m17s 45459ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_28_May-24-2022 16h57m19s 18919ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_28_May-24-2022 16h57m21s 83448ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_28_May-24-2022 16h57m23s 58332ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_2_May-24-2022 16h56m19s 131029ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_4_May-24-2022 16h56m23s 630086ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_4_May-24-2022 16h56m25s 800655ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_4_May-24-2022 16h56m27s 597095ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_4_May-24-2022 16h56m29s 424805ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_4_May-24-2022 16h56m31s 533671ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_4_May-24-2022 16h56m33s 373034ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_4_May-24-2022 16h56m35s 189232ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_4_May-24-2022 16h56m36s 986590ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_399_records/FOSC_right_9_May-24-2022 16h56m40s 914919ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_both_26_May-24-2022 15h29m59s 899884ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_both_28_May-24-2022 15h33m04s 981233ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_both_29_May-24-2022 15h33m53s 769450ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_left_26_May-24-2022 15h34m25s 139764ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_left_27_May-24-2022 15h35m14s 326652ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_left_27_May-24-2022 15h35m16s 891530ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_left_28_May-24-2022 15h36m22s 104054ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_left_29_May-24-2022 15h37m00s 918962ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_left_9_May-24-2022 15h34m16s 400388ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_left_9_May-24-2022 15h34m18s 761802ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_13_May-24-2022 15h39m21s 498872ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_16_May-24-2022 15h40m15s 13569ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_18_May-24-2022 15h40m46s 469137ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_19_May-24-2022 15h41m16s 871193ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_21_May-24-2022 15h41m48s 599227ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_21_May-24-2022 15h41m51s 20532ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_23_May-24-2022 15h42m44s 402938ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_23_May-24-2022 15h42m46s 907679ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_23_May-24-2022 15h42m49s 282162ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_23_May-24-2022 15h42m51s 742095ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_26_May-24-2022 15h43m40s 726323ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_27_May-24-2022 15h44m46s 762951ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_29_May-24-2022 15h46m35s 724992ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/DBSCAN_right_5_May-24-2022 15h37m50s 347977ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m17s 900593ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m28s 487440ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m30s 658742ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m33s 368190ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m36s 602884ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m39s 169264ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m41s 372195ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m43s 701087ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m46s 309890ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m48s 703711ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m51s 46908ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m53s 251667ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m55s 485518ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h31m57s 937116ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m00s 355975ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m02s 610266ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m04s 785833ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m07s 25120ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m09s 443048ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m11s 676891ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m13s 848258ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m16s 94278ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m18s 402345ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_26_May-24-2022 15h32m20s 647909ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m25s 365304ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m28s 264369ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m30s 867356ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m33s 163467ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m35s 958309ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m38s 508714ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m40s 867579ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m43s 616929ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m46s 53860ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m48s 334579ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m51s 69920ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m53s 441735ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m55s 691248ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h32m58s 54682ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h33m00s 483890ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_27_May-24-2022 15h33m02s 720680ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m07s 389294ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m10s 157191ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m12s 458345ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m14s 646498ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m17s 120456ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m19s 388637ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m21s 622488ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m24s 22670ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m26s 372537ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m28s 590764ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m30s 769213ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m33s 230663ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m35s 547989ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m37s 766178ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m39s 935228ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m42s 280728ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m44s 665779ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m46s 910186ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m49s 97218ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_28_May-24-2022 15h33m51s 426248ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_29_May-24-2022 15h33m58s 868690ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_29_May-24-2022 15h34m01s 448784ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_29_May-24-2022 15h34m04s 15244ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_29_May-24-2022 15h34m06s 636718ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_29_May-24-2022 15h34m09s 96421ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_29_May-24-2022 15h34m11s 622868ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_both_29_May-24-2022 15h34m13s 988382ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m27s 826634ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m30s 73268ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m32s 123248ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m34s 217048ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m36s 683898ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m38s 974962ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m41s 38614ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m43s 131872ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m45s 521937ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m47s 943200ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m50s 98503ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m52s 161073ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m54s 238667ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m56s 613152ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h34m59s 48920ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h35m01s 200649ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h35m03s 251265ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h35m05s 330202ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h35m07s 781514ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h35m10s 59016ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_26_May-24-2022 15h35m12s 181487ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m21s 771046ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m24s 517951ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m26s 990337ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m29s 369082ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m31s 743519ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m34s 250637ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m36s 832546ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m39s 331932ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m41s 627273ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m44s 23113ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m46s 454360ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m48s 922530ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m51s 343836ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m53s 727940ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m56s 102381ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h35m58s 465942ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m01s 12876ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m03s 505870ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m05s 786576ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m08s 92648ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m10s 366460ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m12s 946365ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m15s 246108ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m17s 511200ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_27_May-24-2022 15h36m19s 810319ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m24s 431223ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m26s 852528ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m29s 86338ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m31s 257743ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m33s 706906ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m36s 29749ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m38s 187674ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m40s 625305ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m42s 968739ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m45s 124442ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m47s 639516ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m49s 982679ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m52s 122822ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m54s 240350ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m56s 592029ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_28_May-24-2022 15h36m58s 805062ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m05s 931108ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m08s 574614ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m10s 896172ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m13s 551801ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m16s 53407ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m18s 740253ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m21s 31196ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m23s 534044ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m26s 111563ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m28s 638405ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m31s 122244ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m33s 422381ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m35s 907154ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m38s 469081ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m40s 910614ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m43s 242831ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m45s 692779ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_29_May-24-2022 15h37m47s 973538ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_9_May-24-2022 15h34m20s 881533ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_left_9_May-24-2022 15h34m22s 974828ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h38m49s 216277ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h38m51s 452003ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h38m53s 560879ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h38m55s 684841ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h38m57s 930603ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h38m59s 979708ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m02s 135436ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m04s 437915ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m06s 454371ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m08s 609262ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m10s 843110ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m12s 858222ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m15s 85769ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m17s 316279ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_12_May-24-2022 15h39m19s 344995ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m24s 68158ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m26s 224092ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m28s 223621ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m30s 348128ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m32s 489679ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m34s 943775ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m37s 36995ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m39s 56616ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m41s 181159ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m43s 321281ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m45s 780047ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m47s 888216ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m49s 903370ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m52s 59067ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m54s 183618ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m56s 542389ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h39m58s 979547ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h40m01s 199726ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h40m03s 753161ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h40m06s 270896ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h40m08s 400564ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h40m10s 540685ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_13_May-24-2022 15h40m12s 743298ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m20s 891220ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m23s 109465ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m25s 772847ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m27s 991077ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m30s 709186ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m32s 871324ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m35s 198854ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m37s 370261ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m39s 682217ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m41s 930022ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_16_May-24-2022 15h40m44s 277074ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h40m48s 984170ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h40m51s 436763ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h40m53s 701854ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h40m56s 107495ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h40m58s 372633ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h41m00s 745784ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h41m03s 83832ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h41m05s 473947ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h41m07s 731823ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h41m09s 980728ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h41m12s 292685ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_18_May-24-2022 15h41m14s 604641ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m19s 389278ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m21s 586075ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m24s 224666ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m26s 427275ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m29s 10959ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m31s 592946ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m34s 5463ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m37s 48213ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m39s 493690ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m41s 984893ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m44s 188021ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_19_May-24-2022 15h41m46s 428825ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h41m53s 457447ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h41m55s 615119ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h41m57s 867649ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m00s 73435ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m02s 361008ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m04s 500162ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m06s 775833ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m09s 4585ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m11s 144665ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m13s 528219ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m15s 637092ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m17s 838201ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m20s 25181ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m22s 122100ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m24s 276029ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m26s 486551ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m28s 708063ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m31s 209406ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m33s 445477ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m35s 636288ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m37s 928585ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m40s 91454ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_21_May-24-2022 15h42m42s 262859ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h42m56s 727684ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h42m59s 421955ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m01s 928529ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m04s 45168ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m06s 752288ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m08s 995270ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m11s 121087ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m13s 542381ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m16s 322991ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m18s 720087ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m20s 856114ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m23s 648356ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m26s 480214ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m28s 823455ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m30s 872029ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m33s 493684ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m36s 258659ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_23_May-24-2022 15h43m38s 508090ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h43m43s 47825ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h43m45s 595960ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h43m48s 91899ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h43m50s 186822ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h43m52s 373765ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h43m54s 464425ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h43m57s 73136ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h43m59s 719011ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m02s 218705ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m04s 591766ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m06s 722055ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m09s 256483ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m11s 364454ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m13s 569065ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m15s 826859ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m18s 30303ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m20s 531972ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m22s 914103ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m25s 229808ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m27s 403007ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m29s 827116ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m32s 632388ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m35s 267416ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m37s 688037ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m40s 73678ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m42s 225302ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_26_May-24-2022 15h44m44s 659591ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h44m51s 992296ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h44m54s 681657ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h44m57s 450203ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m00s 42638ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m02s 734463ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m05s 36691ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m07s 537994ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m10s 51652ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m12s 439248ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m14s 723219ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m17s 228946ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m20s 162493ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m22s 854289ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m25s 324252ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m27s 652211ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m29s 960478ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_27_May-24-2022 15h45m32s 366470ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m34s 638151ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m36s 895533ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m39s 395753ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m41s 527055ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m43s 741116ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m45s 830039ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m48s 43120ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m50s 597290ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m52s 955012ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m55s 590920ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h45m58s 45389ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m00s 639538ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m03s 251661ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m05s 753196ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m07s 848548ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m10s 33126ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m12s 304054ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m14s 751239ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m17s 251554ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m19s 429145ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m21s 601782ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m23s 917563ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m26s 427892ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m28s 793525ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m31s 13589ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_28_May-24-2022 15h46m33s 221724ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h46m41s 527101ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h46m44s 242004ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h46m46s 374330ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h46m49s 168831ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h46m51s 958510ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h46m54s 269306ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h46m57s 137209ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h46m59s 890870ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h47m02s 810063ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h47m04s 992269ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h47m07s 464445ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h47m09s 668509ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h47m12s 206768ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h47m14s 747927ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h47m16s 871679ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_29_May-24-2022 15h47m19s 309160ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h37m54s 800058ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h37m57s 204467ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h37m59s 360250ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m01s 373488ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m03s 621551ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m05s 953618ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m08s 42957ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m10s 156269ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m12s 380579ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m14s 614429ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m16s 710573ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m18s 725681ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m21s 78843ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m23s 351495ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m25s 437847ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m27s 437377ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m29s 671227ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m31s 960881ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m34s 56615ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_5_May-24-2022 15h38m36s 56144ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_9_May-24-2022 15h38m38s 287332ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_9_May-24-2022 15h38m40s 458695ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_9_May-24-2022 15h38m42s 708068ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_9_May-24-2022 15h38m44s 878436ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/FOSC_right_9_May-24-2022 15h38m47s 49800ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_both_27_May-24-2022 15h32m22s 913007ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_both_29_May-24-2022 15h33m56s 331346ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_left_27_May-24-2022 15h35m19s 346419ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_left_29_May-24-2022 15h37m03s 448142ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_right_16_May-24-2022 15h40m18s 279806ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_right_23_May-24-2022 15h42m54s 288094ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_right_27_May-24-2022 15h44m49s 423194ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_right_29_May-24-2022 15h46m38s 658756ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_465_records/K-Means_right_5_May-24-2022 15h37m52s 691178ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_26_May-24-2022 18h21m33s 781351ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_26_May-24-2022 18h21m34s 468648ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_26_May-24-2022 18h21m35s 761703ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_26_May-24-2022 18h21m35s 89938ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_26_May-24-2022 18h21m36s 402130ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_26_May-24-2022 18h21m37s 34250ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m24s 407171ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m25s 531904ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m25s 822ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m26s 63029ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m26s 686134ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m27s 201594ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m27s 730356ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m28s 292724ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m28s 808185ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m29s 339310ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m29s 917342ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m30s 495330ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m31s 26415ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m31s 594519ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m32s 172506ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m32s 688014ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings/Results_48_records/FOSC_right_5_May-24-2022 18h21m33s 203514ms.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/ClusteringMethods/clustering_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1128, EMA_IVT, left eye.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/EventDetection/Plots EventDetection/Record 1128, EMA_IVT, left eye.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/Features to Extract.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/feature_engineering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering_Framework/RecordSelection/record_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/RecordSelection/record_selection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/clustering_parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/clustering_parameters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering_Framework/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering_Framework/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Counting C&amp;Look DB.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Counting C&amp;Look DB.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/cnl_data2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/cnl_data3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/cnl_data4.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/inserting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/inserting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/reading.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/reading.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/worst_pairwise_frequencies" beforeDir="false" afterPath="$PROJECT_DIR$/sql/worst_pairwise_frequencies" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +998,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Área de Trabalho/emotion recognition" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Clustering_Framework/ClusterValidation/Plots Best Clusterings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lucca\Desktop\Repositórios GitHub\CnLook_Clustering" />
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusterValidation\Plots Best Clusterings" />
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusterValidation\Plots Best Clusterings\313 recordings" />
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusterValidation\Plots Best Clusterings\232 recordings" />
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusterValidation\Plots Best Clusterings\356 recordings" />
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusterValidation\Plots Best Clusterings\464 recordings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusterValidation\Plots Best Clusterings\OLD RESULTS 14-06" />
+      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusterValidation\Plots Best Clusterings\OLD RESULTS" />
       <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusterValidation\Plots Best Clusterings" />
       <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\EventDetection\ema2159" />
       <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework" />
-      <recent name="C:\Git Repositories\CnLook_Clustering\Clustering_Framework\ClusteringMethods" />
-      <recent name="C:\Git Repositories\CnLook_Clustering\Images\" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (2)">
@@ -277,7 +1209,14 @@
       <workItem from="1653496960956" duration="37714000" />
       <workItem from="1653928105202" duration="6345000" />
       <workItem from="1653946110491" duration="7556000" />
-      <workItem from="1653999666958" duration="13178000" />
+      <workItem from="1653999666958" duration="26746000" />
+      <workItem from="1654091811254" duration="12262000" />
+      <workItem from="1654135541869" duration="11494000" />
+      <workItem from="1654616413646" duration="7137000" />
+      <workItem from="1654820607821" duration="15023000" />
+      <workItem from="1655064258614" duration="34080000" />
+      <workItem from="1655216870873" duration="45190000" />
+      <workItem from="1655310254336" duration="6245000" />
     </task>
     <servers />
   </component>
@@ -335,7 +1274,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Database/visualization.py</url>
-          <line>236</line>
+          <line>249</line>
           <option name="timeStamp" value="578" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -345,23 +1284,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="598" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/FeatureEngineering/insert_featured_records.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="599" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/main.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="600" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Clustering_Framework/ClusterValidation/cluster_validation.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="604" />
+          <line>29</line>
+          <option name="timeStamp" value="626" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -377,14 +1301,16 @@
         <watch expression="allRecords.columns.T.T.array" />
         <watch expression="segment_id" />
         <watch expression="n" language="Python" />
+        <watch expression="best_left[0]" />
+        <watch expression="subsets" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1654017435904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1655329861462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$mainTest.coverage" NAME="mainTest Coverage Results" MODIFIED="1651085152924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Trying_eyegaze/eyegaze" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$export_to_csv.coverage" NAME="export_to_csv Coverage Results" MODIFIED="1653332189225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Database" />
-    <SUITE FILE_PATH="coverage/CnLook_Clustering$insert_featured_records.coverage" NAME="insert_featured_records Coverage Results" MODIFIED="1653966384181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
+    <SUITE FILE_PATH="coverage/CnLook_Clustering$insert_featured_records.coverage" NAME="insert_featured_records Coverage Results" MODIFIED="1655221214305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clustering_Framework/FeatureEngineering" />
     <SUITE FILE_PATH="coverage/CnLook_Clustering$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1649879727006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Database" />
   </component>
 </project>

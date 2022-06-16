@@ -21,7 +21,7 @@ records = list(getRecordings_SimilarTasks(conn, taskId).groupby(['recording_id']
 print(f'Num of records: {len(records)}')
 #Analyze subset of records:
 
-good_records = analyzeRecords(records)
+# good_records = analyzeRecords(records)
 good_records = records
 
 #Apply feature engineering and create objects

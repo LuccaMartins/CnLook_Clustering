@@ -9,8 +9,6 @@ from Clustering_Framework.ClusteringMethods.FOSC.util.fosc import FOSC
 from Clustering_Framework.ClusteringMethods.FOSC.util.plotting import plotDendrogram, plotPartition
 from Clustering_Framework.ClusterValidation.cluster_validation import *
 
-#TODO: test with FOSC and K-means (with Elbow method)
-
 def adjustPartition(partition, method):
     #noise = -1
     # for i, label in enumerate(partition):
@@ -79,7 +77,7 @@ def startKMeans(X, mat):
 def startFOSC(X, mat, savePath=None):
     print('Running FOSC...', end='')
 
-    listOfMClSize = [4, 5, 8, 16, 20, 30]
+    listOfMClSize = [20, 30]
     methodsLinkage = ["single", "average", "ward", "complete", "weighted"]
     results = []
 

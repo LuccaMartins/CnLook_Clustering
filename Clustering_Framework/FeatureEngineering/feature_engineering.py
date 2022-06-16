@@ -7,19 +7,6 @@ import pandas as pd
 import scipy
 
 
-all_features = [  # Check document 'Features to Extract.xlsx' in './FeatureEngineering' for explanation
-    #from Fixations
-    'FC', 'AFD', 'FDMax', 'FDMin', 'FDT', 'FDA',
-    #from Saccades
-    'SC', 'ASC',
-    'SFC', 'SDMa', 'SDMi', 'SDT', 'SDA', 'SAT', 'ASA', 'SAMa', 'SAMi', 'SSV', 'SVMax', 'SVMin', 'ASL',
-    #from Blinks
-    'BC' , 'BFC', 'BDT', 'BDA', 'BDMax', 'BDMin',
-    #Others
-    'SPL', 'ADT', 'ADpFF'
-]
-
-
 def createFeaturedRecords(task, records):
     print('Starting feature engineering...')
     parameter_data = json.loads(task.parameter_data.values[0])
@@ -35,8 +22,18 @@ def features_path_length(record, eye):
     x = record[1][f'{eye}_x'].values
     y = record[1][f'{eye}_y'].values
     path_length = 0
+    last_tracked = -1
     for i in range(1, len(record[1])):
-        path_length += distance.euclidean([x[i-1],y[i-1]], [x[i],y[i]])
+        if (eye == 'left' and record[1]['tracking_status'].values[i] not in [1, 3]) or \
+           (eye == 'right' and record[1]['tracking_status'].values[i] not in [1, 2]):
+            if last_tracked == -1:
+                path_length += distance.euclidean([x[i-1],y[i-1]], [x[i],y[i]])
+            else:
+                path_length += distance.euclidean([x[last_tracked], y[last_tracked]], [x[i], y[i]])
+                last_tracked = -1
+        else:
+            if last_tracked == -1:
+                last_tracked = i-1
 
     return path_length
 
@@ -109,8 +106,8 @@ def features_task_with_fixations_EMA(task, records):
         taskPositions = getTaskPositions(task, normalizeTimestamps(record[1]['timestamp'].array))
         shouldAddRecord = True
         for eye in 'left', 'right':
-            distancesToTarget = getDistances_ToTarget(record, taskPositions, eye, last_valid_idx=len(taskPositions)-1)
-            (saccades, fixations, centroids, centroids_count, fixations_ranges) = identify_events_ema(record, eye, last_valid_idx=len(taskPositions)-1)
+            (saccades, fixations, centroids, centroids_count, fixations_ranges) = \
+                identify_events_ema(record, eye, last_valid_idx=len(taskPositions)-1)
 
             valid_fixations_ranges = []
             for fix_range in fixations_ranges:
@@ -123,29 +120,37 @@ def features_task_with_fixations_EMA(task, records):
                len(valid_fixations_ranges) < 2:
                 shouldAddRecord = False
             else:
+                distancesToTarget = getDistances_ToTarget(record, taskPositions, eye)
+                distancesToTarget_valid = getDistances_ToTarget(record, taskPositions, eye, eyeTracked=True)
+                (AFDisp, AFDispH, AFDispV) = features_event_dispersion(fixations)
+                (ADpFF, ADTL, ADTR, ADFF) = features_avg_dist_figFixations(record, taskPositions, eye)
+
                 features.append({
                                  f'FC_{eye}': len(fixations),
                                  f'ADTF_{eye}': scipy.mean([scipy.mean(distancesToTarget[fix[0]:fix[1]+1]) for fix in valid_fixations_ranges]),
                                  f'AFD_{eye}': scipy.mean([len(x) for x in fixations]),
-                                 f'FDMax_{eye}': max([len(x) for x in fixations]),
-                                 f'FDMin_{eye}': min([len(x) for x in fixations]),
-                                 f'AFDisp_{eye}': features_event_dispersion(fixations)[0],
-                                 f'AFDispH_{eye}': features_event_dispersion(fixations)[1],
-                                 f'AFDispV_{eye}': features_event_dispersion(fixations)[2],
+                                 # f'FDMax_{eye}': max([len(x) for x in fixations]),
+                                 # f'FDMin_{eye}': min([len(x) for x in fixations]),
+                                 f'AFDisp_{eye}': AFDisp,
+                                 f'AFDispH_{eye}': AFDispH,
+                                 f'AFDispV_{eye}': AFDispV,
                                  f'SC_{eye}': len(saccades),
                                  f'ASD_{eye}': scipy.mean([len(x) for x in saccades]),
-                                 f'SDMax_{eye}': max([len(x) for x in saccades]),
-                                 f'SDMin_{eye}': min([len(x) for x in saccades]),
-                                 f'FDA_{eye}': features_event_dispersion(saccades),
+                                 # f'SDMax_{eye}': max([len(x) for x in saccades]),
+                                 # f'SDMin_{eye}': min([len(x) for x in saccades]),
                                  f'SPL_{eye}': features_path_length(record, eye),
                                  f'ASA_{eye}': scipy.mean([distance.euclidean(saccade[0], saccade[-1]) for saccade in saccades]),
                                  f'SAMax_{eye}': max([distance.euclidean(saccade[0], saccade[-1]) for saccade in saccades]),
-                                 f'SAMin_{eye}': min([distance.euclidean(saccade[0], saccade[-1]) for saccade in saccades]),
+                                 # f'SAMin_{eye}': min([distance.euclidean(saccade[0], saccade[-1]) for saccade in saccades]),
                                  f'ADT_{eye}': scipy.mean(distancesToTarget),
-                                 f'ADpFF_{eye}': features_avg_dist_figFixations(record, taskPositions, eye),
-
+                                 # f'ADpFF_{eye}': ADpFF, #same as ADT
+                                 f'ADTL_{eye}': ADTL,
+                                 f'ADTR_{eye}': ADTR,
+                                 f'ADFF_{eye}': ADFF,
                                  })
         features.append({
+            # 'ADB': scipy.mean(getDistances_betweenEyes(record))
+
             'ADB': scipy.mean(getDistances_betweenEyes(record))
         })
 
@@ -168,7 +173,7 @@ def features_avg_dist_figFixations(record, taskPositions, eye):
         if taskPositions[i] != taskPositions[i-1]:
             fixations_ranges.append([startFix, i-1])
             startFix = i
-    #appending last fixation
+    # appending last fixation
     fixations_ranges.append([startFix, len(taskPositions) - 1])
 
     average_distances = []
@@ -178,7 +183,12 @@ def features_avg_dist_figFixations(record, taskPositions, eye):
             fixation_distances.append(distance.euclidean([x[i], y[i]], taskPositions[i]))
         average_distances.append(scipy.mean(fixation_distances))
 
-    return average_distances
+    leftSideDistances = average_distances[0:5] + average_distances[10:15] + average_distances[20:25]
+    rightSideDistances = average_distances[5:10] + average_distances[15:20] + average_distances[25:30]
+    firstFixationsDistances = average_distances[0] + average_distances[10] + average_distances[20]
+    return average_distances, scipy.mean(leftSideDistances), \
+           scipy.mean(rightSideDistances), scipy.mean(firstFixationsDistances)
+
 
 
 
